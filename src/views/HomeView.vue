@@ -1,9 +1,19 @@
 <script setup lang="ts">
   import Header from '@/components/base/Header.vue'
+  import Main from '@/components/Main.vue'
+  import { ref, nextTick } from 'vue'
+  import { useDark } from '@vueuse/core'
+  import gsap from 'gsap'
+
+  const isDark = useDark()
+
 </script>
 
 <template>
-  <main>
-    <Header />
+  <main :class="{'text-white bg-[#222]': isDark}">
+    <div class="lg:mx-40 md:mx-20 sm:mx-10 mx-5 font-oswald">
+      <Header />
+      <Main />
+    </div>
   </main>
 </template>

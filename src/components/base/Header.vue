@@ -1,14 +1,19 @@
 <script setup lang="ts">
 import { ref, nextTick } from 'vue'
-import { useDark, useToggle } from '@vueuse/core'
+import { useDark } from '@vueuse/core'
 import gsap from 'gsap'
 import IconBars from '../icons/IconBars.vue'
 import IconClose from '../icons/IconClose.vue'
 import IconLinkedin from '../icons/IconLinkedin.vue'
 import IconsGithub from '../icons/IconsGithub.vue'
+import IconMoon from '../icons/IconMoon.vue'
+import IconSun from '../icons/IconSun.vue'
 
 const isDark = useDark()
-const toggleDark = useToggle(isDark)
+const toggleDark = ()=>{
+  isDark.value = !isDark.value
+}
+
 const isNavOpen = ref(false)
 
 const toggleNav = async () => {
@@ -34,30 +39,40 @@ const toggleNav = async () => {
 }
 </script>
 
-
 <template>
-  <header class="lg:mx-40 md:mx-20 sm:mx-10 mx-5 font-oswald">
-    <nav class="flex justify-between items-center">
+  <header  class="">
+    <nav class="flex justify-between items-center py-3">
       <li>
-        <router-link to="/" class="flex justify-center items-center gap-4">
-          <img src="/favicon.ico" class="rounded-full w-14 lg:w-16 xl:w-16" alt="">
-          <span class="text-4xl font-semibold">Elvin Code</span>
+        <router-link to="/" class="">
+          <span class="text-4xl hidden md:flex font-semibold">Elvin Code</span>
         </router-link>
       </li>
-      <ul class="flex justify-between gap-6 items-center">
+      <ul class="flex justify-between gap-6 items-center" :class="{'text-white': isDark}" >
         <li>
           <router-link to="">
-            <IconsGithub class="w-7 h-7"/>
+            <IconsGithub class="w-7 h-7" :class="{'text-white': isDark}"/>
           </router-link>
         </li>
         <li>
           <router-link to="">
-            <IconLinkedin class="w-7 h-7"/>
+            <IconLinkedin class="w-7 h-7" :class="{'text-white': isDark}"/>
           </router-link>
         </li>
-        <li class="cursor-pointer">
-          <IconClose class="w-10 h-10 icon-close" v-if="isNavOpen" @click="toggleNav"/>
-          <IconBars class="w-10 h-10 icon-bars" v-else @click="toggleNav"/>
+        <li @click="toggleDark" class="cursor-pointer" >
+          <IconMoon class="w-7 h-7" v-if="isDark" :class="{'text-white': isDark}"/>
+          <IconSun class="w-7 h-7"  v-else :class="{'text-white': isDark}"/>
+        </li>
+        <li class="cursor-pointer" @click="toggleNav">
+          <IconClose 
+            class="w-10 h-10 icon-close" 
+            v-if="isNavOpen" 
+            :class="{'text-white': isDark}"
+          />
+          <IconBars 
+            class="w-10 h-10 icon-bars" 
+            v-else 
+            :class="{'text-white': isDark}"
+          />
         </li>
       </ul>
     </nav>
@@ -82,3 +97,7 @@ const toggleNav = async () => {
     </nav>
   </header>
 </template>
+
+<style scoped>
+
+</style>
