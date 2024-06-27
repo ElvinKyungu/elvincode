@@ -1,38 +1,125 @@
 <script setup lang="ts">
 import { ref, nextTick } from 'vue'
-import { useDark } from '@vueuse/core'
 import gsap from 'gsap'
-
+import { useDark } from '@vueuse/core';
+import { images } from '@/assets/images'
+const isDark = useDark()
 </script>
 <template>
-  <section class="mt-20" >
-    <div>
-      <div class="border-b border-gray-30 dark:border-gray-500">
-        <div class="mx-auto grid h-2 max-w-8xl grid-cols-12 px-2 xs:h-8 xs:px-6 sm:px-10 xl:h-12 xl:px-10">
-          <div class="col-span-10 border-x border-gray-30 dark:border-gray-500 md:col-span-4"></div>
-          <div class="col-span-2 border-r border-gray-30 dark:border-gray-500 min-[896px]:col-span-3"></div>
-          <div class="col-span-1 hidden border-r border-gray-30 dark:border-gray-500 lg:block"></div>
-          <div class="col-span-6 hidden border-r border-gray-30 dark:border-gray-500 md:block min-[896px]:col-span-5 lg:col-span-4"></div>
-        </div>
+  <section class=" mt-10">
+    <div class="relative mt-6 overflow-hidden">
+      <div
+        :class="{'bg-[#222]': isDark, 'bg-gray-50 ': !isDark}"
+        class="
+          absolute -inset-x-1 top-[-25.5%] z-[1] h-2/4 scale-y-75 
+          scale-x-125 rounded-[100%] 2xl:scale-y-95
+        "
+      >
       </div>
-      <header class="border-b border-gray-30 dark:border-gray-500">
-        <div class="mx-auto grid max-w-8xl grid-cols-12 px-2 xs:px-6 sm:px-10">
-          <div class="col-span-10 border-x border-gray-30 p-10 dark:border-gray-500 md:col-span-4">
-            <div class="relative w-fit">
-              <h1 class="text-7xl">Hi, I'm Elvin Kyungu</h1>
-              <h1 class="text-5xl font-thin mt-10">Also known as Elvin Code</h1>
-            </div>
-          </div>
-          <div class="col-span-2 border-r border-gray-30 dark:border-gray-500 min-[896px]:col-span-3"></div>
-          <div class="col-span-2 hidden border-r border-t border-gray-30 dark:border-gray-500 max-md:order-last lg:col-span-1 lg:block lg:border-t-0"></div>
-          <div class="col-span-10 hidden flex-col items-end justify-end border-x border-t border-gray-30 bg-gradient-to-br from-gray-30/30 via-white to-white p-8 text-right dark:border-gray-500 dark:from-gray-700 dark:via-gray-1000 dark:to-gray-1000 md:col-span-6 md:flex md:border-l-0 md:border-t-0 min-[896px]:col-span-5 lg:col-span-4">
-            <div></div>
-          </div>
+      <div
+        :class="{'bg-[#222]': isDark, 'bg-gray-50 ': !isDark}"
+        class="
+          absolute -inset-x-1 bottom-[-25.5%] z-[1] h-2/4 
+          scale-y-75 scale-x-125 rounded-[100%] 
+          2xl:scale-y-95
+        "
+      >
+      </div>
+      <div 
+        class="
+          marquee-10 sm:marquee-15 lg:marquee-20 w-full 
+          transition duration-500
+        "
+      >
+        <div 
+          class="
+            grid h-96 w-[350vw] grid-cols-12 gap-1 
+            sm:h-[40rem] sm:w-[300vw] lg:w-[200vw] 2xl:h-[60rem]
+          "
+        >
+          <!-- <img 
+            class="h-full w-full object-cover" 
+            src="" 
+            alt="project cover" 
+            width="826" 
+            height="1238" 
+          />
+            <img 
+              class="col-span-2 h-full w-full object-cover" 
+              src="https://images.unsplash.com/photo-1488895892452-8df3dbc55c68?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" 
+              alt="project cover" 
+              width="826" 
+              height="1239" />
+            <img 
+              class="h-full w-full object-cover" 
+              src="https://images.unsplash.com/photo-1521197721975-e12108edefbc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D" 
+              alt="project cover" 
+              width="826" 
+              height="1239" 
+            />
+            <img 
+              class="h-full w-full object-cover" 
+              src="https://images.unsplash.com/photo-1506321806993-0e39f809ae59?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+              alt="project cover" 
+              width="826" 
+              height="1239" 
+            />
+            <img 
+              class="col-span-2 h-full w-full object-cover" 
+              src="https://images.unsplash.com/photo-1514561064005-2bac60d9f7ea?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+              alt="project cover" 
+              width="1800" 
+              height="1197" 
+            />
+            <img 
+              class="h-full w-full object-cover" 
+              src="https://images.unsplash.com/photo-1548613112-7455315eef5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8fA%3D%3D" 
+              alt="project cover" 
+              width="826" 
+              height="1237" 
+            />
+            <img 
+              class="h-full w-full object-cover" 
+              src="https://images.unsplash.com/photo-1549598685-0058b114c9d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fHw%3D" 
+              alt="project cover" 
+              width="826" 
+              height="1239" 
+            />
+            <img 
+              class="h-full w-full object-cover" 
+              src="https://images.unsplash.com/photo-1548694003-9787ddc38958?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mzh8fHxlbnwwfHx8fHw%3D" 
+              alt="project cover" 
+              width="826" 
+              height="1237" 
+            />
+            <img 
+              class="col-span-2 h-full w-full object-cover" 
+              src="https://images.unsplash.com/photo-1548943544-56e76b7c16d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzV8fHxlbnwwfHx8fHw%3D" 
+              alt="project cover" 
+              width="2000" 
+              height="1334" 
+            /> -->
         </div>
-      </header>
-      <div class="mx-auto max-w-8xl px-2 xs:px-6 sm:px-10">
-        <div class="h-2 border-x border-gray-30 dark:border-gray-500 xs:h-6 sm:h-16"></div>
       </div>
     </div>
   </section>
 </template>
+<style scoped>
+.marquee-10{
+  animation: marque 10s linear infinite;
+}
+.marquee-15{
+  animation: marque 15s linear infinite;
+}
+.marque-20{
+  animation: marque 10s linear infinite;
+}
+@keyframes marque {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+</style>

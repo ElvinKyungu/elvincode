@@ -40,11 +40,11 @@ const toggleNav = async () => {
 </script>
 
 <template>
-  <header  class="">
+  <header class="">
     <nav class="flex justify-between items-center py-3">
       <li>
         <router-link to="/" class="">
-          <span class="text-4xl hidden md:flex font-semibold">Elvin Code</span>
+          <span class="text-2xl md:text-4xl font-semibold">Elvin Code</span>
         </router-link>
       </li>
       <ul class="flex justify-between gap-6 items-center" :class="{'text-white': isDark}" >

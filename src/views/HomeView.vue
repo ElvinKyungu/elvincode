@@ -11,8 +11,9 @@
 
 <template>
   <main :class="{'text-white bg-[#222]': isDark}">
-    <div class="lg:mx-40 md:mx-20 sm:mx-10 mx-5 font-oswald">
-      <Header />
+    <div class="font-oswald">
+      <Header  class="lg:mx-56 md:mx-20 sm:mx-10 mx-5 "/>
+      <!--  -->
       <Main />
     </div>
   </main>
