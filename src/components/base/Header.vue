@@ -75,7 +75,6 @@ function close_menu() {
   <header>
     <nav 
       class="
-        
       "
     >
       <button 
@@ -84,7 +83,7 @@ function close_menu() {
           w-20 h-20 fixed  text-gray-100 group bg-black/10 
           backdrop-blur-md flex flex-col gap-4 ul rounded-full top-1/2 
           -translate-y-1/2
-          left-20 items-center justify-center
+          left-10 lg:left-20 items-center justify-center
         "
         @click="open_menu">
         <IconBars class="w-10 h-10" :class="{'text-black':!isDark, 'text-white':isDark}" />

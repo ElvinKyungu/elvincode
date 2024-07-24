@@ -122,7 +122,7 @@ const handleMouseLeave = () => {
 
 const mouseleaveDetails = () => {
   gsap.to(container.value, {
-    width: 410,
+    width: 400,
     height: '55px',
     y: 0,
     borderRadius: 16,
