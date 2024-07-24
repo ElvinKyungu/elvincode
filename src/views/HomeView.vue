@@ -10,11 +10,14 @@
 </script>
 
 <template>
-  <main :class="{'text-white bg-[#222]': isDark}">
+  <main class="bg-image min-h-screen w-full">
     <div class="font-oswald">
-      <Header  class="lg:mx-56 md:mx-20 sm:mx-10 mx-5 "/>
-      <!--  -->
-      <Main />
+      <Header  class=" "/>
+      <!--lg:mx-56 md:mx-20 sm:mx-10 mx-5  -->
+      <!-- <Main /> -->
     </div>
   </main>
 </template>
+<style>
+
+</style>

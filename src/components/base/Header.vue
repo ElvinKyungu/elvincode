@@ -8,96 +8,134 @@ import IconLinkedin from '../icons/IconLinkedin.vue'
 import IconsGithub from '../icons/IconsGithub.vue'
 import IconMoon from '../icons/IconMoon.vue'
 import IconSun from '../icons/IconSun.vue'
+import IconHome from '@/components/icons/IconHome.vue'
 
 const isDark = useDark()
+
 const toggleDark = ()=>{
   isDark.value = !isDark.value
 }
 
 const isNavOpen = ref(false)
-
-const toggleNav = async () => {
-  if (!isNavOpen.value) {
-    await nextTick()
-    gsap.fromTo(
-      '.nav-menu',
-      { opacity: 0, y: -20 },
-      { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }
-    )
-  } else {
-    gsap.to('.nav-menu', {
-      opacity: 0,
-      y: -20,
-      duration: 0.5,
-      ease: 'power2.in',
-      onComplete: () => {
-        isNavOpen.value = false
-      }
+function open_menu() {
+  const tl = gsap.timeline()
+  tl
+    .to('.container--menu', {
+      '--clip': '110vw',
+      duration: 2,
+      ease: 'power2.out',
     })
-  }
-  isNavOpen.value = !isNavOpen.value
+    .fromTo('.menu__left > *', {
+      x: -150,
+      opacity: 0,
+    }, {
+      x: 0,
+      opacity: 1,
+      duration: 1.5,
+      ease: 'power2.out',
+      stagger: {
+        from: 'center',
+        each: 0.05
+      }
+    }, '0')
+    .fromTo('.menu__right', {
+      x: -100,
+      opacity: 0,
+    }, {
+      opacity: 1,
+      x: 0,
+      duration: 1.5,
+      ease: 'power2.out'
+    }, '<0.5')
+  return tl
+}
+function close_menu() {
+  const tl = gsap.timeline()
+  tl
+    .fromTo(['.menu__left > *', '.menu__right'], {
+      x: 0,
+      opacity: 1
+    }, {
+      x: -150,
+      opacity: 0,
+      duration: 1,
+      ease: 'power2.out'
+    })
+    .to('.container--menu', {
+      '--clip': '0rem',
+      duration: 1,
+      ease: 'power2.out'
+    }, '=-1')
+  return tl
 }
 </script>
 
 <template>
-  <header class="">
-    <nav class="flex justify-between items-center py-3">
-      <li>
-        <router-link to="/" class="">
-          <span class="text-2xl md:text-4xl font-semibold">Elvin Code</span>
-        </router-link>
-      </li>
-      <ul class="flex justify-between gap-6 items-center" :class="{'text-white': isDark}" >
-        <li>
-          <router-link to="">
-            <IconsGithub class="w-7 h-7" :class="{'text-white': isDark}"/>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="">
-            <IconLinkedin class="w-7 h-7" :class="{'text-white': isDark}"/>
-          </router-link>
-        </li>
-        <li @click="toggleDark" class="cursor-pointer" >
-          <IconMoon class="w-7 h-7" v-if="isDark" :class="{'text-white': isDark}"/>
-          <IconSun class="w-7 h-7"  v-else :class="{'text-white': isDark}"/>
-        </li>
-        <li class="cursor-pointer" @click="toggleNav">
-          <IconClose 
-            class="w-10 h-10 icon-close" 
-            v-if="isNavOpen" 
-            :class="{'text-white': isDark}"
-          />
-          <IconBars 
-            class="w-10 h-10 icon-bars" 
-            v-else 
-            :class="{'text-white': isDark}"
-          />
-        </li>
-      </ul>
+  <header>
+    <nav 
+      class="
+        w-20 h-20 fixed  text-gray-100 group bg-black/10 
+        backdrop-blur-md flex flex-col gap-4 ul rounded-full top-1/2 -translate-y-1/2
+        left-20 items-center justify-center
+      "
+    >
+      <button class="sidebar__menu-trigger" @click="open_menu">
+        <IconBars class="w-10 h-10 text-black" />
+      </button>
     </nav>
-    <nav class="nav-menu mt-10" :class="{ hidden: !isNavOpen }">
-      <ul class="flex flex-col gap-6 text-2xl uppercase mt-4 font-semibold font-oswald">
-        <li>
-          <router-link to="">
-            About
-          </router-link>
-        </li>
-        <li>
-          <router-link to="">
-            Conference speaker
-          </router-link>
-        </li>
-        <li>
-          <router-link to="">
-            Articles
-          </router-link>
-        </li>
-      </ul>
-    </nav>
+    <div class="containers">
+      <div 
+        class="
+          container container--menu bg-black/10 
+          backdrop-blur-md flex justify-between px-20 py-10
+        "
+      >
+        <div class="menu__layout">
+          <ul class="menu__left text-xl space-y-5">
+            <li>
+              <router-link to="/">
+                Home
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/">
+                About
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/">
+                Project
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/">
+                Conferences
+              </router-link>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar">
+          <button class="sidebar__menu-trigger menu__right" @click="close_menu">
+            <IconClose class="w-10 h-10"/>
+          </button>
+      </div>
+      </div>
+  </div>
   </header>
 </template>
-
 <style scoped>
+.container--menu, .container--main {
+  width: 100%;
+  max-height: 100vh;
+  height: 100%;
+  display: flex;
+}
+
+.container--menu {
+  --clip: 0;
+  clip-path: circle(var(--clip) at calc(7% + 1.5rem/2) 50%);
+  position: absolute;
+}
+
 
 </style>

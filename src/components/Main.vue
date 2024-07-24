@@ -3,6 +3,7 @@ import { ref, nextTick } from 'vue'
 import gsap from 'gsap'
 import { useDark } from '@vueuse/core';
 import { images } from '@/assets/images'
+import Card from './Card.vue';
 const isDark = useDark()
 </script>
 <template>
@@ -37,6 +38,9 @@ const isDark = useDark()
             sm:h-[40rem] sm:w-[300vw] lg:w-[200vw] 2xl:h-[60rem]
           "
         >
+          <Card
+          
+          />
           <!-- <img 
             class="h-full w-full object-cover" 
             src="" 
@@ -104,7 +108,7 @@ const isDark = useDark()
     </div>
   </section>
 </template>
-<style scoped>
+<!-- <style scoped>
 .marquee-10{
   animation: marque 10s linear infinite;
 }
@@ -122,4 +126,4 @@ const isDark = useDark()
     transform: translateX(-100%);
   }
 }
-</style>
+</style> -->
