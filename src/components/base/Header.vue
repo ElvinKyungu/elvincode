@@ -9,6 +9,7 @@ import IconsGithub from '../icons/IconsGithub.vue'
 import IconMoon from '../icons/IconMoon.vue'
 import IconSun from '../icons/IconSun.vue'
 import IconHome from '@/components/icons/IconHome.vue'
+import IconX from '../icons/IconX.vue'
 
 const isDark = useDark()
 
@@ -74,19 +75,45 @@ function close_menu() {
   <header>
     <nav 
       class="
-        w-20 h-20 fixed  text-gray-100 group bg-black/10 
-        backdrop-blur-md flex flex-col gap-4 ul rounded-full top-1/2 -translate-y-1/2
-        left-20 items-center justify-center
+        
       "
     >
-      <button class="sidebar__menu-trigger" @click="open_menu">
-        <IconBars class="w-10 h-10 text-black" />
+      <button 
+        class="
+          sidebar__menu-trigger
+          w-20 h-20 fixed  text-gray-100 group bg-black/10 
+          backdrop-blur-md flex flex-col gap-4 ul rounded-full top-1/2 
+          -translate-y-1/2
+          left-20 items-center justify-center
+        "
+        @click="open_menu">
+        <IconBars class="w-10 h-10" :class="{'text-black':!isDark, 'text-white':isDark}" />
       </button>
+      <ul 
+        class="fixed right-0 flex justify-end py-5 px-5 space-x-5"
+      >
+        <li class="cursor-pointer">
+          <IconsGithub :class="{'text-black':!isDark, 'text-white':isDark}"/>
+        </li>
+        <li class="cursor-pointer">
+          <IconLinkedin :class="{'text-black':!isDark, 'text-white':isDark}"/>
+        </li>
+        <li class="cursor-pointer">
+          <IconX :class="{'text-black':!isDark, 'text-white':isDark}"/>
+        </li>
+        <li class="flex cursor-pointer" @click="toggleDark">
+          <IconMoon v-if="isDark"  :class="{'text-black':!isDark, 'text-white':isDark}"/>
+          <IconSun  
+            v-else 
+            :class="{'text-black':!isDark, 'text-white':isDark}"
+          />
+        </li>
+      </ul>
     </nav>
     <div class="containers">
       <div 
         class="
-          container container--menu bg-black/10 
+          container container--menu bg-black/10 z-10
           backdrop-blur-md flex justify-between px-20 py-10
         "
       >
@@ -116,7 +143,10 @@ function close_menu() {
         </div>
         <div class="sidebar">
           <button class="sidebar__menu-trigger menu__right" @click="close_menu">
-            <IconClose class="w-10 h-10"/>
+            <IconClose 
+              class="w-10 h-10"
+              :class="{'text-black':!isDark, 'text-white':isDark}"
+            />
           </button>
       </div>
       </div>
