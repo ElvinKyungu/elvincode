@@ -1,6 +1,5 @@
 <template>
-  <svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1.78682 14.9498C2.29591 12.0861 4.78562 10 7.69419 10H8.30604C11.2146 10 13.7043 12.0861 14.2134 14.9498L15.5823 22.6499C15.8002 23.8753 14.8578 25 13.6132 25H2.38703C1.1424 25 0.200052 23.8753 0.417904 22.6499L1.78682 14.9498Z" fill="currentColor"></path>
-    <path d="M12.0001 4C12.0001 6.20914 10.2093 8 8.00011 8C5.79098 8 4.00011 6.20914 4.00011 4C4.00011 1.79086 5.79098 0 8.00011 0C10.2093 0 12.0001 1.79086 12.0001 4Z" fill="currentColor"></path>
-  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+  </svg>  
 </template>

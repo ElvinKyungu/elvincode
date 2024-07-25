@@ -10,10 +10,12 @@
 </script>
 
 <template>
-  <main class="min-h-screen" :class="{'text-white bg-[#222]': isDark}">
+  <main 
+    class="min-h-screen" 
+    :class="{'text-white bg-[#222]': isDark}"
+  >
     <div class="font-oswald">
       <Header  class=" "/>
-      <!--lg:mx-56 md:mx-20 sm:mx-10 mx-5  -->
       <Main />
       <Content />
       <ActionBars />
