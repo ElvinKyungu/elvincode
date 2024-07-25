@@ -48,10 +48,14 @@
     <div 
       ref="container" 
       class="
-        absolute bg-white 
-        bottom-0 left-1/2 -translate-x-1/2 h-[55px]
+        absolute 
+        bottom-0 left-1/2 -translate-x-1/2 h-[55px] backdrop-blur-md
         overflow-hidden rounded-2xl container p-4 py-6
       "
+      :class="{
+        'bg-black/10': !isDark, 
+        'bg-white/50 ': isDark
+      }"
     >
       <div v-show="activeComponent === 0" ref="details0">
         <AppCard />
@@ -72,10 +76,12 @@ import gsap from 'gsap'
 import IconCode from '@/components/icons/IconCode.vue'
 import IconPin from '@/components/icons/IconPin.vue'
 import IconBusiness from '@/components/icons/IconBusiness.vue'
-// import AppCard from './Cards/AppCard.vue'
-// import ComponentCard from './Cards/ComponentCard.vue'
-// import NotesComponent from './Cards/NotesComponent.vue'
+import AppCard from './Cards/AppCard.vue'
+import ComponentCard from './Cards/ComponentCard.vue'
+import NotesComponent from './Cards/NotesComponent.vue'
+import { useDark } from '@vueuse/core'
 
+const isDark = useDark()
 const activeComponent = ref<number | null>(null)
 const container = ref(null)
 const details0 = ref(null)
@@ -90,7 +96,7 @@ const handleMouseEnter = (index: number) => {
   activeComponent.value = index
   gsap.to(container.value, {
     width: [500, 460, 480][index],
-    height: [222, 194, 136][index] + 100,
+    height: [350, 194, 180][index] + 100,
     y: 17,
     borderRadius: 24,
     duration: duration,
