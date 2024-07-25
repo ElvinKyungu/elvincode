@@ -8,7 +8,6 @@ import IconLinkedin from '../icons/IconLinkedin.vue'
 import IconsGithub from '../icons/IconsGithub.vue'
 import IconMoon from '../icons/IconMoon.vue'
 import IconSun from '../icons/IconSun.vue'
-import IconHome from '@/components/icons/IconHome.vue'
 import IconX from '../icons/IconX.vue'
 
 const isDark = useDark()
@@ -16,8 +15,6 @@ const isDark = useDark()
 const toggleDark = ()=>{
   isDark.value = !isDark.value
 }
-
-const isNavOpen = ref(false)
 function open_menu() {
   const tl = gsap.timeline()
   tl
@@ -75,6 +72,7 @@ function close_menu() {
   <header>
     <nav 
       class="
+      
       "
     >
       <button 
@@ -82,7 +80,7 @@ function close_menu() {
           sidebar__menu-trigger
           w-20 h-20 fixed  text-gray-100 group bg-black/10 
           backdrop-blur-md flex flex-col gap-4 ul rounded-full top-1/2 
-          -translate-y-1/2
+          -translate-y-1/2 z-90
           left-10 lg:left-20 items-center justify-center
         "
         @click="open_menu">
@@ -109,11 +107,11 @@ function close_menu() {
         </li>
       </ul>
     </nav>
-    <div class="containers">
+    <div class="container z-12">
       <div 
         class="
-          container container--menu bg-black/10 z-10
-          backdrop-blur-md flex justify-between px-20 py-10
+          container container--menu bg-black/10 z-80 h-full
+          backdrop-blur-md flex justify-between px-20 py-10 relative
         "
       >
         <div class="menu__layout">

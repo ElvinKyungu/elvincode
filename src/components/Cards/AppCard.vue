@@ -42,7 +42,7 @@ const isDark = useDark()
     </div>
     <Button 
       title="See all testimonials"
-      link="/project"
+      link="/testimonials"
     />
     <hr>
   </div>

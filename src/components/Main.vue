@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import { ref, nextTick } from 'vue'
-import gsap from 'gsap'
-import { useDark } from '@vueuse/core';
-import { images } from '@/assets/images'
-import Card from './Card.vue';
-const isDark = useDark()
+
 </script>
 <template>
-  <section class="flex justify-center pt-10 z-0">
+  <section class="flex justify-center pt-10 z-0 ">
     <div class="absolute pl top-44">
       <div class="pl__outer-ring"></div>
       <div class="pl__inner-ring"></div>
