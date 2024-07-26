@@ -2,7 +2,7 @@
   <nav 
     class="
       container flex items-center mx-auto 
-      mt-40 flex-col relative w-[28rem]
+      mt-40 flex-col relative w-[28rem] z-0
     "
   >
     <ul 

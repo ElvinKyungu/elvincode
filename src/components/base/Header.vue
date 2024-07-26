@@ -72,7 +72,6 @@ function close_menu() {
   <header>
     <nav 
       class="
-      
       "
     >
       <button 
@@ -80,7 +79,7 @@ function close_menu() {
           sidebar__menu-trigger
           w-20 h-20 fixed  text-gray-100 group bg-black/10 
           backdrop-blur-md flex flex-col gap-4 ul rounded-full top-1/2 
-          -translate-y-1/2 z-90
+          -translate-y-1/2
           left-10 lg:left-20 items-center justify-center
         "
         @click="open_menu">
@@ -107,11 +106,11 @@ function close_menu() {
         </li>
       </ul>
     </nav>
-    <div class="container z-12">
+    <div class="containers">
       <div 
         class="
-          container container--menu bg-black/10 z-80 h-full
-          backdrop-blur-md flex justify-between px-20 py-10 relative
+          container container--menu bg-black/10 h-full
+          backdrop-blur-md flex justify-between px-20 py-10 
         "
       >
         <div class="menu__layout">
