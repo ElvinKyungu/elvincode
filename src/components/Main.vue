@@ -2,7 +2,7 @@
 
 </script>
 <template>
-  <section class="flex justify-center pt-10 z-0 ">
+  <section class="flex justify-center pt-10 z-0">
     <div class="absolute pl top-44">
       <div class="pl__outer-ring"></div>
       <div class="pl__inner-ring"></div>

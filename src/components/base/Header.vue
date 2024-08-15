@@ -110,7 +110,7 @@ function close_menu() {
       <div 
         class="
           container container--menu bg-black/10 h-full
-          backdrop-blur-md flex justify-between px-20 py-10 
+          backdrop-blur-md flex justify-between px-20 py-10
         "
       >
         <div class="menu__layout">
@@ -155,6 +155,7 @@ function close_menu() {
   max-height: 100vh;
   height: 100%;
   display: flex;
+  z-index: 99;
 }
 
 .container--menu {

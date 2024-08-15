@@ -14,7 +14,7 @@
   <div 
     class="h-full p-8 rounded shadow-md"
     :class="
-      {'bg-white text-gray-800': !isDark, 'bg-[#1b1b1b]': isDark}
+      {'bg-white text-gray-800 border border-gray-200': !isDark, 'bg-[#1b1b1b]': isDark}
     "
   >
     <IconCitation/>
