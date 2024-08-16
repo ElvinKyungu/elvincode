@@ -1,7 +1,43 @@
 <script setup lang="ts">
-  import { useDark } from '@vueuse/core'
+  import { ref, onMounted } from 'vue'
   import IconChek from '@/components/icons/IconChek.vue'
-  const isDark = useDark()
+
+  import { gsap } from 'gsap';
+
+  const defaultText = ref(null);
+  const hoverText = ref(null);
+
+  const animateIn = () => {
+    gsap.timeline()
+      .to(defaultText.value, {
+        y: '-100%',
+        opacity: 0,
+        duration: 0.2,
+        ease: 'power2.inOut'
+      })
+      .to(hoverText.value, {
+        y: '0%',
+        opacity: 1,
+        duration: 0.2,
+        ease: 'power2.inOut'
+      }, 0);
+  };
+
+  const animateOut = () => {
+    gsap.timeline()
+      .to(defaultText.value, {
+        y: '0%',
+        opacity: 1,
+        duration: 0.2,
+        ease: 'power2.inOut'
+      })
+      .to(hoverText.value, {
+        y: '100%',
+        opacity: 0,
+        duration: 0.2,
+        ease: 'power2.inOut'
+      }, 0);
+  };
 </script>
 <template>
   <main class="px-20 w-full font-oswald relative w-95% md:w-[80%] ">
@@ -26,7 +62,14 @@
                 Développeur web frontend à Efficient Outsource SRL 
               </h3>
               <ul class="flex items-center space-x-3 mt-5">
-                <li class="tag">Vuejs</li>
+                <li
+                  class="relative overflow-hidden tag flex items-center"
+                  @mouseenter="animateIn"
+                  @mouseleave="animateOut"
+                >
+                  <span ref="defaultText" class="block w-full">Vuejs</span>
+                  <span ref="hoverText" class="block w-full h-full absolute top-2 opacity-0">Vuejs</span>
+                </li>
                 <li class="tag">Typescript</li>
                 <li class="tag">Tailwindcss</li>
                 <li class="tag">VueUse</li>
