@@ -81,14 +81,14 @@ function close_menu() {
           backdrop-blur-md flex flex-col gap-4 ul rounded-full top-1/2 
           -translate-y-1/2
           left-10 lg:left-20 items-center justify-center
-          animate-pulse 
+          animate-pulse  
         "
         @click="open_menu">
         <span class="absolute w-full h-full rounded-full bg-white/20 opacity-70 transition-opacity duration-1000 ease-in-out animate-pulse"></span>
         <IconBars class="w-10 h-10 relative z-10" :class="{'text-black':!isDark, 'text-white':isDark}" />
       </button>
       <ul
-        class="fixed right-0 flex justify-end py-5 px-5 space-x-5"
+        class="fixed right-0 flex justify-end py-5 px-5 space-x-5 z-50"
       >
         <li class="cursor-pointer">
           <IconsGithub :class="{'text-black':!isDark, 'text-white':isDark}"/>
@@ -166,5 +166,7 @@ function close_menu() {
   position: absolute;
 }
 
-
+.sidebar__menu-trigger{
+  z-index: 99;
+}
 </style>
