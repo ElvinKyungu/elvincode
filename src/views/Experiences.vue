@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useDark } from "@vueuse/core";
-import Experience from "@/components/experiences/Experiences.vue";
-import Header from "@/components/base/Header.vue";
-import IconChek from "@/components/icons/IconChek.vue";
-const isDark = useDark();
+import { useDark } from "@vueuse/core"
+import Experience from "@/components/experiences/Experiences.vue"
+import Header from "@/components/base/Header.vue"
+import IconChek from "@/components/icons/IconChek.vue"
+const isDark = useDark()
 </script>
 <template>
   <main class="min-h-screen w-full" :class="{ 'text-white bg-[#222]': isDark }">
@@ -12,7 +12,7 @@ const isDark = useDark();
       class="py-4 overflow-hidden flex justify-center h-screen w-full pt-36 relative z-0"
     >
       <main class="px-20 w-full font-oswald relative w-95% md:w-[80%]">
-        <h1 class="mb-10 text-5xl text-center">Expériences</h1>
+        <h1 class="mb-10 text-5xl text-center">Experiences</h1>
         <div class="border border-[#363333] relative px-6 pt-5 pb-7 rounded-xl">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
@@ -25,6 +25,7 @@ const isDark = useDark();
                   'Tailwindcss',
                   'VueUse',
                   'GSAP',
+                  'GitLab',
                   'API',
                 ]"
                 :isLast="false"
@@ -45,6 +46,8 @@ const isDark = useDark();
                   'GSAP',
                   'Google Map',
                   'Supabase',
+                  'Git',
+                  'Github',
                 ]"
                 :isLast="false"
               >
@@ -66,6 +69,7 @@ const isDark = useDark();
                   'UnoCSS',
                   'Netlify',
                   'Git',
+                  'Github',
                 ]"
                 :isLast="false"
               >
@@ -83,6 +87,8 @@ const isDark = useDark();
                   'Typescript',
                   'Tailwindcss',
                   'API',
+                  'Git',
+                  'GitHub',
                 ]"
                 :isLast="false"
               >
@@ -98,6 +104,8 @@ const isDark = useDark();
                   'Vuejs',
                   'Typescript',
                   'Tailwindcss',
+                  'Git',
+                  'GitHub',
                 ]"
                 :isLast="false"
               >
@@ -114,6 +122,7 @@ const isDark = useDark();
                   'Tailwindcss',
                   'GSAP',
                   'Git',
+                  'GitHub',
                 ]"
                 :isLast="true"
               >
