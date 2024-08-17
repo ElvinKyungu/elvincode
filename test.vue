@@ -1,490 +1,1405 @@
 <template>
-    <div class="border-b border-gray-30 dark:border-gray-500">
-        <div class="mx-auto grid max-w-8xl grid-cols-12 px-2 xs:px-6 sm:px-10">
-            <div class="order-2 col-span-12 flex flex-col justify-between border-x border-gray-30 dark:border-gray-500 md:order-1 md:col-span-6 min-[896px]:col-span-7 xl:col-span-4">
-                <div class="px-4 pt-4 xs:px-10 xs:pt-10">
-                    <h2 class="text-5xl font-bold tracking-snug" style="opacity:0;transform:translateY(-10px) translateZ(0)">About me</h2>
-                    <div class="mt-6 space-y-6 text-lg leading-normal text-gray-50">
-                        <p style="opacity:0;transform:translateY(-10px) translateZ(0)">I’m a nerd from Estonia working as a designer &amp;developer, building all sorts of interesting and dumb ideas.</p>
-                        <p style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                            I like to
-                            <!-- -->
-                            <a target="_blank" class="text-gray-1000 underline decoration-green-400 dark:text-white" href="https://www.instagram.com/kkkuldar/">play with cameras</a>
-                            , nerd over cool
-                            <!-- -->
-                            <a target="_blank" class="text-gray-1000 underline decoration-green-400 dark:text-white" href="https://www.youtube.com/watch?v=TeVbYCIFVa8">space rockets</a>
-                            <!-- -->
-                            and learn more about math and artificial intelligence.
-                        </p>
-                    </div>
-                    <svg viewBox="0 0 154 46" fill="none" class="mt-8 h-10">
-                        <path d="M31.9183 19.3324C30.4381 22.1357 28.9147 25.1882 27.1721 27.8388C26.1749 29.355 25.2335 31.0005 24.348 32.7752C23.4624 34.5499 22.8896 36.1276 22.6297 37.5083C22.3697 38.8889 22.3076 39.9541 22.4433 40.7039C22.5791 41.4536 23.0058 41.9378 23.7236 42.1563C24.4407 42.3748 26.0503 41.7292 28.5525 40.2195C31.0545 38.7105 33.4476 36.8494 35.7315 34.6361C38.0148 32.4234 39.7671 30.49 40.9885 28.8358C40.81 28.9407 40.4668 29.3229 39.9591 29.9824C39.4507 30.6418 38.9862 31.4287 38.5654 32.3429C38.1447 33.2571 37.9094 34.025 37.8595 34.6467C37.8103 35.2684 37.8003 35.7146 37.8294 35.9852C37.8591 36.2559 37.9128 36.442 37.9905 36.5435C38.0682 36.6443 38.2535 36.772 38.5464 36.9266C38.8386 37.0812 39.2251 37.1858 39.7058 37.2406C40.1872 37.2955 41.4247 36.8179 43.4181 35.8076C45.4123 34.7975 47.7689 33.4129 50.4882 31.654C50.5966 31.6758 50.5578 32.0357 50.3718 32.7337C50.1865 33.4311 50.312 34.5297 50.7483 36.0294C51.6431 36.5776 53.9843 35.7117 57.7721 33.4318C61.5604 31.1526 65.1752 28.3612 68.6162 25.0577C72.0566 21.7534 74.7999 18.3675 76.846 14.9C76.7331 14.7325 75.6624 15.3711 73.634 16.816C71.6055 18.2609 69.7903 19.8467 68.1883 21.5734C66.587 23.3001 65.4474 24.7502 64.7697 25.9237C64.0913 27.097 63.6646 28.6028 63.4898 30.441C63.315 32.2792 64.1589 33.4024 66.0215 33.8105C67.8848 34.2186 71.8164 32.1848 77.8161 27.7088C77.7835 27.7007 77.4167 28.0584 76.7157 28.7817C76.0146 29.5056 75.5249 30.8859 75.2464 32.9226C75.7856 33.4804 77.3111 33.0644 79.823 31.6745C82.3342 30.2853 84.6217 28.7167 86.6855 26.9686C88.7485 25.2211 92.6488 20.6817 98.3863 13.3503C98.2673 13.3157 97.3365 14.1062 95.5938 15.7217C93.8511 17.3372 92.1907 19.2198 90.6125 21.3695C89.0344 23.5193 88.0251 25.1407 87.5848 26.2338C87.1443 27.3276 86.9275 28.169 86.9344 28.758C86.942 29.3471 87.0109 29.8003 87.141 30.1176C87.2705 30.4356 87.5603 30.6643 88.0104 30.8038C88.4606 30.9432 89.127 30.9203 90.0096 30.735C90.8922 30.549 93.3625 29.3144 97.4204 27.031C97.168 27.902 97.219 28.7717 97.5733 29.6403C97.5831 29.6461 97.85 29.7509 98.3738 29.9546C98.8969 30.1583 102.991 28.9894 110.656 26.4481L111.08 26.7077C111.894 27.1639 114.072 27.057 117.614 26.3872C121.154 25.7179 124.668 25.0411 128.154 24.3567C131.639 23.673 135.013 23.2486 138.277 23.0834C141.541 22.9183 146.237 22.9164 152.365 23.0775" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="0px 1px"></path>
-                        <path d="M40.2003 7.0006C39.9722 7.12773 38.8734 8.72997 36.9038 11.8072C34.9342 14.8845 32.6264 18.0426 29.9803 21.2815C27.3349 24.5206 24.1872 27.8954 20.5374 31.4058C16.8877 34.9156 13.9593 37.5514 11.7523 39.3133C9.54603 41.0752 7.94558 42.2262 6.95099 42.7663C5.95639 43.3064 5.07781 43.6316 4.31526 43.7417C3.55264 43.8526 2.86083 43.7909 2.23984 43.5568C1.6727 42.6465 3.21306 40.4249 6.8609 36.892C10.5087 33.3598 14.3189 30.291 18.2916 27.6857C22.2635 25.0803 26.9565 22.5582 32.3704 20.1194C37.7844 17.6798 42.7159 15.6641 47.165 14.0722C51.6133 12.4802 56.6983 11.1464 62.4201 10.0709" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="0px 1px"></path>
-                    </svg>
-                </div>
-                <div class="px-8 pb-8 text-right">
-                    <div class="mb-2 text-sm font-bold uppercase" style="opacity:0;transform:translateY(-10px) translateZ(0)">Find me at</div>
-                    <div class="mb-4 font-medium text-gray-50" style="opacity:0;transform:translateY(-10px) translateZ(0)">email@kuldar.com</div>
-                    <div class="flex items-center justify-end space-x-2">
-                        <a title="Youtube" href="https://youtube.com/@kuldar" target="_blank" class="group relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-30 transition-colors hover:border-green-400 active:top-[1px] dark:border-gray-500 dark:hover:border-gray-200" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 flex-shrink-0 text-gray-40 transition-all group-hover:text-gray-800 dark:text-gray-50 dark:group-hover:text-green-400">
-                                <path stroke="currentColor" d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
-                                <path stroke="currentColor" d="m10 15 5-3-5-3z"></path>
-                            </svg>
-                        </a>
-                        <a title="X" href="https://twitter.com/kkuldar" target="_blank" class="group relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-30 transition-colors hover:border-green-400 active:top-[1px] dark:border-gray-500 dark:hover:border-gray-200" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                            <svg viewBox="0 0 24 24" class="w-5 flex-shrink-0 text-gray-40 transition-all group-hover:text-gray-800 dark:text-gray-50 dark:group-hover:text-green-400">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                        <a title="Github" href="https://github.com/kuldar" target="_blank" class="group relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-30 transition-colors hover:border-green-400 active:top-[1px] dark:border-gray-500 dark:hover:border-gray-200" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                            <svg viewBox="0 0 22 22" fill="none" class="w-5 flex-shrink-0 text-gray-40 transition-all group-hover:text-gray-800 dark:text-gray-50 dark:group-hover:text-green-400">
-                                <path d="M11 0C4.9225 0 0 5.0503 0 11.2793C0 16.2638 3.1515 20.4907 7.52125 21.9805C8.07125 22.0867 8.27292 21.738 8.27292 21.4382C8.27292 21.1703 8.26375 20.4606 8.25917 19.5207C5.19933 20.2012 4.554 18.0074 4.554 18.0074C4.0535 16.7056 3.33025 16.3578 3.33025 16.3578C2.33383 15.6585 3.40725 15.6726 3.40725 15.6726C4.51183 15.7515 5.09208 16.8343 5.09208 16.8343C6.07292 18.5591 7.667 18.061 8.29583 17.7724C8.39483 17.043 8.67808 16.5458 8.9925 16.2638C6.54958 15.9818 3.982 15.0118 3.982 10.6899C3.982 9.45862 4.40825 8.45289 5.11408 7.66334C4.99033 7.37853 4.61908 6.23181 5.21033 4.67808C5.21033 4.67808 6.13158 4.37542 8.23533 5.83421C9.11533 5.58325 10.0503 5.45918 10.9853 5.45354C11.9203 5.45918 12.8553 5.58325 13.7353 5.83421C15.8253 4.37542 16.7466 4.67808 16.7466 4.67808C17.3378 6.23181 16.9666 7.37853 16.8566 7.66334C17.5578 8.45289 17.9841 9.45862 17.9841 10.6899C17.9841 15.0231 15.4128 15.9771 12.9653 16.2544C13.3503 16.5928 13.7078 17.2846 13.7078 18.3411C13.7078 19.8506 13.6941 21.0631 13.6941 21.4297C13.6941 21.7258 13.8866 22.0783 14.4503 21.9655C18.8512 20.486 22 16.2563 22 11.2793C22 5.0503 17.0748 0 11 0Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="order-3 col-span-12 border-x border-t border-gray-30 bg-gray-5/20 bg-dotted-light bg-center p-4 dark:border-gray-500 dark:bg-transparent dark:bg-dotted-dark xs:p-8 xl:order-3 xl:col-span-4 xl:border-l-0 xl:border-t-0">
-                <div class="flex items-center space-x-3" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                    <svg viewBox="0 0 17 16" fill="none" class="h-4 text-green-500 dark:text-white">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69968 1.52865V6.17265C6.69968 6.90165 6.40968 7.60065 5.89468 8.11665L4.67768 9.33265C5.89128 9.29107 7.10025 9.50256 8.22768 9.95365L8.72968 10.1546C10.056 10.6853 11.5095 10.8122 12.9077 10.5196L10.5047 8.11665C9.98925 7.60098 9.6997 6.90174 9.69968 6.17265V1.52865C8.70003 1.49133 7.69933 1.49133 6.69968 1.52865ZM11.1997 1.61265L11.3897 1.62765C11.4887 1.63719 11.5887 1.62694 11.6837 1.59747C11.7787 1.56801 11.867 1.51993 11.9432 1.45604C12.0195 1.39214 12.0823 1.31371 12.128 1.22531C12.1736 1.1369 12.2013 1.0403 12.2092 0.941115C12.2172 0.841933 12.2053 0.742159 12.1744 0.647604C12.1434 0.553049 12.0939 0.465603 12.0288 0.39036C11.9637 0.315117 11.8843 0.253581 11.7951 0.209336C11.706 0.165091 11.609 0.139022 11.5097 0.132648C9.30655 -0.044216 7.0928 -0.044216 4.88968 0.132648C4.69375 0.151531 4.5131 0.246682 4.3867 0.397571C4.2603 0.54846 4.19828 0.742992 4.21403 0.939196C4.22978 1.1354 4.32203 1.31755 4.47088 1.44635C4.61973 1.57514 4.81325 1.64026 5.00968 1.62765L5.19968 1.61265V6.17265C5.19968 6.50365 5.06768 6.82165 4.83368 7.05565L0.799677 11.0906C-0.696323 12.5866 -0.017323 15.2406 2.20268 15.5656C4.16068 15.8526 6.16268 16.0006 8.19968 16.0006C10.2367 16.0006 12.2387 15.8526 14.1967 15.5646C16.4167 15.2396 17.0967 12.5856 15.5997 11.0896L11.5657 7.05565C11.3315 6.82143 11.1999 6.50385 11.1997 6.17265V1.61265Z" fill="currentColor"></path>
-                    </svg>
-                    <div class="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400">Experiments</div>
-                </div>
-                <div class="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-5">
-                    <a target="_blank" href="https://generatedhumans.com/" class="group/card relative col-span-6 overflow-hidden rounded-2xl border border-gray-30 bg-white bg-gradient-to-br from-gray-35 via-white to-gray-40 transition-colors hover:border-gray-35 active:top-[1px] dark:border-gray-500 dark:bg-gray-1000 dark:from-gray-900 dark:via-gray-1000 dark:to-gray-800 dark:hover:border-gray-200/70 last:max-[1103px]:col-span-6 md:col-span-3 min-[1104px]:col-span-2 xl:col-span-6" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                        <div class="flex h-full items-center justify-between space-x-4 bg-white transition-colors hover:bg-white/90 dark:bg-gray-1000 dark:hover:bg-transparent">
-                            <div class="flex-shrink-0 p-6 pr-2">
-                                <h3 class="text-3xl font-bold leading-none">Generated</h3>
-                                <div class="mt-2 text-lg leading-snug text-gray-50">Wallpapers for mobile</div>
-                            </div>
-                            <div class="origin-top-left translate-x-2 translate-y-1 rotate-6 overflow-hidden opacity-60 transition-all duration-200 group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:rotate-0 group-hover/card:opacity-100">
-                                <div class="mt-6 h-24 min-w-[160px] max-w-[200px] rounded-tl-xl border-l border-t border-gray-30 p-4 dark:border-gray-500">
-                                    <div class="mb-1 h-1.5 max-w-[80px] rounded-sm bg-gray-40 dark:bg-gray-500"></div>
-                                    <div class="mb-2.5 h-1 max-w-[52px] rounded-sm bg-gray-30 dark:bg-gray-700"></div>
-                                    <div class="flex gap-2">
-                                        <div class="flex h-14 min-w-[32px] flex-1 items-center justify-center rounded border border-gray-30 text-gray-30 dark:border-gray-500 dark:text-gray-500">
-                                            <svg width="12" height="25" viewBox="0 0 12 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.714914 15.9573C0.334687 12.7887 2.80875 10 6.00004 10C9.19133 10 11.6654 12.7887 11.2852 15.9573L10.4114 23.2383C10.2908 24.2435 9.4381 25 8.42569 25H3.57439C2.56199 25 1.70926 24.2435 1.58864 23.2383L0.714914 15.9573Z" fill="currentColor"></path>
-                                                <path d="M10 4C10 6.20914 8.20918 8 6.00004 8C3.7909 8 2.00004 6.20914 2.00004 4C2.00004 1.79086 3.7909 0 6.00004 0C8.20918 0 10 1.79086 10 4Z" fill="currentColor"></path>
-                                            </svg>
-                                        </div>
-                                        <div class="flex h-14 min-w-[32px] flex-1 items-center justify-center rounded border border-gray-40 text-gray-50 transition-colors duration-200 group-hover/card:text-gray-100 dark:border-gray-100 dark:text-gray-100 dark:group-hover/card:border-white dark:group-hover/card:text-white">
-                                            <svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.78682 14.9498C2.29591 12.0861 4.78562 10 7.69419 10H8.30604C11.2146 10 13.7043 12.0861 14.2134 14.9498L15.5823 22.6499C15.8002 23.8753 14.8578 25 13.6132 25H2.38703C1.1424 25 0.200052 23.8753 0.417904 22.6499L1.78682 14.9498Z" fill="currentColor"></path>
-                                                <path d="M12.0001 4C12.0001 6.20914 10.2093 8 8.00011 8C5.79098 8 4.00011 6.20914 4.00011 4C4.00011 1.79086 5.79098 0 8.00011 0C10.2093 0 12.0001 1.79086 12.0001 4Z" fill="currentColor"></path>
-                                            </svg>
-                                        </div>
-                                        <div class="flex h-14 min-w-[32px] flex-1 items-center justify-center rounded border border-gray-30 text-gray-30 dark:border-gray-500 dark:text-gray-500">
-                                            <svg width="12" height="25" viewBox="0 0 12 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.714914 15.9573C0.334687 12.7887 2.80875 10 6.00004 10C9.19133 10 11.6654 12.7887 11.2852 15.9573L10.4114 23.2383C10.2908 24.2435 9.4381 25 8.42569 25H3.57439C2.56199 25 1.70926 24.2435 1.58864 23.2383L0.714914 15.9573Z" fill="currentColor"></path>
-                                                <path d="M10 4C10 6.20914 8.20918 8 6.00004 8C3.7909 8 2.00004 6.20914 2.00004 4C2.00004 1.79086 3.7909 0 6.00004 0C8.20918 0 10 1.79086 10 4Z" fill="currentColor"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a target="_blank" href="https://awesomeai.xyz/" class="group/card relative col-span-6 overflow-hidden rounded-2xl border border-gray-30 bg-white bg-gradient-to-br from-gray-35 via-white to-gray-40 transition-colors hover:border-gray-35 active:top-[1px] dark:border-gray-500 dark:bg-gray-1000 dark:from-gray-900 dark:via-gray-1000 dark:to-gray-800 dark:hover:border-gray-200/70 last:max-[1103px]:col-span-6 md:col-span-3 min-[1104px]:col-span-2 xl:col-span-6" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                        <div class="flex h-full items-center justify-between space-x-4 bg-white transition-colors hover:bg-white/90 dark:bg-gray-1000 dark:hover:bg-transparent">
-                            <div class="flex-shrink-0 p-6 pr-2">
-                                <h3 class="text-3xl font-bold leading-none">Awesome AI</h3>
-                                <div class="mt-2 text-lg leading-snug text-gray-50">AI resource aggregator</div>
-                            </div>
-                            <div class="origin-top-left translate-x-2 translate-y-1 rotate-6 items-end justify-end overflow-hidden opacity-60 transition-all duration-200 group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:rotate-0 group-hover/card:opacity-100">
-                                <div class="mt-6 h-24 min-w-[160px] max-w-[200px] rounded-tl-xl border-l border-t border-gray-30 p-4 dark:border-gray-500">
-                                    <div class="flex flex-col gap-2">
-                                        <div class="flex items-center gap-2">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-40 dark:text-gray-500">
-                                                <path d="M12 4.5L12 19.5M12 19.5L5.25 12.75M12 19.5L18.75 12.75" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                            <div class="flex-1">
-                                                <div class="mb-1 h-1.5 max-w-[76px] rounded-sm bg-gray-40 dark:bg-gray-500"></div>
-                                                <div class="h-1 max-w-[50px] rounded-sm bg-gray-30 dark:bg-gray-700"></div>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-2">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 rotate-180 text-gray-100 transition-colors duration-200 group-hover/card:text-gray-100 dark:group-hover/card:text-white">
-                                                <path d="M12 4.5L12 19.5M12 19.5L5.25 12.75M12 19.5L18.75 12.75" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                            <div class="flex-1">
-                                                <div class="mb-1 h-1.5 max-w-[60px] rounded-sm bg-gray-50 transition-colors duration-200 group-hover/card:text-gray-100 dark:group-hover/card:bg-white"></div>
-                                                <div class="h-1 max-w-[34px] rounded-sm bg-gray-50 transition-colors duration-200 group-hover/card:text-gray-100 dark:group-hover/card:bg-white"></div>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-2">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-40 dark:text-gray-500">
-                                                <path d="M12 4.5L12 19.5M12 19.5L5.25 12.75M12 19.5L18.75 12.75" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                            <div class="flex-1">
-                                                <div class="mb-1 h-1.5 max-w-[86px] rounded-sm bg-gray-40 dark:bg-gray-500"></div>
-                                                <div class="h-1 max-w-[58px] rounded-sm bg-gray-30 dark:bg-gray-700"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a target="_blank" href="https://github.com/kuldar/untick" class="group/card relative col-span-6 overflow-hidden rounded-2xl border border-gray-30 bg-white bg-gradient-to-br from-gray-35 via-white to-gray-40 transition-colors hover:border-gray-35 active:top-[1px] dark:border-gray-500 dark:bg-gray-1000 dark:from-gray-900 dark:via-gray-1000 dark:to-gray-800 dark:hover:border-gray-200/70 last:max-[1103px]:col-span-6 md:col-span-3 min-[1104px]:col-span-2 xl:col-span-6" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                        <div class="flex h-full items-center justify-between space-x-4 bg-white transition-colors hover:bg-white/90 dark:bg-gray-1000 dark:hover:bg-transparent">
-                            <div class="flex-shrink-0 p-6 pr-2">
-                                <h3 class="text-3xl font-bold leading-none">Untick</h3>
-                                <div class="mt-2 text-lg leading-snug text-gray-50">Tiny Chrome extension</div>
-                            </div>
-                            <div class="flex h-full items-end overflow-hidden opacity-60 transition-opacity duration-200 group-hover/card:opacity-100">
-                                <div class="flex gap-10 pl-3">
-                                    <div class="relative mb-6 hidden h-24 min-w-[160px] max-w-[200px] origin-bottom-right -translate-x-2 -translate-y-1 rotate-6 rounded-b-xl border-x border-b border-gray-30 transition-transform duration-200 group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:rotate-0 dark:border-gray-500 md:block min-[1104px]:hidden">
-                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -bottom-3 left-1/2 h-6 w-6 -translate-x-1/2 transform bg-white text-gray-50 transition-all duration-200 group-hover/card:text-gray-100 dark:bg-gray-1000 dark:text-gray-100 dark:group-hover/card:text-white">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.67751 9.31007C2.21429 7.50679 2.68862 5.51239 4.1005 4.1005C5.51238 2.68862 7.50679 2.21429 9.31007 2.67751C10.2576 1.07485 12.0033 0 14 0C15.9967 0 17.7424 1.07485 18.6899 2.67752C20.4932 2.2143 22.4876 2.68863 23.8995 4.10051C25.3114 5.51239 25.7857 7.50679 25.3225 9.31007C26.9251 10.2576 28 12.0033 28 14C28 15.9967 26.9252 17.7424 25.3225 18.6899C25.7857 20.4932 25.3114 22.4876 23.8995 23.8995C22.4876 25.3114 20.4932 25.7857 18.6899 25.3225C17.7424 26.9251 15.9967 28 14 28C12.0033 28 10.2576 26.9251 9.31007 25.3225C7.50679 25.7857 5.51239 25.3114 4.10051 23.8995C2.68863 22.4876 2.2143 20.4932 2.67752 18.6899C1.07485 17.7424 0 15.9967 0 14C0 12.0033 1.07485 10.2576 2.67751 9.31007ZM19.4355 11.0745C20.0213 10.4888 20.0213 9.53901 19.4355 8.95323C18.8498 8.36744 17.9 8.36744 17.3142 8.95323L14.1943 12.0732L11.0743 8.95323C10.4885 8.36744 9.5388 8.36744 8.95301 8.95323C8.36723 9.53902 8.36723 10.4888 8.95301 11.0745L12.073 14.1945L8.95311 17.3143C8.36733 17.9001 8.36733 18.8499 8.95311 19.4357C9.5389 20.0214 10.4886 20.0214 11.0744 19.4357L14.1943 16.3158L17.3141 19.4357C17.8999 20.0214 18.8497 20.0214 19.4354 19.4357C20.0212 18.8499 20.0212 17.9001 19.4354 17.3143L16.3156 14.1945L19.4355 11.0745Z" fill="currentColor"></path>
-                                        </svg>
-                                        <div class="flex flex-col gap-2 p-4">
-                                            <div class="flex items-center gap-2">
-                                                <div class="h-3.5 w-3.5 rounded-full bg-gray-30 dark:bg-gray-500"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 h-1 max-w-[60px] rounded-sm bg-gray-40 dark:bg-gray-500"></div>
-                                                    <div class="h-1 max-w-[40px] rounded-sm bg-gray-30 dark:bg-gray-700"></div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-2">
-                                                <div class="h-3.5 w-3.5 rounded-full bg-gray-30 dark:bg-gray-500"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 h-1 max-w-[78px] rounded-sm bg-gray-40 dark:bg-gray-500"></div>
-                                                    <div class="h-1 max-w-[55px] rounded-sm bg-gray-30 dark:bg-gray-700"></div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-2">
-                                                <div class="h-3.5 w-3.5 rounded-full bg-gray-30 dark:bg-gray-500"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 h-1 max-w-[70px] rounded-sm bg-gray-40 dark:bg-gray-500"></div>
-                                                    <div class="h-1 max-w-[50px] rounded-sm bg-gray-30 dark:bg-gray-700"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="relative mt-6 h-24 min-w-[160px] max-w-[200px] origin-top-left translate-x-2 translate-y-1 rotate-6 rounded-tl-xl border-l border-t border-gray-30 transition-transform duration-200 group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:rotate-0 dark:border-gray-500">
-                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -top-4 left-1/2 h-6 w-6 -translate-x-1/2 transform bg-white text-gray-50 transition-all duration-200 group-hover/card:text-gray-100 dark:bg-gray-1000 dark:text-gray-100 dark:group-hover/card:text-white">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.67751 9.31007C2.21429 7.50679 2.68862 5.51239 4.1005 4.1005C5.51238 2.68862 7.50679 2.21429 9.31007 2.67751C10.2576 1.07485 12.0033 0 14 0C15.9967 0 17.7424 1.07485 18.6899 2.67752C20.4932 2.2143 22.4876 2.68863 23.8995 4.10051C25.3114 5.51239 25.7857 7.50679 25.3225 9.31007C26.9251 10.2576 28 12.0033 28 14C28 15.9967 26.9252 17.7424 25.3225 18.6899C25.7857 20.4932 25.3114 22.4876 23.8995 23.8995C22.4876 25.3114 20.4932 25.7857 18.6899 25.3225C17.7424 26.9251 15.9967 28 14 28C12.0033 28 10.2576 26.9251 9.31007 25.3225C7.50679 25.7857 5.51239 25.3114 4.10051 23.8995C2.68863 22.4876 2.2143 20.4932 2.67752 18.6899C1.07485 17.7424 0 15.9967 0 14C0 12.0033 1.07485 10.2576 2.67751 9.31007ZM19.4355 11.0745C20.0213 10.4888 20.0213 9.53901 19.4355 8.95323C18.8498 8.36744 17.9 8.36744 17.3142 8.95323L14.1943 12.0732L11.0743 8.95323C10.4885 8.36744 9.5388 8.36744 8.95301 8.95323C8.36723 9.53902 8.36723 10.4888 8.95301 11.0745L12.073 14.1945L8.95311 17.3143C8.36733 17.9001 8.36733 18.8499 8.95311 19.4357C9.5389 20.0214 10.4886 20.0214 11.0744 19.4357L14.1943 16.3158L17.3141 19.4357C17.8999 20.0214 18.8497 20.0214 19.4354 19.4357C20.0212 18.8499 20.0212 17.9001 19.4354 17.3143L16.3156 14.1945L19.4355 11.0745Z" fill="currentColor"></path>
-                                        </svg>
-                                        <div class="flex flex-col gap-2 p-4">
-                                            <div class="flex items-center gap-2">
-                                                <div class="h-3.5 w-3.5 rounded-full bg-gray-30 dark:bg-gray-500"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 h-1 max-w-[60px] rounded-sm bg-gray-40 dark:bg-gray-500"></div>
-                                                    <div class="h-1 max-w-[40px] rounded-sm bg-gray-30 dark:bg-gray-700"></div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-2">
-                                                <div class="h-3.5 w-3.5 rounded-full bg-gray-30 dark:bg-gray-500"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 h-1 max-w-[78px] rounded-sm bg-gray-40 dark:bg-gray-500"></div>
-                                                    <div class="h-1 max-w-[55px] rounded-sm bg-gray-30 dark:bg-gray-700"></div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-2">
-                                                <div class="h-3.5 w-3.5 rounded-full bg-gray-30 dark:bg-gray-500"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 h-1 max-w-[70px] rounded-sm bg-gray-40 dark:bg-gray-500"></div>
-                                                    <div class="h-1 max-w-[50px] rounded-sm bg-gray-30 dark:bg-gray-700"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="order-1 col-span-12 flex border-x border-gray-30 px-4 pt-4 dark:border-gray-500 xs:px-8 xs:pt-8 md:order-2 md:col-span-6 md:border-l-0 md:border-r md:pb-8 min-[896px]:col-span-5 xl:order-2 xl:col-span-4">
-                <div class="relative flex h-80 w-64 rounded-2xl border-t border-gray-50/20 bg-gray-1000 bg-cover bg-center bg-no-repeat p-2 brightness-125 dark:brightness-100 md:h-auto md:w-full" style="background-image:url(&quot;/_next/static/media/portrait.64ddd9d1.jpg&quot;);opacity:0;transform:translateY(-10px) rotate(3deg) translateZ(0)">
-                    <canvas class="absolute inset-0 z-10 hidden cursor-draw md:block"></canvas>
-                    <div class="flex w-full items-end rounded-xl border border-white/20 p-3 dark:border-gray-50/20">
-                        <div class="flex items-center space-x-3">
-                            <svg viewBox="0 0 18 14" fill="none" class="h-4 text-white/50">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2.25C0 1.65326 0.237053 1.08097 0.65901 0.65901C1.08097 0.237053 1.65326 0 2.25 0H15.75C16.0455 0 16.3381 0.058198 16.611 0.171271C16.884 0.284344 17.1321 0.450078 17.341 0.65901C17.5499 0.867942 17.7157 1.11598 17.8287 1.38896C17.9418 1.66194 18 1.95453 18 2.25V11.75C18 12.0455 17.9418 12.3381 17.8287 12.611C17.7157 12.884 17.5499 13.1321 17.341 13.341C17.1321 13.5499 16.884 13.7157 16.611 13.8287C16.3381 13.9418 16.0455 14 15.75 14H2.25C1.65326 14 1.08097 13.7629 0.65901 13.341C0.237053 12.919 0 12.3467 0 11.75V2.25ZM1.5 8.06V11.75C1.5 12.164 1.836 12.5 2.25 12.5H15.75C15.9489 12.5 16.1397 12.421 16.2803 12.2803C16.421 12.1397 16.5 11.9489 16.5 11.75V9.06L14.28 6.841C14.1394 6.70055 13.9488 6.62166 13.75 6.62166C13.5512 6.62166 13.3606 6.70055 13.22 6.841L11.31 8.75L11.78 9.22C11.8537 9.28866 11.9128 9.37146 11.9538 9.46346C11.9948 9.55546 12.0168 9.65478 12.0186 9.75548C12.0204 9.85618 12.0018 9.95621 11.9641 10.0496C11.9264 10.143 11.8703 10.2278 11.799 10.299C11.7278 10.3703 11.643 10.4264 11.5496 10.4641C11.4562 10.5018 11.3562 10.5204 11.2555 10.5186C11.1548 10.5168 11.0555 10.4948 10.9635 10.4538C10.8715 10.4128 10.7887 10.3537 10.72 10.28L5.53 5.091C5.38937 4.95055 5.19875 4.87166 5 4.87166C4.80125 4.87166 4.61063 4.95055 4.47 5.091L1.5 8.06ZM11 4C11 4.26522 10.8946 4.51957 10.7071 4.70711C10.5196 4.89464 10.2652 5 10 5C9.73478 5 9.48043 4.89464 9.29289 4.70711C9.10536 4.51957 9 4.26522 9 4C9 3.73478 9.10536 3.48043 9.29289 3.29289C9.48043 3.10536 9.73478 3 10 3C10.2652 3 10.5196 3.10536 10.7071 3.29289C10.8946 3.48043 11 3.73478 11 4Z" fill="currentColor"></path>
-                            </svg>
-                            <div class="text-sm font-bold uppercase text-white">IMG_0526.jpg</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="border-b border-gray-30 dark:border-gray-500">
+    <div class="mx-auto grid max-w-8xl grid-cols-12 px-2 xs:px-6 sm:px-10">
+      <div
+        class="order-2 col-span-12 flex flex-col justify-between border-x border-gray-30 dark:border-gray-500 md:order-1 md:col-span-6 min-[896px]:col-span-7 xl:col-span-4"
+      >
+        <div class="px-4 pt-4 xs:px-10 xs:pt-10">
+          <h2
+            class="text-5xl font-bold tracking-snug"
+            style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+          >
+            About me
+          </h2>
+          <div class="mt-6 space-y-6 text-lg leading-normal text-gray-50">
+            <p style="opacity: 0; transform: translateY(-10px) translateZ(0)">
+              I’m a nerd from Estonia working as a designer &amp;developer,
+              building all sorts of interesting and dumb ideas.
+            </p>
+            <p style="opacity: 0; transform: translateY(-10px) translateZ(0)">
+              I like to
+              <!-- -->
+              <a
+                target="_blank"
+                class="text-gray-1000 underline decoration-green-400 dark:text-white"
+                href="https://www.instagram.com/kkkuldar/"
+                >play with cameras</a
+              >
+              , nerd over cool
+              <!-- -->
+              <a
+                target="_blank"
+                class="text-gray-1000 underline decoration-green-400 dark:text-white"
+                href="https://www.youtube.com/watch?v=TeVbYCIFVa8"
+                >space rockets</a
+              >
+              <!-- -->
+              and learn more about math and artificial intelligence.
+            </p>
+          </div>
+          <svg viewBox="0 0 154 46" fill="none" class="mt-8 h-10">
+            <path
+              d="M31.9183 19.3324C30.4381 22.1357 28.9147 25.1882 27.1721 27.8388C26.1749 29.355 25.2335 31.0005 24.348 32.7752C23.4624 34.5499 22.8896 36.1276 22.6297 37.5083C22.3697 38.8889 22.3076 39.9541 22.4433 40.7039C22.5791 41.4536 23.0058 41.9378 23.7236 42.1563C24.4407 42.3748 26.0503 41.7292 28.5525 40.2195C31.0545 38.7105 33.4476 36.8494 35.7315 34.6361C38.0148 32.4234 39.7671 30.49 40.9885 28.8358C40.81 28.9407 40.4668 29.3229 39.9591 29.9824C39.4507 30.6418 38.9862 31.4287 38.5654 32.3429C38.1447 33.2571 37.9094 34.025 37.8595 34.6467C37.8103 35.2684 37.8003 35.7146 37.8294 35.9852C37.8591 36.2559 37.9128 36.442 37.9905 36.5435C38.0682 36.6443 38.2535 36.772 38.5464 36.9266C38.8386 37.0812 39.2251 37.1858 39.7058 37.2406C40.1872 37.2955 41.4247 36.8179 43.4181 35.8076C45.4123 34.7975 47.7689 33.4129 50.4882 31.654C50.5966 31.6758 50.5578 32.0357 50.3718 32.7337C50.1865 33.4311 50.312 34.5297 50.7483 36.0294C51.6431 36.5776 53.9843 35.7117 57.7721 33.4318C61.5604 31.1526 65.1752 28.3612 68.6162 25.0577C72.0566 21.7534 74.7999 18.3675 76.846 14.9C76.7331 14.7325 75.6624 15.3711 73.634 16.816C71.6055 18.2609 69.7903 19.8467 68.1883 21.5734C66.587 23.3001 65.4474 24.7502 64.7697 25.9237C64.0913 27.097 63.6646 28.6028 63.4898 30.441C63.315 32.2792 64.1589 33.4024 66.0215 33.8105C67.8848 34.2186 71.8164 32.1848 77.8161 27.7088C77.7835 27.7007 77.4167 28.0584 76.7157 28.7817C76.0146 29.5056 75.5249 30.8859 75.2464 32.9226C75.7856 33.4804 77.3111 33.0644 79.823 31.6745C82.3342 30.2853 84.6217 28.7167 86.6855 26.9686C88.7485 25.2211 92.6488 20.6817 98.3863 13.3503C98.2673 13.3157 97.3365 14.1062 95.5938 15.7217C93.8511 17.3372 92.1907 19.2198 90.6125 21.3695C89.0344 23.5193 88.0251 25.1407 87.5848 26.2338C87.1443 27.3276 86.9275 28.169 86.9344 28.758C86.942 29.3471 87.0109 29.8003 87.141 30.1176C87.2705 30.4356 87.5603 30.6643 88.0104 30.8038C88.4606 30.9432 89.127 30.9203 90.0096 30.735C90.8922 30.549 93.3625 29.3144 97.4204 27.031C97.168 27.902 97.219 28.7717 97.5733 29.6403C97.5831 29.6461 97.85 29.7509 98.3738 29.9546C98.8969 30.1583 102.991 28.9894 110.656 26.4481L111.08 26.7077C111.894 27.1639 114.072 27.057 117.614 26.3872C121.154 25.7179 124.668 25.0411 128.154 24.3567C131.639 23.673 135.013 23.2486 138.277 23.0834C141.541 22.9183 146.237 22.9164 152.365 23.0775"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              opacity="0"
+              pathLength="1"
+              stroke-dashoffset="0px"
+              stroke-dasharray="0px 1px"
+            ></path>
+            <path
+              d="M40.2003 7.0006C39.9722 7.12773 38.8734 8.72997 36.9038 11.8072C34.9342 14.8845 32.6264 18.0426 29.9803 21.2815C27.3349 24.5206 24.1872 27.8954 20.5374 31.4058C16.8877 34.9156 13.9593 37.5514 11.7523 39.3133C9.54603 41.0752 7.94558 42.2262 6.95099 42.7663C5.95639 43.3064 5.07781 43.6316 4.31526 43.7417C3.55264 43.8526 2.86083 43.7909 2.23984 43.5568C1.6727 42.6465 3.21306 40.4249 6.8609 36.892C10.5087 33.3598 14.3189 30.291 18.2916 27.6857C22.2635 25.0803 26.9565 22.5582 32.3704 20.1194C37.7844 17.6798 42.7159 15.6641 47.165 14.0722C51.6133 12.4802 56.6983 11.1464 62.4201 10.0709"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              opacity="0"
+              pathLength="1"
+              stroke-dashoffset="0px"
+              stroke-dasharray="0px 1px"
+            ></path>
+          </svg>
         </div>
+        <div class="px-8 pb-8 text-right">
+          <div
+            class="mb-2 text-sm font-bold uppercase"
+            style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+          >
+            Find me at
+          </div>
+          <div
+            class="mb-4 font-medium text-gray-50"
+            style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+          >
+            email@kuldar.com
+          </div>
+          <div class="flex items-center justify-end space-x-2">
+            <a
+              title="Youtube"
+              href="https://youtube.com/@kuldar"
+              target="_blank"
+              class="group relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-30 transition-colors hover:border-green-400 active:top-[1px] dark:border-gray-500 dark:hover:border-gray-200"
+              style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-5 flex-shrink-0 text-gray-40 transition-all group-hover:text-gray-800 dark:text-gray-50 dark:group-hover:text-green-400"
+              >
+                <path
+                  stroke="currentColor"
+                  d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
+                ></path>
+                <path stroke="currentColor" d="m10 15 5-3-5-3z"></path>
+              </svg>
+            </a>
+            <a
+              title="X"
+              href="https://twitter.com/kkuldar"
+              target="_blank"
+              class="group relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-30 transition-colors hover:border-green-400 active:top-[1px] dark:border-gray-500 dark:hover:border-gray-200"
+              style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                class="w-5 flex-shrink-0 text-gray-40 transition-all group-hover:text-gray-800 dark:text-gray-50 dark:group-hover:text-green-400"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+            <a
+              title="Github"
+              href="https://github.com/kuldar"
+              target="_blank"
+              class="group relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-30 transition-colors hover:border-green-400 active:top-[1px] dark:border-gray-500 dark:hover:border-gray-200"
+              style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+            >
+              <svg
+                viewBox="0 0 22 22"
+                fill="none"
+                class="w-5 flex-shrink-0 text-gray-40 transition-all group-hover:text-gray-800 dark:text-gray-50 dark:group-hover:text-green-400"
+              >
+                <path
+                  d="M11 0C4.9225 0 0 5.0503 0 11.2793C0 16.2638 3.1515 20.4907 7.52125 21.9805C8.07125 22.0867 8.27292 21.738 8.27292 21.4382C8.27292 21.1703 8.26375 20.4606 8.25917 19.5207C5.19933 20.2012 4.554 18.0074 4.554 18.0074C4.0535 16.7056 3.33025 16.3578 3.33025 16.3578C2.33383 15.6585 3.40725 15.6726 3.40725 15.6726C4.51183 15.7515 5.09208 16.8343 5.09208 16.8343C6.07292 18.5591 7.667 18.061 8.29583 17.7724C8.39483 17.043 8.67808 16.5458 8.9925 16.2638C6.54958 15.9818 3.982 15.0118 3.982 10.6899C3.982 9.45862 4.40825 8.45289 5.11408 7.66334C4.99033 7.37853 4.61908 6.23181 5.21033 4.67808C5.21033 4.67808 6.13158 4.37542 8.23533 5.83421C9.11533 5.58325 10.0503 5.45918 10.9853 5.45354C11.9203 5.45918 12.8553 5.58325 13.7353 5.83421C15.8253 4.37542 16.7466 4.67808 16.7466 4.67808C17.3378 6.23181 16.9666 7.37853 16.8566 7.66334C17.5578 8.45289 17.9841 9.45862 17.9841 10.6899C17.9841 15.0231 15.4128 15.9771 12.9653 16.2544C13.3503 16.5928 13.7078 17.2846 13.7078 18.3411C13.7078 19.8506 13.6941 21.0631 13.6941 21.4297C13.6941 21.7258 13.8866 22.0783 14.4503 21.9655C18.8512 20.486 22 16.2563 22 11.2793C22 5.0503 17.0748 0 11 0Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="order-3 col-span-12 border-x border-t border-gray-30 bg-gray-5/20 bg-dotted-light bg-center p-4 dark:border-gray-500 dark:bg-transparent dark:bg-dotted-dark xs:p-8 xl:order-3 xl:col-span-4 xl:border-l-0 xl:border-t-0"
+      >
+        <div
+          class="flex items-center space-x-3"
+          style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+        >
+          <svg
+            viewBox="0 0 17 16"
+            fill="none"
+            class="h-4 text-green-500 dark:text-white"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6.69968 1.52865V6.17265C6.69968 6.90165 6.40968 7.60065 5.89468 8.11665L4.67768 9.33265C5.89128 9.29107 7.10025 9.50256 8.22768 9.95365L8.72968 10.1546C10.056 10.6853 11.5095 10.8122 12.9077 10.5196L10.5047 8.11665C9.98925 7.60098 9.6997 6.90174 9.69968 6.17265V1.52865C8.70003 1.49133 7.69933 1.49133 6.69968 1.52865ZM11.1997 1.61265L11.3897 1.62765C11.4887 1.63719 11.5887 1.62694 11.6837 1.59747C11.7787 1.56801 11.867 1.51993 11.9432 1.45604C12.0195 1.39214 12.0823 1.31371 12.128 1.22531C12.1736 1.1369 12.2013 1.0403 12.2092 0.941115C12.2172 0.841933 12.2053 0.742159 12.1744 0.647604C12.1434 0.553049 12.0939 0.465603 12.0288 0.39036C11.9637 0.315117 11.8843 0.253581 11.7951 0.209336C11.706 0.165091 11.609 0.139022 11.5097 0.132648C9.30655 -0.044216 7.0928 -0.044216 4.88968 0.132648C4.69375 0.151531 4.5131 0.246682 4.3867 0.397571C4.2603 0.54846 4.19828 0.742992 4.21403 0.939196C4.22978 1.1354 4.32203 1.31755 4.47088 1.44635C4.61973 1.57514 4.81325 1.64026 5.00968 1.62765L5.19968 1.61265V6.17265C5.19968 6.50365 5.06768 6.82165 4.83368 7.05565L0.799677 11.0906C-0.696323 12.5866 -0.017323 15.2406 2.20268 15.5656C4.16068 15.8526 6.16268 16.0006 8.19968 16.0006C10.2367 16.0006 12.2387 15.8526 14.1967 15.5646C16.4167 15.2396 17.0967 12.5856 15.5997 11.0896L11.5657 7.05565C11.3315 6.82143 11.1999 6.50385 11.1997 6.17265V1.61265Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          <div
+            class="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400"
+          >
+            Experiments
+          </div>
+        </div>
+        <div class="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-5">
+          <a
+            target="_blank"
+            href="https://generatedhumans.com/"
+            class="group/card relative col-span-6 overflow-hidden rounded-2xl border border-gray-30 bg-white bg-gradient-to-br from-gray-35 via-white to-gray-40 transition-colors hover:border-gray-35 active:top-[1px] dark:border-gray-500 dark:bg-gray-1000 dark:from-gray-900 dark:via-gray-1000 dark:to-gray-800 dark:hover:border-gray-200/70 last:max-[1103px]:col-span-6 md:col-span-3 min-[1104px]:col-span-2 xl:col-span-6"
+            style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+          >
+            <div
+              class="flex h-full items-center justify-between space-x-4 bg-white transition-colors hover:bg-white/90 dark:bg-gray-1000 dark:hover:bg-transparent"
+            >
+              <div class="flex-shrink-0 p-6 pr-2">
+                <h3 class="text-3xl font-bold leading-none">Generated</h3>
+                <div class="mt-2 text-lg leading-snug text-gray-50">
+                  Wallpapers for mobile
+                </div>
+              </div>
+              <div
+                class="origin-top-left translate-x-2 translate-y-1 rotate-6 overflow-hidden opacity-60 transition-all duration-200 group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:rotate-0 group-hover/card:opacity-100"
+              >
+                <div
+                  class="mt-6 h-24 min-w-[160px] max-w-[200px] rounded-tl-xl border-l border-t border-gray-30 p-4 dark:border-gray-500"
+                >
+                  <div
+                    class="mb-1 h-1.5 max-w-[80px] rounded-sm bg-gray-40 dark:bg-gray-500"
+                  ></div>
+                  <div
+                    class="mb-2.5 h-1 max-w-[52px] rounded-sm bg-gray-30 dark:bg-gray-700"
+                  ></div>
+                  <div class="flex gap-2">
+                    <div
+                      class="flex h-14 min-w-[32px] flex-1 items-center justify-center rounded border border-gray-30 text-gray-30 dark:border-gray-500 dark:text-gray-500"
+                    >
+                      <svg
+                        width="12"
+                        height="25"
+                        viewBox="0 0 12 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.714914 15.9573C0.334687 12.7887 2.80875 10 6.00004 10C9.19133 10 11.6654 12.7887 11.2852 15.9573L10.4114 23.2383C10.2908 24.2435 9.4381 25 8.42569 25H3.57439C2.56199 25 1.70926 24.2435 1.58864 23.2383L0.714914 15.9573Z"
+                          fill="currentColor"
+                        ></path>
+                        <path
+                          d="M10 4C10 6.20914 8.20918 8 6.00004 8C3.7909 8 2.00004 6.20914 2.00004 4C2.00004 1.79086 3.7909 0 6.00004 0C8.20918 0 10 1.79086 10 4Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div
+                      class="flex h-14 min-w-[32px] flex-1 items-center justify-center rounded border border-gray-40 text-gray-50 transition-colors duration-200 group-hover/card:text-gray-100 dark:border-gray-100 dark:text-gray-100 dark:group-hover/card:border-white dark:group-hover/card:text-white"
+                    >
+                      <svg
+                        width="16"
+                        height="25"
+                        viewBox="0 0 16 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.78682 14.9498C2.29591 12.0861 4.78562 10 7.69419 10H8.30604C11.2146 10 13.7043 12.0861 14.2134 14.9498L15.5823 22.6499C15.8002 23.8753 14.8578 25 13.6132 25H2.38703C1.1424 25 0.200052 23.8753 0.417904 22.6499L1.78682 14.9498Z"
+                          fill="currentColor"
+                        ></path>
+                        <path
+                          d="M12.0001 4C12.0001 6.20914 10.2093 8 8.00011 8C5.79098 8 4.00011 6.20914 4.00011 4C4.00011 1.79086 5.79098 0 8.00011 0C10.2093 0 12.0001 1.79086 12.0001 4Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div
+                      class="flex h-14 min-w-[32px] flex-1 items-center justify-center rounded border border-gray-30 text-gray-30 dark:border-gray-500 dark:text-gray-500"
+                    >
+                      <svg
+                        width="12"
+                        height="25"
+                        viewBox="0 0 12 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.714914 15.9573C0.334687 12.7887 2.80875 10 6.00004 10C9.19133 10 11.6654 12.7887 11.2852 15.9573L10.4114 23.2383C10.2908 24.2435 9.4381 25 8.42569 25H3.57439C2.56199 25 1.70926 24.2435 1.58864 23.2383L0.714914 15.9573Z"
+                          fill="currentColor"
+                        ></path>
+                        <path
+                          d="M10 4C10 6.20914 8.20918 8 6.00004 8C3.7909 8 2.00004 6.20914 2.00004 4C2.00004 1.79086 3.7909 0 6.00004 0C8.20918 0 10 1.79086 10 4Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a
+            target="_blank"
+            href="https://awesomeai.xyz/"
+            class="group/card relative col-span-6 overflow-hidden rounded-2xl border border-gray-30 bg-white bg-gradient-to-br from-gray-35 via-white to-gray-40 transition-colors hover:border-gray-35 active:top-[1px] dark:border-gray-500 dark:bg-gray-1000 dark:from-gray-900 dark:via-gray-1000 dark:to-gray-800 dark:hover:border-gray-200/70 last:max-[1103px]:col-span-6 md:col-span-3 min-[1104px]:col-span-2 xl:col-span-6"
+            style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+          >
+            <div
+              class="flex h-full items-center justify-between space-x-4 bg-white transition-colors hover:bg-white/90 dark:bg-gray-1000 dark:hover:bg-transparent"
+            >
+              <div class="flex-shrink-0 p-6 pr-2">
+                <h3 class="text-3xl font-bold leading-none">Awesome AI</h3>
+                <div class="mt-2 text-lg leading-snug text-gray-50">
+                  AI resource aggregator
+                </div>
+              </div>
+              <div
+                class="origin-top-left translate-x-2 translate-y-1 rotate-6 items-end justify-end overflow-hidden opacity-60 transition-all duration-200 group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:rotate-0 group-hover/card:opacity-100"
+              >
+                <div
+                  class="mt-6 h-24 min-w-[160px] max-w-[200px] rounded-tl-xl border-l border-t border-gray-30 p-4 dark:border-gray-500"
+                >
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-2">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 text-gray-40 dark:text-gray-500"
+                      >
+                        <path
+                          d="M12 4.5L12 19.5M12 19.5L5.25 12.75M12 19.5L18.75 12.75"
+                          stroke="currentColor"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                      <div class="flex-1">
+                        <div
+                          class="mb-1 h-1.5 max-w-[76px] rounded-sm bg-gray-40 dark:bg-gray-500"
+                        ></div>
+                        <div
+                          class="h-1 max-w-[50px] rounded-sm bg-gray-30 dark:bg-gray-700"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 rotate-180 text-gray-100 transition-colors duration-200 group-hover/card:text-gray-100 dark:group-hover/card:text-white"
+                      >
+                        <path
+                          d="M12 4.5L12 19.5M12 19.5L5.25 12.75M12 19.5L18.75 12.75"
+                          stroke="currentColor"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                      <div class="flex-1">
+                        <div
+                          class="mb-1 h-1.5 max-w-[60px] rounded-sm bg-gray-50 transition-colors duration-200 group-hover/card:text-gray-100 dark:group-hover/card:bg-white"
+                        ></div>
+                        <div
+                          class="h-1 max-w-[34px] rounded-sm bg-gray-50 transition-colors duration-200 group-hover/card:text-gray-100 dark:group-hover/card:bg-white"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 text-gray-40 dark:text-gray-500"
+                      >
+                        <path
+                          d="M12 4.5L12 19.5M12 19.5L5.25 12.75M12 19.5L18.75 12.75"
+                          stroke="currentColor"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                      <div class="flex-1">
+                        <div
+                          class="mb-1 h-1.5 max-w-[86px] rounded-sm bg-gray-40 dark:bg-gray-500"
+                        ></div>
+                        <div
+                          class="h-1 max-w-[58px] rounded-sm bg-gray-30 dark:bg-gray-700"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a
+            target="_blank"
+            href="https://github.com/kuldar/untick"
+            class="group/card relative col-span-6 overflow-hidden rounded-2xl border border-gray-30 bg-white bg-gradient-to-br from-gray-35 via-white to-gray-40 transition-colors hover:border-gray-35 active:top-[1px] dark:border-gray-500 dark:bg-gray-1000 dark:from-gray-900 dark:via-gray-1000 dark:to-gray-800 dark:hover:border-gray-200/70 last:max-[1103px]:col-span-6 md:col-span-3 min-[1104px]:col-span-2 xl:col-span-6"
+            style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+          >
+            <div
+              class="flex h-full items-center justify-between space-x-4 bg-white transition-colors hover:bg-white/90 dark:bg-gray-1000 dark:hover:bg-transparent"
+            >
+              <div class="flex-shrink-0 p-6 pr-2">
+                <h3 class="text-3xl font-bold leading-none">Untick</h3>
+                <div class="mt-2 text-lg leading-snug text-gray-50">
+                  Tiny Chrome extension
+                </div>
+              </div>
+              <div
+                class="flex h-full items-end overflow-hidden opacity-60 transition-opacity duration-200 group-hover/card:opacity-100"
+              >
+                <div class="flex gap-10 pl-3">
+                  <div
+                    class="relative mb-6 hidden h-24 min-w-[160px] max-w-[200px] origin-bottom-right -translate-x-2 -translate-y-1 rotate-6 rounded-b-xl border-x border-b border-gray-30 transition-transform duration-200 group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:rotate-0 dark:border-gray-500 md:block min-[1104px]:hidden"
+                  >
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="absolute -bottom-3 left-1/2 h-6 w-6 -translate-x-1/2 transform bg-white text-gray-50 transition-all duration-200 group-hover/card:text-gray-100 dark:bg-gray-1000 dark:text-gray-100 dark:group-hover/card:text-white"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M2.67751 9.31007C2.21429 7.50679 2.68862 5.51239 4.1005 4.1005C5.51238 2.68862 7.50679 2.21429 9.31007 2.67751C10.2576 1.07485 12.0033 0 14 0C15.9967 0 17.7424 1.07485 18.6899 2.67752C20.4932 2.2143 22.4876 2.68863 23.8995 4.10051C25.3114 5.51239 25.7857 7.50679 25.3225 9.31007C26.9251 10.2576 28 12.0033 28 14C28 15.9967 26.9252 17.7424 25.3225 18.6899C25.7857 20.4932 25.3114 22.4876 23.8995 23.8995C22.4876 25.3114 20.4932 25.7857 18.6899 25.3225C17.7424 26.9251 15.9967 28 14 28C12.0033 28 10.2576 26.9251 9.31007 25.3225C7.50679 25.7857 5.51239 25.3114 4.10051 23.8995C2.68863 22.4876 2.2143 20.4932 2.67752 18.6899C1.07485 17.7424 0 15.9967 0 14C0 12.0033 1.07485 10.2576 2.67751 9.31007ZM19.4355 11.0745C20.0213 10.4888 20.0213 9.53901 19.4355 8.95323C18.8498 8.36744 17.9 8.36744 17.3142 8.95323L14.1943 12.0732L11.0743 8.95323C10.4885 8.36744 9.5388 8.36744 8.95301 8.95323C8.36723 9.53902 8.36723 10.4888 8.95301 11.0745L12.073 14.1945L8.95311 17.3143C8.36733 17.9001 8.36733 18.8499 8.95311 19.4357C9.5389 20.0214 10.4886 20.0214 11.0744 19.4357L14.1943 16.3158L17.3141 19.4357C17.8999 20.0214 18.8497 20.0214 19.4354 19.4357C20.0212 18.8499 20.0212 17.9001 19.4354 17.3143L16.3156 14.1945L19.4355 11.0745Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                    <div class="flex flex-col gap-2 p-4">
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="h-3.5 w-3.5 rounded-full bg-gray-30 dark:bg-gray-500"
+                        ></div>
+                        <div class="flex-1">
+                          <div
+                            class="mb-1 h-1 max-w-[60px] rounded-sm bg-gray-40 dark:bg-gray-500"
+                          ></div>
+                          <div
+                            class="h-1 max-w-[40px] rounded-sm bg-gray-30 dark:bg-gray-700"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="h-3.5 w-3.5 rounded-full bg-gray-30 dark:bg-gray-500"
+                        ></div>
+                        <div class="flex-1">
+                          <div
+                            class="mb-1 h-1 max-w-[78px] rounded-sm bg-gray-40 dark:bg-gray-500"
+                          ></div>
+                          <div
+                            class="h-1 max-w-[55px] rounded-sm bg-gray-30 dark:bg-gray-700"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="h-3.5 w-3.5 rounded-full bg-gray-30 dark:bg-gray-500"
+                        ></div>
+                        <div class="flex-1">
+                          <div
+                            class="mb-1 h-1 max-w-[70px] rounded-sm bg-gray-40 dark:bg-gray-500"
+                          ></div>
+                          <div
+                            class="h-1 max-w-[50px] rounded-sm bg-gray-30 dark:bg-gray-700"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="relative mt-6 h-24 min-w-[160px] max-w-[200px] origin-top-left translate-x-2 translate-y-1 rotate-6 rounded-tl-xl border-l border-t border-gray-30 transition-transform duration-200 group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:rotate-0 dark:border-gray-500"
+                  >
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="absolute -top-4 left-1/2 h-6 w-6 -translate-x-1/2 transform bg-white text-gray-50 transition-all duration-200 group-hover/card:text-gray-100 dark:bg-gray-1000 dark:text-gray-100 dark:group-hover/card:text-white"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M2.67751 9.31007C2.21429 7.50679 2.68862 5.51239 4.1005 4.1005C5.51238 2.68862 7.50679 2.21429 9.31007 2.67751C10.2576 1.07485 12.0033 0 14 0C15.9967 0 17.7424 1.07485 18.6899 2.67752C20.4932 2.2143 22.4876 2.68863 23.8995 4.10051C25.3114 5.51239 25.7857 7.50679 25.3225 9.31007C26.9251 10.2576 28 12.0033 28 14C28 15.9967 26.9252 17.7424 25.3225 18.6899C25.7857 20.4932 25.3114 22.4876 23.8995 23.8995C22.4876 25.3114 20.4932 25.7857 18.6899 25.3225C17.7424 26.9251 15.9967 28 14 28C12.0033 28 10.2576 26.9251 9.31007 25.3225C7.50679 25.7857 5.51239 25.3114 4.10051 23.8995C2.68863 22.4876 2.2143 20.4932 2.67752 18.6899C1.07485 17.7424 0 15.9967 0 14C0 12.0033 1.07485 10.2576 2.67751 9.31007ZM19.4355 11.0745C20.0213 10.4888 20.0213 9.53901 19.4355 8.95323C18.8498 8.36744 17.9 8.36744 17.3142 8.95323L14.1943 12.0732L11.0743 8.95323C10.4885 8.36744 9.5388 8.36744 8.95301 8.95323C8.36723 9.53902 8.36723 10.4888 8.95301 11.0745L12.073 14.1945L8.95311 17.3143C8.36733 17.9001 8.36733 18.8499 8.95311 19.4357C9.5389 20.0214 10.4886 20.0214 11.0744 19.4357L14.1943 16.3158L17.3141 19.4357C17.8999 20.0214 18.8497 20.0214 19.4354 19.4357C20.0212 18.8499 20.0212 17.9001 19.4354 17.3143L16.3156 14.1945L19.4355 11.0745Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                    <div class="flex flex-col gap-2 p-4">
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="h-3.5 w-3.5 rounded-full bg-gray-30 dark:bg-gray-500"
+                        ></div>
+                        <div class="flex-1">
+                          <div
+                            class="mb-1 h-1 max-w-[60px] rounded-sm bg-gray-40 dark:bg-gray-500"
+                          ></div>
+                          <div
+                            class="h-1 max-w-[40px] rounded-sm bg-gray-30 dark:bg-gray-700"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="h-3.5 w-3.5 rounded-full bg-gray-30 dark:bg-gray-500"
+                        ></div>
+                        <div class="flex-1">
+                          <div
+                            class="mb-1 h-1 max-w-[78px] rounded-sm bg-gray-40 dark:bg-gray-500"
+                          ></div>
+                          <div
+                            class="h-1 max-w-[55px] rounded-sm bg-gray-30 dark:bg-gray-700"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="h-3.5 w-3.5 rounded-full bg-gray-30 dark:bg-gray-500"
+                        ></div>
+                        <div class="flex-1">
+                          <div
+                            class="mb-1 h-1 max-w-[70px] rounded-sm bg-gray-40 dark:bg-gray-500"
+                          ></div>
+                          <div
+                            class="h-1 max-w-[50px] rounded-sm bg-gray-30 dark:bg-gray-700"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        class="order-1 col-span-12 flex border-x border-gray-30 px-4 pt-4 dark:border-gray-500 xs:px-8 xs:pt-8 md:order-2 md:col-span-6 md:border-l-0 md:border-r md:pb-8 min-[896px]:col-span-5 xl:order-2 xl:col-span-4"
+      >
+        <div
+          class="relative flex h-80 w-64 rounded-2xl border-t border-gray-50/20 bg-gray-1000 bg-cover bg-center bg-no-repeat p-2 brightness-125 dark:brightness-100 md:h-auto md:w-full"
+          style="
+            background-image: url(&quot;/_next/static/media/portrait.64ddd9d1.jpg&quot;);
+            opacity: 0;
+            transform: translateY(-10px) rotate(3deg) translateZ(0);
+          "
+        >
+          <canvas
+            class="absolute inset-0 z-10 hidden cursor-draw md:block"
+          ></canvas>
+          <div
+            class="flex w-full items-end rounded-xl border border-white/20 p-3 dark:border-gray-50/20"
+          >
+            <div class="flex items-center space-x-3">
+              <svg viewBox="0 0 18 14" fill="none" class="h-4 text-white/50">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0 2.25C0 1.65326 0.237053 1.08097 0.65901 0.65901C1.08097 0.237053 1.65326 0 2.25 0H15.75C16.0455 0 16.3381 0.058198 16.611 0.171271C16.884 0.284344 17.1321 0.450078 17.341 0.65901C17.5499 0.867942 17.7157 1.11598 17.8287 1.38896C17.9418 1.66194 18 1.95453 18 2.25V11.75C18 12.0455 17.9418 12.3381 17.8287 12.611C17.7157 12.884 17.5499 13.1321 17.341 13.341C17.1321 13.5499 16.884 13.7157 16.611 13.8287C16.3381 13.9418 16.0455 14 15.75 14H2.25C1.65326 14 1.08097 13.7629 0.65901 13.341C0.237053 12.919 0 12.3467 0 11.75V2.25ZM1.5 8.06V11.75C1.5 12.164 1.836 12.5 2.25 12.5H15.75C15.9489 12.5 16.1397 12.421 16.2803 12.2803C16.421 12.1397 16.5 11.9489 16.5 11.75V9.06L14.28 6.841C14.1394 6.70055 13.9488 6.62166 13.75 6.62166C13.5512 6.62166 13.3606 6.70055 13.22 6.841L11.31 8.75L11.78 9.22C11.8537 9.28866 11.9128 9.37146 11.9538 9.46346C11.9948 9.55546 12.0168 9.65478 12.0186 9.75548C12.0204 9.85618 12.0018 9.95621 11.9641 10.0496C11.9264 10.143 11.8703 10.2278 11.799 10.299C11.7278 10.3703 11.643 10.4264 11.5496 10.4641C11.4562 10.5018 11.3562 10.5204 11.2555 10.5186C11.1548 10.5168 11.0555 10.4948 10.9635 10.4538C10.8715 10.4128 10.7887 10.3537 10.72 10.28L5.53 5.091C5.38937 4.95055 5.19875 4.87166 5 4.87166C4.80125 4.87166 4.61063 4.95055 4.47 5.091L1.5 8.06ZM11 4C11 4.26522 10.8946 4.51957 10.7071 4.70711C10.5196 4.89464 10.2652 5 10 5C9.73478 5 9.48043 4.89464 9.29289 4.70711C9.10536 4.51957 9 4.26522 9 4C9 3.73478 9.10536 3.48043 9.29289 3.29289C9.48043 3.10536 9.73478 3 10 3C10.2652 3 10.5196 3.10536 10.7071 3.29289C10.8946 3.48043 11 3.73478 11 4Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <div class="text-sm font-bold uppercase text-white">
+                IMG_0526.jpg
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="border-b border-gray-30 dark:border-gray-500">
-        <div class="mx-auto grid max-w-8xl grid-cols-12 px-2 xs:px-6 sm:px-10">
-            <div class="order-2 col-span-12 flex flex-col-reverse border-x border-gray-30 dark:border-gray-500 lg:order-1 lg:col-span-5 lg:flex-col xl:col-span-4">
-                <div class="flex h-64 flex-1 flex-col items-center justify-center border-t border-gray-30 px-8 py-8 text-center dark:border-gray-500 lg:border-t-0" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                    <div class="mb-4 text-lg font-bold leading-snug">
-                        Companies
-                        <!-- -->
-                        <span class="inline lg:block">I &#x27;ve worked with</span>
-                    </div>
-                    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 p-4">
-                        <a href="https://www.synack.com/" target="_blank" class="text-gray-40 transition-colors hover:text-gray-50 active:translate-y-[1px] dark:text-gray-200 dark:hover:text-gray-30">
-                            <svg width="178" height="44" viewBox="0 0 178 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-9 w-auto">
-                                <path d="M133.454 15.6125C132.624 14.0854 130.508 12.2146 127.002 12.2146C121.625 12.2146 117.26 16.3392 117.26 22.3739C117.26 27.7851 120.864 32.5677 127.002 32.5677C129.673 32.5677 132.236 31.4579 133.454 29.2041V31.9441H138.03V12.8038H133.454V15.6125ZM133.488 22.5458C133.454 23.4837 133.174 24.3822 132.762 25.217C131.892 26.9503 130.228 28.3055 127.665 28.3055C123.54 28.3055 121.841 24.8389 121.841 22.482V22.4476C121.841 19.4671 123.923 16.4816 127.63 16.4816C130.37 16.4816 132.172 18.0431 132.973 19.8795C133.351 20.7094 133.523 21.6079 133.488 22.5458Z" fill="currentColor"></path>
-                                <path d="M149.825 16.4767C150.934 16.4423 152.044 16.7517 152.948 17.3802C153.886 18.0038 154.578 18.9073 154.995 19.9139H159.675C158.565 15.2344 154.475 12.2146 149.653 12.2146C143.932 12.2146 139.562 16.7222 139.562 22.3739C139.562 27.8538 143.761 32.5677 149.825 32.5677C152.079 32.602 154.264 31.8753 156.066 30.4857C157.833 29.101 159.115 27.1565 159.67 24.9715H154.99C154.298 26.5329 152.702 28.2663 149.825 28.2663C146.564 28.2663 144.173 25.8406 144.173 22.369C144.139 20.8076 144.693 19.2805 145.734 18.102C146.255 17.5472 146.913 17.1298 147.605 16.8548C148.298 16.5798 149.059 16.4423 149.825 16.4767Z" fill="currentColor"></path>
-                                <path d="M93.7494 12.8039L88.5838 26.0174L83.7963 12.8039H78.6651L84.9748 28.6493L86.2907 31.9441C84.8668 35.8281 83.7571 35.5875 81.4001 35.2732V39.0885C82.5098 39.3291 83.6196 39.4715 84.7637 39.4371C88.0928 39.4371 89.4088 36.5254 90.4841 33.7511C91.3876 31.4972 98.5615 12.7351 98.5615 12.7351H93.7396V12.8039H93.7494Z" fill="currentColor"></path>
-                                <path d="M72.0756 16.791C66.9787 15.3326 66.3207 14.2229 66.3207 12.8038C66.3207 11.3848 67.671 9.78893 70.7252 9.78893C73.7794 9.78893 77.8353 11.4535 77.8353 11.4535V6.91151C75.4096 6.08168 72.8759 5.66431 70.3128 5.66431C64.5923 5.66431 61.4006 8.43861 61.4006 12.8431C61.4006 17.6306 63.9343 19.5358 70.0722 21.1317C74.0937 22.1726 74.4079 23.8028 74.4079 24.8438C74.4079 25.8848 73.75 28.1386 70.0034 28.1386C66.085 28.1386 61.926 26.3365 61.926 26.3365V30.8442C63.3844 31.399 66.1587 32.2289 70.3864 32.2289C76.5586 32.2289 79.4704 29.1059 79.4704 24.5639C79.4655 20.1201 77.1773 18.2788 72.0756 16.791Z" fill="currentColor"></path>
-                                <path d="M106.929 11.969C102.107 11.969 97.879 15.8874 97.879 20.7093V31.9783H102.455V20.5718C102.455 18.2492 104.64 16.4128 106.963 16.4128C109.286 16.4128 111.471 18.2836 111.471 20.5718V31.9783H116.013V20.7093C115.978 15.853 111.746 11.969 106.929 11.969Z" fill="currentColor"></path>
-                                <path d="M161.094 4.75586H165.67V21.053L171.98 12.7989H177.735L170.418 21.8141L177.769 31.9391H172.358L167.57 25.0058L165.7 27.3971V31.9735H161.123L161.094 4.75586Z" fill="currentColor"></path>
-                                <path d="M24.2888 8.43374H33.2697C33.5103 8.43374 33.6527 8.15876 33.5447 7.94762L29.0371 0.179576C28.934 -0.0266555 28.6197 -0.0266555 28.4822 0.179576L23.9746 7.94762C23.896 8.1293 24.0433 8.43374 24.2888 8.43374Z" fill="currentColor"></path>
-                                <path d="M26.6507 30.2795C31.1583 17.8663 17.9104 10.5844 17.9104 10.5844L0.434738 0.042053C0.194135 -0.100345 -0.0808401 0.145169 0.0222755 0.385772L2.20734 6.55798C2.27609 6.79858 2.44795 6.97535 2.65909 7.11284L13.825 13.7368C13.825 13.7368 20.6552 17.5864 21.8681 22.2659L4.7705 12.0378C4.49553 11.866 4.18127 12.141 4.28439 12.4208L6.46946 18.4556C6.57257 18.7305 6.78371 19.0104 7.05869 19.1479L26.0712 30.5201C26.2627 30.6379 26.5475 30.5201 26.6507 30.2795Z" fill="currentColor"></path>
-                                <path d="M30.8833 30.2795C26.3757 17.8663 39.6236 10.5844 39.6236 10.5844L57.0993 0.0420636C57.3399 -0.0954239 57.6198 0.145179 57.5166 0.390693L55.3316 6.5629C55.2628 6.8035 55.091 6.98027 54.8798 7.11776L43.7139 13.7368C43.7139 13.7368 36.8837 17.5864 35.6709 22.2659L52.7684 12.0378C53.0434 11.866 53.3576 12.141 53.2545 12.4208L51.0645 18.4556C50.9614 18.7305 50.7503 19.0104 50.4753 19.1479L31.4628 30.5201C31.2713 30.6379 30.9865 30.5201 30.8833 30.2795Z" fill="currentColor"></path>
-                                <path d="M49.2281 23.6897L28.767 35.931L8.31082 23.6897C8.24699 23.6553 8.19298 23.7192 8.20771 23.7585C8.62508 24.9025 11.1882 31.4921 18.0921 35.273L23.9157 38.8084L20.2722 40.9935C20.1004 41.0966 20.1004 41.3765 20.2722 41.4796L24.225 43.8709C24.5 44.0428 24.883 44.0428 25.1629 43.8709L28.767 41.7006L32.3711 43.8709C32.6461 44.0428 33.0291 44.0428 33.309 43.8709L37.2618 41.4796C37.4336 41.3765 37.4336 41.0966 37.2618 40.9935L33.6183 38.8084L39.4419 35.273C46.3408 31.4921 48.9089 24.9025 49.3263 23.7585C49.3459 23.7192 49.2919 23.6504 49.2281 23.6897Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                        <a href="https://www.pento.io/" target="_blank" class="text-gray-40 transition-colors hover:text-gray-50 active:translate-y-[1px] dark:text-gray-200 dark:hover:text-gray-30">
-                            <svg width="44" height="52" viewBox="0 0 44 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-11 w-auto">
-                                <path d="M0 51.999H2.16666V13.3088C2.16666 11.9412 3.27527 10.8327 4.64282 10.8327H38.6902C40.0578 10.8327 41.1663 11.9412 41.1663 13.3088V27.8563C41.1663 29.2239 40.0578 30.3326 38.6902 30.3326H10.8333V32.4991H38.3807C41.1158 32.4991 43.3331 30.2819 43.3331 27.5469V13.6184C43.3331 10.8832 41.1158 8.66602 38.3807 8.66602H4.95235C2.21725 8.66602 0 10.8832 0 13.6184V51.999Z" fill="currentColor"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8335 51.9996H8.66681V4.95235C8.66681 2.21725 10.8841 0 13.6192 0H29.7142C32.4494 0 34.6666 2.21723 34.6666 4.95233V36.214C34.6666 38.9492 32.4494 41.1664 29.7142 41.1664H10.8335V51.9996ZM10.8335 4.64282C10.8335 3.27527 11.9421 2.16666 13.3096 2.16666H30.0238C31.3914 2.16666 32.4999 3.27527 32.4999 4.64282V36.5236C32.4999 37.891 31.3914 38.9997 30.0238 38.9997H10.8335V4.64282Z" fill="currentColor"></path>
-                                <path d="M4.33362 51.9999H6.50026V8.97632C6.50026 7.60877 7.60889 6.50014 8.97644 6.50014H34.3572C35.7248 6.50014 36.8333 7.60877 36.8333 8.97632V32.1904C36.8333 33.558 35.7248 34.6665 34.3572 34.6665H10.8336V36.8333H34.0476C36.7828 36.8333 39 34.616 39 31.8809V9.2859C39 6.55072 36.7828 4.3335 34.0476 4.3335H9.28595C6.55085 4.3335 4.33362 6.55072 4.33362 9.2859V51.9999Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                        <a href="https://www.prisma.io/" target="_blank" class="text-gray-40 transition-colors hover:text-gray-50 active:translate-y-[1px] dark:text-gray-200 dark:hover:text-gray-30">
-                            <svg width="151" height="48" viewBox="0 0 151 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-auto">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.610678 30.418C0.133993 31.1954 0.14137 32.1767 0.629694 32.9469L9.46821 46.8894C10.0419 47.7943 11.1475 48.2069 12.1738 47.899L37.6797 40.2472C39.0717 39.8297 39.7719 38.2769 39.1635 36.9572L22.7671 1.38963C21.9675 -0.344917 19.5569 -0.487295 18.5587 1.14106L0.610678 30.418ZM22.3314 9.52075C21.9829 8.71436 20.8029 8.83857 20.6299 9.69984L14.3174 41.131C14.1842 41.7938 14.8048 42.3597 15.4525 42.1664L33.0749 36.9058C33.5893 36.7525 33.8543 36.1843 33.6414 35.6916L22.3314 9.52075Z" fill="currentColor"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M54.6647 23.9089H56.2181C57.6701 23.9089 58.7556 23.6223 59.4769 23.0485C60.1979 22.4748 60.5582 21.6397 60.5582 20.5433C60.5582 19.4372 60.256 18.6199 59.6521 18.0918C59.0477 17.5638 58.1013 17.2998 56.8119 17.2998H54.6647V23.9089ZM65.3248 20.376C65.3248 22.7721 64.5762 24.6041 63.0781 25.8732C61.5812 27.1428 59.4519 27.7768 56.6905 27.7768H54.6649V35.6957H49.9442V13.4319H57.0555C59.7565 13.4319 61.8097 14.0132 63.2158 15.1752C64.6219 16.3377 65.3248 18.0714 65.3248 20.376Z" fill="currentColor"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M77.8387 18.3501C78.4684 18.3501 78.9912 18.3958 79.4073 18.4872L79.0572 22.8422C78.6813 22.7411 78.225 22.6901 77.6866 22.6901C76.2041 22.6901 75.0496 23.0708 74.2216 23.8322C73.3946 24.5936 72.981 25.6599 72.981 27.0305V35.6955H68.3362V18.67H71.8541L72.5396 21.5329H72.7676C73.2956 20.579 74.0085 19.8095 74.9076 19.2255C75.8056 18.6421 76.7827 18.3501 77.8387 18.3501Z" fill="currentColor"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M81.8706 35.6957H86.5154V18.6704H81.8706V35.6957ZM81.6736 14.2689C81.6736 12.7563 82.5162 12.0002 84.2014 12.0002C85.8861 12.0002 86.7292 12.7563 86.7292 14.2689C86.7292 14.99 86.5186 15.5508 86.0975 15.952C85.676 16.3531 85.044 16.5531 84.2014 16.5531C82.5162 16.5531 81.6736 15.7917 81.6736 14.2689Z" fill="currentColor"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M102.868 30.6391C102.868 32.3856 102.262 33.7156 101.048 34.6291C99.8348 35.5427 98.02 35.9997 95.6041 35.9997C94.3653 35.9997 93.3103 35.9159 92.4369 35.7481C91.5638 35.5809 90.7462 35.3345 89.985 35.0097V31.1721C90.8479 31.5785 91.8196 31.9184 92.9016 32.1926C93.9824 32.4663 94.9342 32.6035 95.7562 32.6035C97.4414 32.6035 98.2845 32.1164 98.2845 31.1421C98.2845 30.7764 98.1729 30.4796 97.9496 30.2511C97.726 30.0223 97.3405 29.7638 96.7919 29.474C96.244 29.1847 95.5126 28.8475 94.599 28.4614C93.2897 27.9136 92.3272 27.4059 91.7136 26.9387C91.099 26.4717 90.6522 25.9363 90.3738 25.3319C90.0942 24.728 89.9542 23.9844 89.9542 23.1009C89.9542 21.5883 90.5403 20.4187 91.7136 19.5912C92.886 18.7636 94.5481 18.3501 96.7006 18.3501C98.7515 18.3501 100.746 18.797 102.685 19.6901L101.285 23.0401C100.432 22.6745 99.6343 22.3755 98.8934 22.1416C98.1523 21.9082 97.3958 21.7915 96.6246 21.7915C95.254 21.7915 94.5685 22.162 94.5685 22.903C94.5685 23.3197 94.79 23.68 95.231 23.9844C95.6728 24.2887 96.6398 24.7409 98.132 25.3398C99.4624 25.8783 100.437 26.3804 101.056 26.8472C101.675 27.3144 102.132 27.8523 102.427 28.4614C102.721 29.0708 102.868 29.7965 102.868 30.6391Z" fill="currentColor"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M121.268 35.6955H116.624V25.7512C116.624 24.5232 116.418 23.6015 116.007 22.9874C115.595 22.3733 114.948 22.0658 114.065 22.0658C112.878 22.0658 112.015 22.5024 111.476 23.3757C110.938 24.2489 110.669 25.6852 110.669 27.6855V35.6955H106.024V18.67H109.573L110.197 20.8478H110.456C110.913 20.066 111.573 19.4541 112.436 19.0126C113.299 18.5711 114.289 18.3501 115.406 18.3501C117.954 18.3501 119.679 19.183 120.583 20.8478H120.994C121.451 20.0558 122.124 19.4417 123.012 19.0051C123.901 18.5684 124.903 18.3501 126.02 18.3501C127.948 18.3501 129.408 18.8453 130.398 19.8348C131.388 20.8247 131.883 22.411 131.883 24.5936V35.6955H127.223V25.7512C127.223 24.5232 127.017 23.6015 126.606 22.9874C126.194 22.3733 125.548 22.0658 124.664 22.0658C123.527 22.0658 122.677 22.4723 122.113 23.2843C121.55 24.0967 121.268 25.3857 121.268 27.1521V35.6955Z" fill="currentColor"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M145.399 27.8071L143.602 27.8679C142.252 27.9089 141.247 28.1523 140.587 28.5991C139.927 29.046 139.597 29.7258 139.597 30.6399C139.597 31.9492 140.348 32.6042 141.851 32.6042C142.927 32.6042 143.788 32.2943 144.432 31.675C145.076 31.056 145.399 30.234 145.399 29.208V27.8071ZM146.77 35.6953L145.871 33.3804H145.749C144.967 34.3656 144.163 35.048 143.335 35.4286C142.508 35.8092 141.43 35.9997 140.1 35.9997C138.465 35.9997 137.178 35.533 136.239 34.5989C135.3 33.6649 134.831 32.335 134.831 30.6089C134.831 28.8023 135.462 27.4697 136.726 26.6114C137.991 25.7539 139.896 25.279 142.445 25.1877L145.399 25.0962V24.3499C145.399 22.6243 144.515 21.7613 142.749 21.7613C141.389 21.7613 139.79 22.1721 137.952 22.9948L136.414 19.8578C138.373 18.8323 140.547 18.3193 142.932 18.3193C145.216 18.3193 146.968 18.8173 148.186 19.812C149.404 20.8068 150.013 22.3194 150.013 24.3499V35.6953H146.77Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                        <a href="https://checkr.com/" target="_blank" class="text-gray-40 transition-colors hover:text-gray-50 active:translate-y-[1px] dark:text-gray-200 dark:hover:text-gray-30">
-                            <svg width="137" height="32" viewBox="0 0 137 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-auto">
-                                <path d="M60.9063 7.65625C54.0626 7.65625 48.9689 12.875 48.9689 19.8124C48.9689 26.7187 54.1251 31.9687 60.9063 31.9687C65.6564 31.9687 69.6563 29.4375 71.6564 25.3751L65.7501 23.8125C64.7814 25.4062 63.0314 26.4063 60.9063 26.4063C57.875 26.4063 55.8126 24.6875 55.2812 21.5312H72.7188C72.7814 20.9375 72.8438 20.3125 72.8438 19.7188C72.8438 13.125 68.0001 7.65625 60.9063 7.65625ZM55.4376 17.3125C56.1563 14.5937 58.125 12.9687 60.9063 12.9687C63.6876 12.9687 65.7188 14.5 66.5938 17.3125H55.4376Z" fill="currentColor"></path>
-                                <path d="M25.3751 31.3437H31.5938V19.25C31.5938 15.5 33.6564 13.25 36.7502 13.25C39.5627 13.25 40.7814 14.9688 40.7814 18.4063V31.3437H47.0001V17.3438C47.0001 11.4688 43.7501 7.75001 38.5313 7.75001C35.7813 7.75001 33.3125 8.78125 31.5627 10.4375V0H25.3751" fill="currentColor"></path>
-                                <path d="M120.094 8.31251H112.906L106 18.5312V0H99.7811V31.3437H106V20.3125L113.375 31.3437H120.906L112.281 19.2813L120.094 8.31251Z" fill="currentColor"></path>
-                                <path d="M134.563 8.1875C131.594 8.1875 129.531 9.09375 127.875 11.125L126.781 8.31251H122.781V31.3437H129.031V19.3751C129.031 15.625 130.406 14.0625 133.938 14.0625H136.625V8.1875H134.563Z" fill="currentColor"></path>
-                                <path d="M12.25 26.1562C8.90625 26.1562 6.34376 23.375 6.34376 19.8124C6.34376 16.25 8.875 13.5312 12.25 13.5312C14.5937 13.5312 16.6875 14.75 17.7187 16.9688L23.4063 15C21.625 10.5 17.4374 7.65625 12.3125 7.65625C5.28125 7.65625 0 12.8437 0 19.7501C0 26.6563 5.31249 32 12.2187 32C17.4374 32 21.7499 29.0313 23.4687 24.375L17.6875 22.3751C16.8125 24.7188 14.6562 26.1562 12.25 26.1562Z" fill="currentColor"></path>
-                                <path d="M86.6251 26.1562C83.2813 26.1562 80.7188 23.375 80.7188 19.8124C80.7188 16.25 83.2501 13.5312 86.6251 13.5312C88.9689 13.5312 91.0626 14.75 92.0938 16.9688L97.7813 15C96 10.5 91.8126 7.65625 86.6875 7.65625C79.6876 7.65625 74.4063 12.8437 74.4063 19.7501C74.4063 26.6563 79.7189 32 86.6251 32C91.8439 32 96.1564 29.0313 97.8751 24.375L92.0938 22.3751C91.2188 24.7188 89.0314 26.1562 86.6251 26.1562Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                        <a href="https://bonusly.com/" target="_blank" class="text-gray-40 transition-colors hover:text-gray-50 active:translate-y-[1px] dark:text-gray-200 dark:hover:text-gray-30">
-                            <svg width="184" height="48" viewBox="0 0 184 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-auto">
-                                <path d="M51.9034 13.7852C50.9771 10.7716 49.0623 8.16343 46.4719 6.38724C43.8378 4.57181 40.9158 3.22084 37.8311 2.39222C32.6168 0.963702 27.253 0.160718 21.8513 0H18.565C17.4617 0 16.4036 0.441067 15.6235 1.22617C14.8434 2.01127 14.4051 3.07609 14.4051 4.18639V12.5592C14.4051 15.9561 14.4051 19.06 14.6071 22.4511C14.7913 24.9568 15.7957 27.9233 18.0004 29.4005C18.9933 30.1102 20.1321 30.5863 21.3327 30.7934C22.5331 31.0004 23.7644 30.9332 24.9355 30.5966C26.2185 30.1751 27.3734 29.4308 28.2906 28.4345C29.2079 27.4381 29.8572 26.2226 30.177 24.9031C30.5008 23.5841 30.484 22.2038 30.1283 20.8933C29.7726 19.5827 29.0897 18.3855 28.1445 17.4154C25.7676 14.9454 22.8556 14.9454 19.1117 15.0232V9.36557C19.1318 9.03664 19.2194 8.71545 19.3687 8.42215C19.5179 8.12884 19.7259 7.86974 19.9794 7.66111C20.3261 7.41197 20.7417 7.27815 21.1679 7.27835C23.7358 7.16885 26.2966 7.62185 28.6735 8.60603C31.6629 9.93959 34.2026 12.1194 35.9829 14.8797C37.1355 16.8604 37.8471 19.0694 38.0685 21.3539C38.29 23.6384 38.0161 25.9442 37.2657 28.1118C36.5154 30.2794 35.3064 32.2572 33.7224 33.9087C32.1384 35.5604 30.2171 36.8462 28.0911 37.6775C25.8612 38.5409 23.4635 38.8746 21.0845 38.6526C18.7054 38.4306 16.4095 37.6589 14.3754 36.3977C6.64988 31.4936 6.7509 21.8649 6.77467 13.6238L6.85787 7.33815V7.30227C6.85787 6.34538 6.0259 6.59058 5.66933 6.76402C4.59816 7.26999 3.65679 8.01683 2.91786 8.94693C0.742836 11.7159 0.231765 15.37 0 18.7849V22.7261C0.112599 27.3911 0.963165 32.0082 2.51971 36.4037C3.64533 39.5221 5.5387 42.302 8.02263 44.4834C10.5452 46.5431 13.6368 47.7709 16.8773 48H20.0031C22.0066 47.8116 23.9845 47.4106 25.9042 46.8039C31.2963 45.0561 36.2812 42.2284 40.5588 38.4909C45.0116 34.792 48.5683 30.1205 50.9586 24.8313C52.5074 21.3632 52.8407 17.4687 51.9034 13.7852Z" fill="currentColor"></path>
-                                <path d="M163.43 27.0265V9.26416H158.152V26.7035C158.152 33.3957 160.738 33.7845 164.654 33.7845H164.862C164.949 33.7853 165.035 33.7687 165.115 33.7356C165.196 33.7025 165.269 33.6537 165.33 33.5918C165.391 33.53 165.44 33.4565 165.473 33.3756C165.506 33.2948 165.523 33.2081 165.522 33.1207V28.707H164.927C164.716 28.7056 164.508 28.6598 164.316 28.5725C164.123 28.4852 163.95 28.3584 163.81 28.2001C163.668 28.0419 163.561 27.8558 163.497 27.6536C163.431 27.4515 163.408 27.2379 163.43 27.0265Z" fill="currentColor"></path>
-                                <path d="M98.7735 17.6309C97.9019 16.7154 96.8518 15.9906 95.6893 15.5019C94.5367 15.0075 93.2931 14.7649 92.0404 14.7902C90.1255 14.7276 88.2364 15.2487 86.6207 16.2852C85.4096 17.0685 84.3856 18.1114 83.622 19.3395C82.8584 20.5676 82.3741 21.9504 82.2037 23.389C82.0333 24.8274 82.1812 26.2861 82.6366 27.6604C83.0919 29.0347 83.8437 30.2906 84.8379 31.3384C86.1666 32.7284 87.8782 33.6865 89.7525 34.0894C90.4074 34.2271 91.0744 34.2972 91.7433 34.2988C93.3217 34.2986 94.8753 33.9053 96.2658 33.154C97.6563 32.4026 98.8404 31.3166 99.7125 29.9928C100.779 28.3871 101.35 26.4997 101.353 24.5684C101.406 23.2929 101.204 22.0197 100.758 20.8246C100.319 19.6353 99.6439 18.5487 98.7735 17.6309ZM92.0227 29.4665C90.0318 29.4665 87.8628 27.9235 87.8628 24.5384C87.8628 21.1535 89.9427 19.6703 92.0227 19.6703C94.1025 19.6703 96.1825 21.1773 96.1825 24.5384C96.1825 27.8995 94.0194 29.4665 92.0227 29.4665Z" fill="currentColor"></path>
-                                <path d="M72.1026 14.8796C70.3612 14.7833 68.6525 15.383 67.3484 16.5481V10.4779C67.3484 10.3412 67.3216 10.2059 67.2697 10.0797C67.2177 9.9534 67.1415 9.83868 67.0455 9.74204C66.9495 9.64542 66.8355 9.56877 66.7101 9.51647C66.5847 9.46418 66.4501 9.43726 66.3144 9.43726H62.2614V33.802H67.3365V32.0079C67.6631 32.634 68.144 33.1653 68.733 33.5509C69.6335 34.0253 70.6345 34.2735 71.6509 34.2746H71.9837C77.0528 34.2746 80.4639 30.3512 80.4639 24.5143C80.4639 18.6773 77.1717 14.8916 72.1026 14.8796ZM71.2944 29.4004C68.9173 29.4004 67.3425 27.4746 67.3425 24.4963C67.3425 21.5181 68.8935 19.67 71.2944 19.67C73.6952 19.67 75.2403 21.5659 75.2403 24.4963C75.2403 27.4268 73.6892 29.4004 71.2944 29.4004Z" fill="currentColor"></path>
-                                <path d="M150.339 22.8459C147.961 22.2479 146.499 21.877 146.499 20.5912C146.499 19.73 147.231 19.1798 148.359 19.1798C150.814 19.1798 150.767 20.7347 150.767 20.7347L155.473 20.7826C155.472 20.5566 155.458 20.331 155.431 20.1067C155.027 17.6547 152.93 14.79 148.359 14.79C144.622 14.79 141.585 17.553 141.585 20.9441C141.585 23.713 143.367 25.2381 146.547 26.0874C149.726 26.9366 150.582 27.2835 150.582 28.4796C150.582 29.0776 149.988 29.8909 148.574 29.8969C148.236 29.9213 147.896 29.8786 147.575 29.7714C147.251 29.6661 146.951 29.4951 146.696 29.269C146.405 28.9779 146.164 28.6405 145.983 28.2702L145.828 27.9533H145.472H141.674H141.079C141.065 28.1644 141.065 28.3761 141.079 28.5872C141.318 30.8957 143.522 34.3286 148.61 34.3286C153.168 34.3286 155.55 31.2486 155.55 28.2044C155.574 24.8972 152.709 23.42 150.339 22.8459Z" fill="currentColor"></path>
-                                <path d="M113.084 14.8021C111.982 14.7796 110.895 15.0542 109.934 15.5974C109.397 15.9609 108.961 16.4572 108.668 17.0387V16.1477C108.667 15.9277 108.579 15.7172 108.425 15.5616C108.27 15.406 108.061 15.3179 107.842 15.3163H103.611V33.7725H108.77V23.2226C108.77 21.5182 109.536 19.7061 111.699 19.7061C113.619 19.7061 114.587 20.8006 114.587 22.9655V33.7843H119.752V22.2658C119.752 17.7325 117.149 14.808 113.084 14.8021Z" fill="currentColor"></path>
-                                <path d="M133.616 26.1352C133.616 28.2344 132.535 29.4365 130.645 29.4365C128.03 29.4365 127.828 26.8589 127.828 26.0694V15.3044H122.664V26.793C122.664 31.1828 125.516 34.2569 129.569 34.2569C132.623 34.2569 133.812 32.2893 133.812 32.2893C133.812 32.2893 133.812 32.9231 133.812 33.0666C133.796 33.1592 133.802 33.2542 133.83 33.344C133.857 33.4337 133.905 33.5157 133.97 33.5832C134.035 33.6507 134.115 33.702 134.203 33.7327C134.291 33.7636 134.385 33.773 134.477 33.7604H138.762V15.3283H133.61L133.616 26.1352Z" fill="currentColor"></path>
-                                <path d="M178.304 15.3283V26.1352C178.304 28.2344 177.223 29.4365 175.333 29.4365C172.719 29.4365 172.51 26.8589 172.51 26.0694V15.3044H167.347V26.793C167.347 31.1828 170.204 34.2567 174.257 34.2567H174.609C175.528 34.2566 176.436 34.0396 177.259 33.6229C177.784 33.2955 178.213 32.8331 178.501 32.2833V33.7544C178.501 37.2829 177.526 39.137 174.603 39.137C172.962 39.137 172.368 38.3116 172.225 37.6538C172.206 37.5588 172.155 37.4735 172.08 37.4124C172.006 37.3514 171.912 37.3183 171.816 37.3189H166.658C166.658 39.113 168.612 43.9692 174.603 43.9692C181.448 43.9692 183.451 38.2758 183.451 33.8023V15.3283H178.304Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                        <a href="https://fraktal.co/" target="_blank" class="text-gray-40 transition-colors hover:text-gray-50 active:translate-y-[1px] dark:text-gray-200 dark:hover:text-gray-30">
-                            <svg width="56" height="52" viewBox="0 0 56 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto">
-                                <g clip-path="url(#clip0_306_57)">
-                                    <path d="M54.1839 18.9951L54.0572 18.4875C53.0447 14.3416 51.0616 12.4378 45.1548 13.3262L41.0624 13.9608L39.9232 14.13C38.3199 14.3838 36.8011 13.2416 36.5058 11.634L35.7041 6.76888C34.7336 1.01533 32.1178 0 28.1096 0H27.6034C23.5952 0 21.1903 1.01533 20.0933 6.81117L19.2495 11.6763C18.9541 13.2839 17.3931 14.4262 15.7898 14.1723L11.1066 13.4954C11.0222 13.4954 10.8956 13.4531 10.8112 13.4531L10.3049 13.3685C10.2628 13.3685 10.2205 13.3685 10.2205 13.3685C4.39817 12.4378 2.49956 13.9608 1.40259 18.4875L1.27602 18.9951C0.136853 23.5219 0.263427 25.2986 5.41076 28.1755L9.58769 30.5022C11.0222 31.3061 11.6129 33.1252 10.8956 34.6058L8.27976 39.9786C5.66389 45.2668 7.01402 48.2706 10.3893 50.0473L10.8956 50.3013C14.2709 52.078 16.6758 53.3048 20.9371 49.2858L25.5781 44.9284C26.7595 43.7861 28.7004 43.7861 29.8816 44.9284L34.4805 49.2858C36.6744 51.3587 38.4886 52.078 40.1763 51.9933C41.2733 51.9933 41.9061 51.6549 41.9061 51.6549H41.9483C42.8344 51.3587 43.6782 50.8512 44.5221 50.3013L44.9017 50.0473C47.7708 48.0166 49.7959 45.2668 47.1379 39.9786L45.1128 35.9597L44.4376 34.6058C43.7204 33.1252 44.2689 31.3061 45.7033 30.5446L50.0068 28.1755C55.1964 25.2986 55.3229 23.2679 54.1839 18.9951ZM36.0415 21.4065C36.0415 23.3526 35.029 24.1987 32.793 24.1987H27.5189V26.1448H30.8943C33.2148 26.1448 34.1429 26.9909 34.1429 28.6832V28.7676C34.1429 30.5868 33.2148 31.4752 30.8943 31.4752H27.8143V34.0558C27.8143 36.1712 26.7595 37.3133 24.7344 37.3133H23.5952C21.6544 37.3133 20.6418 35.7481 20.6418 33.1675V22.5064C20.6418 19.9259 21.8653 18.6144 24.1859 18.6144H32.793C35.029 18.6144 36.0415 19.4605 36.0415 21.2797V21.4065Z" fill="currentColor"></path>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_306_57">
-                                        <rect width="55.4667" height="52" fill="currentColor"></rect>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="relative order-1 col-span-12 border-r border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 lg:order-2 lg:col-span-7 xl:col-span-8">
-                <div class="border-l border-gray-500 bg-gray-1000/20 p-6 pr-0 transition-colors hover:bg-transparent xs:p-10 lg:border-l-0">
-                    <div class="flex flex-col sm:flex-row">
-                        <div class="flex w-full flex-col items-start pr-6 xs:pr-8 sm:w-1/2 sm:pr-0">
-                            <div class="flex items-center space-x-3" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                                <svg viewBox="0 0 12 16" fill="none" class="h-4 text-green-500 dark:text-white">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2.01994e-06C4.52914 2.01994e-06 3.07886 0.106001 1.65429 0.31C0.690857 0.45 3.19029e-09 1.414 3.19029e-09 2.51699V15.2499C-1.08291e-05 15.3768 0.0275633 15.5016 0.0801428 15.6126C0.132722 15.7237 0.208588 15.8174 0.300643 15.8849C0.392698 15.9524 0.497933 15.9916 0.606502 15.9988C0.715071 16.006 0.823425 15.9809 0.921428 15.9259L6 13.0819L11.0786 15.9259C11.1766 15.9809 11.2849 16.006 11.3935 15.9988C11.5021 15.9916 11.6073 15.9524 11.6994 15.8849C11.7914 15.8174 11.8673 15.7237 11.9199 15.6126C11.9724 15.5016 12 15.3768 12 15.2499V2.51699C12 1.414 11.3091 0.449 10.3457 0.31C8.90395 0.103 7.45264 -0.000527367 6 2.01994e-06Z" fill="currentColor"></path>
-                                </svg>
-                                <div class="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400">Articles</div>
-                            </div>
-                            <a href="/articles/scraping-with-supabase" class="flex-1 active:translate-y-[1px]">
-                                <div class="mt-6 inline-block text-3xl font-bold leading-tight">Scraping the web with Supabase Edge Functions</div>
-                                <div class="mb-8 mt-6 text-lg text-gray-50">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still.</div>
-                            </a>
-                            <div class="flex items-center gap-4">
-                                <a target="_self" href="/articles/scraping-with-supabase" class="group/button inline-flex items-center space-x-2 rounded-lg border border-gray-500 py-2 pl-2.5 pr-2 transition-colors hover:border-gray-200 active:translate-y-[1px]">
-                                    <div class="text-sm font-bold leading-none text-white">Read</div>
-                                    <div class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover/button:border-green-400 group-hover/button:bg-green-400">
-                                        <svg viewBox="0 0 8 8" fill="none" class="h-2 w-2 text-white transition-colors group-hover/button:text-gray-1000">
-                                            <path d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a target="_self" href="/articles" class="group/button inline-flex items-center space-x-2 rounded-lg border border-gray-500 py-2 pl-2.5 pr-2 transition-colors hover:border-gray-200 active:translate-y-[1px]">
-                                    <div class="text-sm font-bold leading-none text-white">All articles</div>
-                                    <div class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover/button:border-green-400 group-hover/button:bg-green-400">
-                                        <svg viewBox="0 0 8 8" fill="none" class="h-2 w-2 text-white transition-colors group-hover/button:text-gray-1000">
-                                            <path d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="flex w-full flex-col justify-center divide-y divide-gray-500 pt-8 sm:w-1/2 sm:pl-10 sm:pt-0">
-                            <div class="py-4 pr-10">
-                                <a href="/articles/build-components-with-radix-tailwind" class="group inline-block max-w-xs active:translate-y-[1px]">
-                                    <span class="text-lg text-gray-50 transition-colors group-hover:text-white">Build Components with Radix UI and Tailwind
-                                    <!-- -->
-                                    </span>
-                                    <span class="whitespace-nowrap text-lg text-gray-50 transition-colors group-hover:text-white">
-                                        <span class="mr-2">CSS</span>
-                                        <div class="inline-flex h-[18px] w-[18px] -translate-y-[3px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover:border-green-400 group-hover:bg-green-400">
-                                            <svg viewBox="0 0 8 8" fill="none" class="h-2 w-2 text-white transition-colors group-hover:text-gray-1000">
-                                                <path d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="py-4 pr-10">
-                                <a href="/articles/building-dumb-stuff" class="group inline-block max-w-xs active:translate-y-[1px]">
-                                    <span class="text-lg text-gray-50 transition-colors group-hover:text-white">Building dumb
-                                    <!-- -->
-                                    </span>
-                                    <span class="whitespace-nowrap text-lg text-gray-50 transition-colors group-hover:text-white">
-                                        <span class="mr-2">stuff</span>
-                                        <div class="inline-flex h-[18px] w-[18px] -translate-y-[3px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover:border-green-400 group-hover:bg-green-400">
-                                            <svg viewBox="0 0 8 8" fill="none" class="h-2 w-2 text-white transition-colors group-hover:text-gray-1000">
-                                                <path d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="py-4 pr-10">
-                                <a href="/articles/interactive-illustrations-with-framer-motion" class="group inline-block max-w-xs active:translate-y-[1px]">
-                                    <span class="text-lg text-gray-50 transition-colors group-hover:text-white">Interactive Illustrations with Framer
-                                    <!-- -->
-                                    </span>
-                                    <span class="whitespace-nowrap text-lg text-gray-50 transition-colors group-hover:text-white">
-                                        <span class="mr-2">Motion</span>
-                                        <div class="inline-flex h-[18px] w-[18px] -translate-y-[3px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover:border-green-400 group-hover:bg-green-400">
-                                            <svg viewBox="0 0 8 8" fill="none" class="h-2 w-2 text-white transition-colors group-hover:text-gray-1000">
-                                                <path d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="py-4 pr-10">
-                                <a href="/articles/ui-experiments-with-swiftui" class="group inline-block max-w-xs active:translate-y-[1px]">
-                                    <span class="text-lg text-gray-50 transition-colors group-hover:text-white">UI Experiments with
-                                    <!-- -->
-                                    </span>
-                                    <span class="whitespace-nowrap text-lg text-gray-50 transition-colors group-hover:text-white">
-                                        <span class="mr-2">SwiftUI</span>
-                                        <div class="inline-flex h-[18px] w-[18px] -translate-y-[3px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover:border-green-400 group-hover:bg-green-400">
-                                            <svg viewBox="0 0 8 8" fill="none" class="h-2 w-2 text-white transition-colors group-hover:text-gray-1000">
-                                                <path d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  </div>
+  <div class="border-b border-gray-30 dark:border-gray-500">
+    <div class="mx-auto grid max-w-8xl grid-cols-12 px-2 xs:px-6 sm:px-10">
+      <div
+        class="order-2 col-span-12 flex flex-col-reverse border-x border-gray-30 dark:border-gray-500 lg:order-1 lg:col-span-5 lg:flex-col xl:col-span-4"
+      >
+        <div
+          class="flex h-64 flex-1 flex-col items-center justify-center border-t border-gray-30 px-8 py-8 text-center dark:border-gray-500 lg:border-t-0"
+          style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+        >
+          <div class="mb-4 text-lg font-bold leading-snug">
+            Companies
+            <!-- -->
+            <span class="inline lg:block">I &#x27;ve worked with</span>
+          </div>
+          <div
+            class="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 p-4"
+          >
+            <a
+              href="https://www.synack.com/"
+              target="_blank"
+              class="text-gray-40 transition-colors hover:text-gray-50 active:translate-y-[1px] dark:text-gray-200 dark:hover:text-gray-30"
+            >
+              <svg
+                width="178"
+                height="44"
+                viewBox="0 0 178 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-9 w-auto"
+              >
+                <path
+                  d="M133.454 15.6125C132.624 14.0854 130.508 12.2146 127.002 12.2146C121.625 12.2146 117.26 16.3392 117.26 22.3739C117.26 27.7851 120.864 32.5677 127.002 32.5677C129.673 32.5677 132.236 31.4579 133.454 29.2041V31.9441H138.03V12.8038H133.454V15.6125ZM133.488 22.5458C133.454 23.4837 133.174 24.3822 132.762 25.217C131.892 26.9503 130.228 28.3055 127.665 28.3055C123.54 28.3055 121.841 24.8389 121.841 22.482V22.4476C121.841 19.4671 123.923 16.4816 127.63 16.4816C130.37 16.4816 132.172 18.0431 132.973 19.8795C133.351 20.7094 133.523 21.6079 133.488 22.5458Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M149.825 16.4767C150.934 16.4423 152.044 16.7517 152.948 17.3802C153.886 18.0038 154.578 18.9073 154.995 19.9139H159.675C158.565 15.2344 154.475 12.2146 149.653 12.2146C143.932 12.2146 139.562 16.7222 139.562 22.3739C139.562 27.8538 143.761 32.5677 149.825 32.5677C152.079 32.602 154.264 31.8753 156.066 30.4857C157.833 29.101 159.115 27.1565 159.67 24.9715H154.99C154.298 26.5329 152.702 28.2663 149.825 28.2663C146.564 28.2663 144.173 25.8406 144.173 22.369C144.139 20.8076 144.693 19.2805 145.734 18.102C146.255 17.5472 146.913 17.1298 147.605 16.8548C148.298 16.5798 149.059 16.4423 149.825 16.4767Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M93.7494 12.8039L88.5838 26.0174L83.7963 12.8039H78.6651L84.9748 28.6493L86.2907 31.9441C84.8668 35.8281 83.7571 35.5875 81.4001 35.2732V39.0885C82.5098 39.3291 83.6196 39.4715 84.7637 39.4371C88.0928 39.4371 89.4088 36.5254 90.4841 33.7511C91.3876 31.4972 98.5615 12.7351 98.5615 12.7351H93.7396V12.8039H93.7494Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M72.0756 16.791C66.9787 15.3326 66.3207 14.2229 66.3207 12.8038C66.3207 11.3848 67.671 9.78893 70.7252 9.78893C73.7794 9.78893 77.8353 11.4535 77.8353 11.4535V6.91151C75.4096 6.08168 72.8759 5.66431 70.3128 5.66431C64.5923 5.66431 61.4006 8.43861 61.4006 12.8431C61.4006 17.6306 63.9343 19.5358 70.0722 21.1317C74.0937 22.1726 74.4079 23.8028 74.4079 24.8438C74.4079 25.8848 73.75 28.1386 70.0034 28.1386C66.085 28.1386 61.926 26.3365 61.926 26.3365V30.8442C63.3844 31.399 66.1587 32.2289 70.3864 32.2289C76.5586 32.2289 79.4704 29.1059 79.4704 24.5639C79.4655 20.1201 77.1773 18.2788 72.0756 16.791Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M106.929 11.969C102.107 11.969 97.879 15.8874 97.879 20.7093V31.9783H102.455V20.5718C102.455 18.2492 104.64 16.4128 106.963 16.4128C109.286 16.4128 111.471 18.2836 111.471 20.5718V31.9783H116.013V20.7093C115.978 15.853 111.746 11.969 106.929 11.969Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M161.094 4.75586H165.67V21.053L171.98 12.7989H177.735L170.418 21.8141L177.769 31.9391H172.358L167.57 25.0058L165.7 27.3971V31.9735H161.123L161.094 4.75586Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M24.2888 8.43374H33.2697C33.5103 8.43374 33.6527 8.15876 33.5447 7.94762L29.0371 0.179576C28.934 -0.0266555 28.6197 -0.0266555 28.4822 0.179576L23.9746 7.94762C23.896 8.1293 24.0433 8.43374 24.2888 8.43374Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M26.6507 30.2795C31.1583 17.8663 17.9104 10.5844 17.9104 10.5844L0.434738 0.042053C0.194135 -0.100345 -0.0808401 0.145169 0.0222755 0.385772L2.20734 6.55798C2.27609 6.79858 2.44795 6.97535 2.65909 7.11284L13.825 13.7368C13.825 13.7368 20.6552 17.5864 21.8681 22.2659L4.7705 12.0378C4.49553 11.866 4.18127 12.141 4.28439 12.4208L6.46946 18.4556C6.57257 18.7305 6.78371 19.0104 7.05869 19.1479L26.0712 30.5201C26.2627 30.6379 26.5475 30.5201 26.6507 30.2795Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M30.8833 30.2795C26.3757 17.8663 39.6236 10.5844 39.6236 10.5844L57.0993 0.0420636C57.3399 -0.0954239 57.6198 0.145179 57.5166 0.390693L55.3316 6.5629C55.2628 6.8035 55.091 6.98027 54.8798 7.11776L43.7139 13.7368C43.7139 13.7368 36.8837 17.5864 35.6709 22.2659L52.7684 12.0378C53.0434 11.866 53.3576 12.141 53.2545 12.4208L51.0645 18.4556C50.9614 18.7305 50.7503 19.0104 50.4753 19.1479L31.4628 30.5201C31.2713 30.6379 30.9865 30.5201 30.8833 30.2795Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M49.2281 23.6897L28.767 35.931L8.31082 23.6897C8.24699 23.6553 8.19298 23.7192 8.20771 23.7585C8.62508 24.9025 11.1882 31.4921 18.0921 35.273L23.9157 38.8084L20.2722 40.9935C20.1004 41.0966 20.1004 41.3765 20.2722 41.4796L24.225 43.8709C24.5 44.0428 24.883 44.0428 25.1629 43.8709L28.767 41.7006L32.3711 43.8709C32.6461 44.0428 33.0291 44.0428 33.309 43.8709L37.2618 41.4796C37.4336 41.3765 37.4336 41.0966 37.2618 40.9935L33.6183 38.8084L39.4419 35.273C46.3408 31.4921 48.9089 24.9025 49.3263 23.7585C49.3459 23.7192 49.2919 23.6504 49.2281 23.6897Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.pento.io/"
+              target="_blank"
+              class="text-gray-40 transition-colors hover:text-gray-50 active:translate-y-[1px] dark:text-gray-200 dark:hover:text-gray-30"
+            >
+              <svg
+                width="44"
+                height="52"
+                viewBox="0 0 44 52"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-11 w-auto"
+              >
+                <path
+                  d="M0 51.999H2.16666V13.3088C2.16666 11.9412 3.27527 10.8327 4.64282 10.8327H38.6902C40.0578 10.8327 41.1663 11.9412 41.1663 13.3088V27.8563C41.1663 29.2239 40.0578 30.3326 38.6902 30.3326H10.8333V32.4991H38.3807C41.1158 32.4991 43.3331 30.2819 43.3331 27.5469V13.6184C43.3331 10.8832 41.1158 8.66602 38.3807 8.66602H4.95235C2.21725 8.66602 0 10.8832 0 13.6184V51.999Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.8335 51.9996H8.66681V4.95235C8.66681 2.21725 10.8841 0 13.6192 0H29.7142C32.4494 0 34.6666 2.21723 34.6666 4.95233V36.214C34.6666 38.9492 32.4494 41.1664 29.7142 41.1664H10.8335V51.9996ZM10.8335 4.64282C10.8335 3.27527 11.9421 2.16666 13.3096 2.16666H30.0238C31.3914 2.16666 32.4999 3.27527 32.4999 4.64282V36.5236C32.4999 37.891 31.3914 38.9997 30.0238 38.9997H10.8335V4.64282Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M4.33362 51.9999H6.50026V8.97632C6.50026 7.60877 7.60889 6.50014 8.97644 6.50014H34.3572C35.7248 6.50014 36.8333 7.60877 36.8333 8.97632V32.1904C36.8333 33.558 35.7248 34.6665 34.3572 34.6665H10.8336V36.8333H34.0476C36.7828 36.8333 39 34.616 39 31.8809V9.2859C39 6.55072 36.7828 4.3335 34.0476 4.3335H9.28595C6.55085 4.3335 4.33362 6.55072 4.33362 9.2859V51.9999Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.prisma.io/"
+              target="_blank"
+              class="text-gray-40 transition-colors hover:text-gray-50 active:translate-y-[1px] dark:text-gray-200 dark:hover:text-gray-30"
+            >
+              <svg
+                width="151"
+                height="48"
+                viewBox="0 0 151 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-auto"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.610678 30.418C0.133993 31.1954 0.14137 32.1767 0.629694 32.9469L9.46821 46.8894C10.0419 47.7943 11.1475 48.2069 12.1738 47.899L37.6797 40.2472C39.0717 39.8297 39.7719 38.2769 39.1635 36.9572L22.7671 1.38963C21.9675 -0.344917 19.5569 -0.487295 18.5587 1.14106L0.610678 30.418ZM22.3314 9.52075C21.9829 8.71436 20.8029 8.83857 20.6299 9.69984L14.3174 41.131C14.1842 41.7938 14.8048 42.3597 15.4525 42.1664L33.0749 36.9058C33.5893 36.7525 33.8543 36.1843 33.6414 35.6916L22.3314 9.52075Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M54.6647 23.9089H56.2181C57.6701 23.9089 58.7556 23.6223 59.4769 23.0485C60.1979 22.4748 60.5582 21.6397 60.5582 20.5433C60.5582 19.4372 60.256 18.6199 59.6521 18.0918C59.0477 17.5638 58.1013 17.2998 56.8119 17.2998H54.6647V23.9089ZM65.3248 20.376C65.3248 22.7721 64.5762 24.6041 63.0781 25.8732C61.5812 27.1428 59.4519 27.7768 56.6905 27.7768H54.6649V35.6957H49.9442V13.4319H57.0555C59.7565 13.4319 61.8097 14.0132 63.2158 15.1752C64.6219 16.3377 65.3248 18.0714 65.3248 20.376Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M77.8387 18.3501C78.4684 18.3501 78.9912 18.3958 79.4073 18.4872L79.0572 22.8422C78.6813 22.7411 78.225 22.6901 77.6866 22.6901C76.2041 22.6901 75.0496 23.0708 74.2216 23.8322C73.3946 24.5936 72.981 25.6599 72.981 27.0305V35.6955H68.3362V18.67H71.8541L72.5396 21.5329H72.7676C73.2956 20.579 74.0085 19.8095 74.9076 19.2255C75.8056 18.6421 76.7827 18.3501 77.8387 18.3501Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M81.8706 35.6957H86.5154V18.6704H81.8706V35.6957ZM81.6736 14.2689C81.6736 12.7563 82.5162 12.0002 84.2014 12.0002C85.8861 12.0002 86.7292 12.7563 86.7292 14.2689C86.7292 14.99 86.5186 15.5508 86.0975 15.952C85.676 16.3531 85.044 16.5531 84.2014 16.5531C82.5162 16.5531 81.6736 15.7917 81.6736 14.2689Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M102.868 30.6391C102.868 32.3856 102.262 33.7156 101.048 34.6291C99.8348 35.5427 98.02 35.9997 95.6041 35.9997C94.3653 35.9997 93.3103 35.9159 92.4369 35.7481C91.5638 35.5809 90.7462 35.3345 89.985 35.0097V31.1721C90.8479 31.5785 91.8196 31.9184 92.9016 32.1926C93.9824 32.4663 94.9342 32.6035 95.7562 32.6035C97.4414 32.6035 98.2845 32.1164 98.2845 31.1421C98.2845 30.7764 98.1729 30.4796 97.9496 30.2511C97.726 30.0223 97.3405 29.7638 96.7919 29.474C96.244 29.1847 95.5126 28.8475 94.599 28.4614C93.2897 27.9136 92.3272 27.4059 91.7136 26.9387C91.099 26.4717 90.6522 25.9363 90.3738 25.3319C90.0942 24.728 89.9542 23.9844 89.9542 23.1009C89.9542 21.5883 90.5403 20.4187 91.7136 19.5912C92.886 18.7636 94.5481 18.3501 96.7006 18.3501C98.7515 18.3501 100.746 18.797 102.685 19.6901L101.285 23.0401C100.432 22.6745 99.6343 22.3755 98.8934 22.1416C98.1523 21.9082 97.3958 21.7915 96.6246 21.7915C95.254 21.7915 94.5685 22.162 94.5685 22.903C94.5685 23.3197 94.79 23.68 95.231 23.9844C95.6728 24.2887 96.6398 24.7409 98.132 25.3398C99.4624 25.8783 100.437 26.3804 101.056 26.8472C101.675 27.3144 102.132 27.8523 102.427 28.4614C102.721 29.0708 102.868 29.7965 102.868 30.6391Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M121.268 35.6955H116.624V25.7512C116.624 24.5232 116.418 23.6015 116.007 22.9874C115.595 22.3733 114.948 22.0658 114.065 22.0658C112.878 22.0658 112.015 22.5024 111.476 23.3757C110.938 24.2489 110.669 25.6852 110.669 27.6855V35.6955H106.024V18.67H109.573L110.197 20.8478H110.456C110.913 20.066 111.573 19.4541 112.436 19.0126C113.299 18.5711 114.289 18.3501 115.406 18.3501C117.954 18.3501 119.679 19.183 120.583 20.8478H120.994C121.451 20.0558 122.124 19.4417 123.012 19.0051C123.901 18.5684 124.903 18.3501 126.02 18.3501C127.948 18.3501 129.408 18.8453 130.398 19.8348C131.388 20.8247 131.883 22.411 131.883 24.5936V35.6955H127.223V25.7512C127.223 24.5232 127.017 23.6015 126.606 22.9874C126.194 22.3733 125.548 22.0658 124.664 22.0658C123.527 22.0658 122.677 22.4723 122.113 23.2843C121.55 24.0967 121.268 25.3857 121.268 27.1521V35.6955Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M145.399 27.8071L143.602 27.8679C142.252 27.9089 141.247 28.1523 140.587 28.5991C139.927 29.046 139.597 29.7258 139.597 30.6399C139.597 31.9492 140.348 32.6042 141.851 32.6042C142.927 32.6042 143.788 32.2943 144.432 31.675C145.076 31.056 145.399 30.234 145.399 29.208V27.8071ZM146.77 35.6953L145.871 33.3804H145.749C144.967 34.3656 144.163 35.048 143.335 35.4286C142.508 35.8092 141.43 35.9997 140.1 35.9997C138.465 35.9997 137.178 35.533 136.239 34.5989C135.3 33.6649 134.831 32.335 134.831 30.6089C134.831 28.8023 135.462 27.4697 136.726 26.6114C137.991 25.7539 139.896 25.279 142.445 25.1877L145.399 25.0962V24.3499C145.399 22.6243 144.515 21.7613 142.749 21.7613C141.389 21.7613 139.79 22.1721 137.952 22.9948L136.414 19.8578C138.373 18.8323 140.547 18.3193 142.932 18.3193C145.216 18.3193 146.968 18.8173 148.186 19.812C149.404 20.8068 150.013 22.3194 150.013 24.3499V35.6953H146.77Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://checkr.com/"
+              target="_blank"
+              class="text-gray-40 transition-colors hover:text-gray-50 active:translate-y-[1px] dark:text-gray-200 dark:hover:text-gray-30"
+            >
+              <svg
+                width="137"
+                height="32"
+                viewBox="0 0 137 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-auto"
+              >
+                <path
+                  d="M60.9063 7.65625C54.0626 7.65625 48.9689 12.875 48.9689 19.8124C48.9689 26.7187 54.1251 31.9687 60.9063 31.9687C65.6564 31.9687 69.6563 29.4375 71.6564 25.3751L65.7501 23.8125C64.7814 25.4062 63.0314 26.4063 60.9063 26.4063C57.875 26.4063 55.8126 24.6875 55.2812 21.5312H72.7188C72.7814 20.9375 72.8438 20.3125 72.8438 19.7188C72.8438 13.125 68.0001 7.65625 60.9063 7.65625ZM55.4376 17.3125C56.1563 14.5937 58.125 12.9687 60.9063 12.9687C63.6876 12.9687 65.7188 14.5 66.5938 17.3125H55.4376Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M25.3751 31.3437H31.5938V19.25C31.5938 15.5 33.6564 13.25 36.7502 13.25C39.5627 13.25 40.7814 14.9688 40.7814 18.4063V31.3437H47.0001V17.3438C47.0001 11.4688 43.7501 7.75001 38.5313 7.75001C35.7813 7.75001 33.3125 8.78125 31.5627 10.4375V0H25.3751"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M120.094 8.31251H112.906L106 18.5312V0H99.7811V31.3437H106V20.3125L113.375 31.3437H120.906L112.281 19.2813L120.094 8.31251Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M134.563 8.1875C131.594 8.1875 129.531 9.09375 127.875 11.125L126.781 8.31251H122.781V31.3437H129.031V19.3751C129.031 15.625 130.406 14.0625 133.938 14.0625H136.625V8.1875H134.563Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M12.25 26.1562C8.90625 26.1562 6.34376 23.375 6.34376 19.8124C6.34376 16.25 8.875 13.5312 12.25 13.5312C14.5937 13.5312 16.6875 14.75 17.7187 16.9688L23.4063 15C21.625 10.5 17.4374 7.65625 12.3125 7.65625C5.28125 7.65625 0 12.8437 0 19.7501C0 26.6563 5.31249 32 12.2187 32C17.4374 32 21.7499 29.0313 23.4687 24.375L17.6875 22.3751C16.8125 24.7188 14.6562 26.1562 12.25 26.1562Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M86.6251 26.1562C83.2813 26.1562 80.7188 23.375 80.7188 19.8124C80.7188 16.25 83.2501 13.5312 86.6251 13.5312C88.9689 13.5312 91.0626 14.75 92.0938 16.9688L97.7813 15C96 10.5 91.8126 7.65625 86.6875 7.65625C79.6876 7.65625 74.4063 12.8437 74.4063 19.7501C74.4063 26.6563 79.7189 32 86.6251 32C91.8439 32 96.1564 29.0313 97.8751 24.375L92.0938 22.3751C91.2188 24.7188 89.0314 26.1562 86.6251 26.1562Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://bonusly.com/"
+              target="_blank"
+              class="text-gray-40 transition-colors hover:text-gray-50 active:translate-y-[1px] dark:text-gray-200 dark:hover:text-gray-30"
+            >
+              <svg
+                width="184"
+                height="48"
+                viewBox="0 0 184 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-auto"
+              >
+                <path
+                  d="M51.9034 13.7852C50.9771 10.7716 49.0623 8.16343 46.4719 6.38724C43.8378 4.57181 40.9158 3.22084 37.8311 2.39222C32.6168 0.963702 27.253 0.160718 21.8513 0H18.565C17.4617 0 16.4036 0.441067 15.6235 1.22617C14.8434 2.01127 14.4051 3.07609 14.4051 4.18639V12.5592C14.4051 15.9561 14.4051 19.06 14.6071 22.4511C14.7913 24.9568 15.7957 27.9233 18.0004 29.4005C18.9933 30.1102 20.1321 30.5863 21.3327 30.7934C22.5331 31.0004 23.7644 30.9332 24.9355 30.5966C26.2185 30.1751 27.3734 29.4308 28.2906 28.4345C29.2079 27.4381 29.8572 26.2226 30.177 24.9031C30.5008 23.5841 30.484 22.2038 30.1283 20.8933C29.7726 19.5827 29.0897 18.3855 28.1445 17.4154C25.7676 14.9454 22.8556 14.9454 19.1117 15.0232V9.36557C19.1318 9.03664 19.2194 8.71545 19.3687 8.42215C19.5179 8.12884 19.7259 7.86974 19.9794 7.66111C20.3261 7.41197 20.7417 7.27815 21.1679 7.27835C23.7358 7.16885 26.2966 7.62185 28.6735 8.60603C31.6629 9.93959 34.2026 12.1194 35.9829 14.8797C37.1355 16.8604 37.8471 19.0694 38.0685 21.3539C38.29 23.6384 38.0161 25.9442 37.2657 28.1118C36.5154 30.2794 35.3064 32.2572 33.7224 33.9087C32.1384 35.5604 30.2171 36.8462 28.0911 37.6775C25.8612 38.5409 23.4635 38.8746 21.0845 38.6526C18.7054 38.4306 16.4095 37.6589 14.3754 36.3977C6.64988 31.4936 6.7509 21.8649 6.77467 13.6238L6.85787 7.33815V7.30227C6.85787 6.34538 6.0259 6.59058 5.66933 6.76402C4.59816 7.26999 3.65679 8.01683 2.91786 8.94693C0.742836 11.7159 0.231765 15.37 0 18.7849V22.7261C0.112599 27.3911 0.963165 32.0082 2.51971 36.4037C3.64533 39.5221 5.5387 42.302 8.02263 44.4834C10.5452 46.5431 13.6368 47.7709 16.8773 48H20.0031C22.0066 47.8116 23.9845 47.4106 25.9042 46.8039C31.2963 45.0561 36.2812 42.2284 40.5588 38.4909C45.0116 34.792 48.5683 30.1205 50.9586 24.8313C52.5074 21.3632 52.8407 17.4687 51.9034 13.7852Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M163.43 27.0265V9.26416H158.152V26.7035C158.152 33.3957 160.738 33.7845 164.654 33.7845H164.862C164.949 33.7853 165.035 33.7687 165.115 33.7356C165.196 33.7025 165.269 33.6537 165.33 33.5918C165.391 33.53 165.44 33.4565 165.473 33.3756C165.506 33.2948 165.523 33.2081 165.522 33.1207V28.707H164.927C164.716 28.7056 164.508 28.6598 164.316 28.5725C164.123 28.4852 163.95 28.3584 163.81 28.2001C163.668 28.0419 163.561 27.8558 163.497 27.6536C163.431 27.4515 163.408 27.2379 163.43 27.0265Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M98.7735 17.6309C97.9019 16.7154 96.8518 15.9906 95.6893 15.5019C94.5367 15.0075 93.2931 14.7649 92.0404 14.7902C90.1255 14.7276 88.2364 15.2487 86.6207 16.2852C85.4096 17.0685 84.3856 18.1114 83.622 19.3395C82.8584 20.5676 82.3741 21.9504 82.2037 23.389C82.0333 24.8274 82.1812 26.2861 82.6366 27.6604C83.0919 29.0347 83.8437 30.2906 84.8379 31.3384C86.1666 32.7284 87.8782 33.6865 89.7525 34.0894C90.4074 34.2271 91.0744 34.2972 91.7433 34.2988C93.3217 34.2986 94.8753 33.9053 96.2658 33.154C97.6563 32.4026 98.8404 31.3166 99.7125 29.9928C100.779 28.3871 101.35 26.4997 101.353 24.5684C101.406 23.2929 101.204 22.0197 100.758 20.8246C100.319 19.6353 99.6439 18.5487 98.7735 17.6309ZM92.0227 29.4665C90.0318 29.4665 87.8628 27.9235 87.8628 24.5384C87.8628 21.1535 89.9427 19.6703 92.0227 19.6703C94.1025 19.6703 96.1825 21.1773 96.1825 24.5384C96.1825 27.8995 94.0194 29.4665 92.0227 29.4665Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M72.1026 14.8796C70.3612 14.7833 68.6525 15.383 67.3484 16.5481V10.4779C67.3484 10.3412 67.3216 10.2059 67.2697 10.0797C67.2177 9.9534 67.1415 9.83868 67.0455 9.74204C66.9495 9.64542 66.8355 9.56877 66.7101 9.51647C66.5847 9.46418 66.4501 9.43726 66.3144 9.43726H62.2614V33.802H67.3365V32.0079C67.6631 32.634 68.144 33.1653 68.733 33.5509C69.6335 34.0253 70.6345 34.2735 71.6509 34.2746H71.9837C77.0528 34.2746 80.4639 30.3512 80.4639 24.5143C80.4639 18.6773 77.1717 14.8916 72.1026 14.8796ZM71.2944 29.4004C68.9173 29.4004 67.3425 27.4746 67.3425 24.4963C67.3425 21.5181 68.8935 19.67 71.2944 19.67C73.6952 19.67 75.2403 21.5659 75.2403 24.4963C75.2403 27.4268 73.6892 29.4004 71.2944 29.4004Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M150.339 22.8459C147.961 22.2479 146.499 21.877 146.499 20.5912C146.499 19.73 147.231 19.1798 148.359 19.1798C150.814 19.1798 150.767 20.7347 150.767 20.7347L155.473 20.7826C155.472 20.5566 155.458 20.331 155.431 20.1067C155.027 17.6547 152.93 14.79 148.359 14.79C144.622 14.79 141.585 17.553 141.585 20.9441C141.585 23.713 143.367 25.2381 146.547 26.0874C149.726 26.9366 150.582 27.2835 150.582 28.4796C150.582 29.0776 149.988 29.8909 148.574 29.8969C148.236 29.9213 147.896 29.8786 147.575 29.7714C147.251 29.6661 146.951 29.4951 146.696 29.269C146.405 28.9779 146.164 28.6405 145.983 28.2702L145.828 27.9533H145.472H141.674H141.079C141.065 28.1644 141.065 28.3761 141.079 28.5872C141.318 30.8957 143.522 34.3286 148.61 34.3286C153.168 34.3286 155.55 31.2486 155.55 28.2044C155.574 24.8972 152.709 23.42 150.339 22.8459Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M113.084 14.8021C111.982 14.7796 110.895 15.0542 109.934 15.5974C109.397 15.9609 108.961 16.4572 108.668 17.0387V16.1477C108.667 15.9277 108.579 15.7172 108.425 15.5616C108.27 15.406 108.061 15.3179 107.842 15.3163H103.611V33.7725H108.77V23.2226C108.77 21.5182 109.536 19.7061 111.699 19.7061C113.619 19.7061 114.587 20.8006 114.587 22.9655V33.7843H119.752V22.2658C119.752 17.7325 117.149 14.808 113.084 14.8021Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M133.616 26.1352C133.616 28.2344 132.535 29.4365 130.645 29.4365C128.03 29.4365 127.828 26.8589 127.828 26.0694V15.3044H122.664V26.793C122.664 31.1828 125.516 34.2569 129.569 34.2569C132.623 34.2569 133.812 32.2893 133.812 32.2893C133.812 32.2893 133.812 32.9231 133.812 33.0666C133.796 33.1592 133.802 33.2542 133.83 33.344C133.857 33.4337 133.905 33.5157 133.97 33.5832C134.035 33.6507 134.115 33.702 134.203 33.7327C134.291 33.7636 134.385 33.773 134.477 33.7604H138.762V15.3283H133.61L133.616 26.1352Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M178.304 15.3283V26.1352C178.304 28.2344 177.223 29.4365 175.333 29.4365C172.719 29.4365 172.51 26.8589 172.51 26.0694V15.3044H167.347V26.793C167.347 31.1828 170.204 34.2567 174.257 34.2567H174.609C175.528 34.2566 176.436 34.0396 177.259 33.6229C177.784 33.2955 178.213 32.8331 178.501 32.2833V33.7544C178.501 37.2829 177.526 39.137 174.603 39.137C172.962 39.137 172.368 38.3116 172.225 37.6538C172.206 37.5588 172.155 37.4735 172.08 37.4124C172.006 37.3514 171.912 37.3183 171.816 37.3189H166.658C166.658 39.113 168.612 43.9692 174.603 43.9692C181.448 43.9692 183.451 38.2758 183.451 33.8023V15.3283H178.304Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://fraktal.co/"
+              target="_blank"
+              class="text-gray-40 transition-colors hover:text-gray-50 active:translate-y-[1px] dark:text-gray-200 dark:hover:text-gray-30"
+            >
+              <svg
+                width="56"
+                height="52"
+                viewBox="0 0 56 52"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-auto"
+              >
+                <g clip-path="url(#clip0_306_57)">
+                  <path
+                    d="M54.1839 18.9951L54.0572 18.4875C53.0447 14.3416 51.0616 12.4378 45.1548 13.3262L41.0624 13.9608L39.9232 14.13C38.3199 14.3838 36.8011 13.2416 36.5058 11.634L35.7041 6.76888C34.7336 1.01533 32.1178 0 28.1096 0H27.6034C23.5952 0 21.1903 1.01533 20.0933 6.81117L19.2495 11.6763C18.9541 13.2839 17.3931 14.4262 15.7898 14.1723L11.1066 13.4954C11.0222 13.4954 10.8956 13.4531 10.8112 13.4531L10.3049 13.3685C10.2628 13.3685 10.2205 13.3685 10.2205 13.3685C4.39817 12.4378 2.49956 13.9608 1.40259 18.4875L1.27602 18.9951C0.136853 23.5219 0.263427 25.2986 5.41076 28.1755L9.58769 30.5022C11.0222 31.3061 11.6129 33.1252 10.8956 34.6058L8.27976 39.9786C5.66389 45.2668 7.01402 48.2706 10.3893 50.0473L10.8956 50.3013C14.2709 52.078 16.6758 53.3048 20.9371 49.2858L25.5781 44.9284C26.7595 43.7861 28.7004 43.7861 29.8816 44.9284L34.4805 49.2858C36.6744 51.3587 38.4886 52.078 40.1763 51.9933C41.2733 51.9933 41.9061 51.6549 41.9061 51.6549H41.9483C42.8344 51.3587 43.6782 50.8512 44.5221 50.3013L44.9017 50.0473C47.7708 48.0166 49.7959 45.2668 47.1379 39.9786L45.1128 35.9597L44.4376 34.6058C43.7204 33.1252 44.2689 31.3061 45.7033 30.5446L50.0068 28.1755C55.1964 25.2986 55.3229 23.2679 54.1839 18.9951ZM36.0415 21.4065C36.0415 23.3526 35.029 24.1987 32.793 24.1987H27.5189V26.1448H30.8943C33.2148 26.1448 34.1429 26.9909 34.1429 28.6832V28.7676C34.1429 30.5868 33.2148 31.4752 30.8943 31.4752H27.8143V34.0558C27.8143 36.1712 26.7595 37.3133 24.7344 37.3133H23.5952C21.6544 37.3133 20.6418 35.7481 20.6418 33.1675V22.5064C20.6418 19.9259 21.8653 18.6144 24.1859 18.6144H32.793C35.029 18.6144 36.0415 19.4605 36.0415 21.2797V21.4065Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_306_57">
+                    <rect
+                      width="55.4667"
+                      height="52"
+                      fill="currentColor"
+                    ></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="mx-auto grid max-w-8xl grid-cols-12 px-2 xs:px-6 sm:px-10">
-            <div class="col-span-12 border-x border-t border-gray-30 bg-gray-5/20 bg-dotted-light bg-center p-4 dark:border-gray-500 dark:bg-transparent dark:bg-dotted-dark xs:p-8">
-                <div class="flex items-center space-x-3" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 text-green-500 dark:text-white">
-                        <path d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z" fill-rule="evenodd" clip-rule="evenodd"></path>
+      </div>
+      <div
+        class="relative order-1 col-span-12 border-r border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 lg:order-2 lg:col-span-7 xl:col-span-8"
+      >
+        <div
+          class="border-l border-gray-500 bg-gray-1000/20 p-6 pr-0 transition-colors hover:bg-transparent xs:p-10 lg:border-l-0"
+        >
+          <div class="flex flex-col sm:flex-row">
+            <div
+              class="flex w-full flex-col items-start pr-6 xs:pr-8 sm:w-1/2 sm:pr-0"
+            >
+              <div
+                class="flex items-center space-x-3"
+                style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+              >
+                <svg
+                  viewBox="0 0 12 16"
+                  fill="none"
+                  class="h-4 text-green-500 dark:text-white"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6 2.01994e-06C4.52914 2.01994e-06 3.07886 0.106001 1.65429 0.31C0.690857 0.45 3.19029e-09 1.414 3.19029e-09 2.51699V15.2499C-1.08291e-05 15.3768 0.0275633 15.5016 0.0801428 15.6126C0.132722 15.7237 0.208588 15.8174 0.300643 15.8849C0.392698 15.9524 0.497933 15.9916 0.606502 15.9988C0.715071 16.006 0.823425 15.9809 0.921428 15.9259L6 13.0819L11.0786 15.9259C11.1766 15.9809 11.2849 16.006 11.3935 15.9988C11.5021 15.9916 11.6073 15.9524 11.6994 15.8849C11.7914 15.8174 11.8673 15.7237 11.9199 15.6126C11.9724 15.5016 12 15.3768 12 15.2499V2.51699C12 1.414 11.3091 0.449 10.3457 0.31C8.90395 0.103 7.45264 -0.000527367 6 2.01994e-06Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <div
+                  class="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400"
+                >
+                  Articles
+                </div>
+              </div>
+              <a
+                href="/articles/scraping-with-supabase"
+                class="flex-1 active:translate-y-[1px]"
+              >
+                <div class="mt-6 inline-block text-3xl font-bold leading-tight">
+                  Scraping the web with Supabase Edge Functions
+                </div>
+                <div class="mb-8 mt-6 text-lg text-gray-50">
+                  Most companies try to stay ahead of the curve when it comes to
+                  visual design, but for Planetaria we needed to create a brand
+                  that would still.
+                </div>
+              </a>
+              <div class="flex items-center gap-4">
+                <a
+                  target="_self"
+                  href="/articles/scraping-with-supabase"
+                  class="group/button inline-flex items-center space-x-2 rounded-lg border border-gray-500 py-2 pl-2.5 pr-2 transition-colors hover:border-gray-200 active:translate-y-[1px]"
+                >
+                  <div class="text-sm font-bold leading-none text-white">
+                    Read
+                  </div>
+                  <div
+                    class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover/button:border-green-400 group-hover/button:bg-green-400"
+                  >
+                    <svg
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      class="h-2 w-2 text-white transition-colors group-hover/button:text-gray-1000"
+                    >
+                      <path
+                        d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
                     </svg>
-                    <div class="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400">Work</div>
-                </div>
-                <div class="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-8">
-                    <div class="group/card relative col-span-6 overflow-hidden rounded-2xl border-b border-t-0 border-gray-10 bg-gradient-to-br from-gray-10 via-white to-gray-5 active:top-[1px] dark:border-b-0 dark:border-gray-50/20 dark:from-gray-1000 dark:via-gray-800 dark:to-gray-950 md:col-span-3 last:md:col-span-6 lg:col-span-2 last:lg:col-span-2" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                        <a class="h-full w-full" href="https://awesomeai.xyz/">
-                            <svg width="266" height="231" viewBox="0 0 266 231" fill="none" class="absolute text-gray-20 dark:text-gray-500/80 -bottom-6 -right-12">
-                                <path d="M205.039 229L265 84.658C238.694 55.5212 205.977 41.2427 166.69 41.9859L106.348 187.663C143.186 182.775 175.877 196.659 205.039 229ZM163.293 41.9883L141.108 43.2969L133.59 61.72L155.773 59.6417L163.293 41.9883ZM154.464 62.8602L132.462 64.3611L124.773 82.7842L147.127 80.7156L154.464 62.8602ZM145.816 83.9124L123.835 85.2113L116.113 103.464L138.479 101.758L145.816 83.9124ZM137.179 104.953L114.985 106.276L107.479 124.504L129.659 122.62L137.179 104.953ZM128.531 125.625L106.348 126.943L98.8186 145.186L121.182 143.3L128.531 125.625ZM119.693 147.047L97.4979 148.38L89.9922 166.803L112.173 164.917L119.693 147.047ZM110.842 168.112L88.8496 169.444L81.1514 187.843L103.502 185.767L110.842 168.112ZM117.809 41.0406L110.842 57.7799L131.331 56.0865L138.298 39.5613L117.809 41.0406Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M122.695 77.3191L129.469 60.7819L108.978 62.2732L102.013 79.0029L122.695 77.3191ZM114.217 97.616L121.182 80.8864L100.512 82.5702L93.7379 99.1074L114.217 97.616Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M91.8518 103.644L84.707 120.374L105.581 118.68L112.341 101.951L91.8518 103.644Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M82.8305 124.867L76.0706 141.585L96.7402 139.937L103.524 123.183L82.8305 124.867ZM74.377 145.186L67.6147 161.903L88.3083 160.21L95.251 143.48L74.377 145.186Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M79.4578 181.25L86.4006 164.713L65.9331 166.204L58.9663 182.753L79.4578 181.25ZM116.871 31.8375L99.574 32.5952L93.377 47.451L110.852 46.4913L116.871 31.8375Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M90.7356 54.0106L84.5362 68.6741L102.013 67.736L108.052 53.2553L90.7356 54.0106ZM82.2773 74.1368L76.2631 88.9806L93.7379 88.0425L99.7545 73.5619L82.2773 74.1368Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M90.928 94.6141L73.4508 95.1673L67.4343 110.023L84.9331 109.097L90.928 94.6141Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M64.6124 116.614L58.413 131.458L76.0802 130.532L82.0872 115.883L64.6124 116.614ZM56.3249 136.911L50.3083 151.382L67.6051 150.648L73.8021 135.985L56.3249 136.911Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M58.9663 171.689L64.9829 157.027L47.6861 157.773L41.4915 172.401L58.9663 171.689ZM82.2772 26.3772L77.9663 36.9081L91.8639 36.3308L96.3793 25.6315L82.2772 26.3772Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M73.4508 47.6194L69.1278 58.1407L83.035 57.5995L87.5505 46.8761L73.4508 47.6194ZM64.9829 67.748L60.6599 78.2789L74.7716 77.894L79.2653 66.8099L64.9829 67.748Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M70.4365 88.0449L56.3249 88.8002L51.8214 99.3311L65.9331 98.9823L70.4365 88.0449Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M47.5081 110.023L43.0023 120.747L57.2968 120.181L61.6198 109.265L47.5081 110.023ZM39.0522 130.339L34.7171 141.053L48.8288 140.49L53.1422 129.584L39.0522 130.339Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M30.2233 151.37L25.8763 162.096L39.9783 161.53L44.4938 150.636L30.2233 151.37ZM76.0802 20.1904L79.8403 11.1605L69.1279 12.6711L65.5482 21.499L76.0802 20.1904Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M60.275 33.9061L56.5173 42.7557L67.2202 41.4327L70.9778 32.2344L60.275 33.9061ZM51.8214 54.2247L48.0614 63.0526L58.7738 61.7416L62.7264 52.5433L51.8214 54.2247Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M43.1731 75.2553L39.413 84.1048L49.9354 82.7818L53.8855 73.5619L43.1731 75.2553Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M34.3443 96.5096L30.7887 105.325L41.299 104.026L45.0687 95.0086L34.3443 96.5096ZM25.8763 116.797L22.3207 125.625L32.8335 124.314L36.5911 115.101L25.8763 116.797Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M17.0499 137.847L13.6627 146.506L24.1947 145.354L27.9548 136.153L17.0499 137.847ZM56.3249 1.7553L53.7051 7.77366L61.7641 7.58123L64.6028 1L56.3249 1.7553Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M47.6885 22.8099L45.0591 29.0159L52.9617 28.8235L55.5791 22.2567L47.6885 22.8099ZM39.2326 42.9144L36.7836 49.1204H44.4818L47.1136 42.5416L39.2326 42.9144Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M30.5746 63.9883L27.9524 70.175H35.8454L38.6576 63.5938L30.5746 63.9883Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M21.7458 85.4013L19.1139 91.4197L27.0045 91.2393L29.6267 85.0405L21.7458 85.4013ZM13.2898 105.708L10.658 111.907L18.5606 111.726L21.3608 105.316L13.2898 105.708Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M4.44897 126.763L2 132.983L9.90263 132.766L12.532 126.188L4.44897 126.763Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M176.084 112.46L195.252 66.4154C185.861 63.2089 173.443 61.9124 158.044 62.2732L139.041 108.149C153.144 107.572 165.562 109.107 176.084 112.46Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M239.428 88.4153C230.782 79.5778 220.62 73.3815 208.982 69.6098L189.426 116.797L202.578 122.25C207.634 124.304 213.471 128.458 220.235 134.847L239.428 88.4153Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M214.613 148.019C205.955 139.35 195.625 133.524 183.782 130.339L164.987 175.629C175.88 179.4 186.051 185.597 195.827 193.862L214.613 148.019Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M152.015 170.741L170.236 126.763C158.766 123.003 146.381 121.502 133.217 122.44L114.612 167.005C125.7 166.406 138.106 167.751 152.015 170.741Z" stroke="currentColor" stroke-width="1.5"></path>
-                            </svg>
-                            <div class="relative flex h-full flex-col items-start bg-white/50 p-8 transition-colors group-hover/card:bg-transparent dark:bg-gray-950/50">
-                                <h2 class="text-5xl font-bold tracking-snug">Awesome AI</h2>
-                                <div class="mb-10 mt-6 flex-1 space-y-6 pr-4 text-lg leading-normal text-gray-50">Had a stupid itch to build a Hacker News for AI in the style of Windows 95. So I did.</div>
-                                <div class="inline-flex items-center space-x-2 rounded-lg border border-gray-30 bg-white py-2 pl-2.5 pr-2 transition-colors group-hover/card:border-gray-40 dark:border-gray-500 dark:bg-gray-900 dark:group-hover/card:border-gray-200">
-                                    <div class="text-sm font-bold leading-none text-gray-1000 dark:text-white">View more</div>
-                                    <div class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-40 transition-colors group-hover/card:border-green-500 group-hover/card:bg-green-500 dark:border-gray-200 dark:group-hover/card:border-green-400 dark:group-hover/card:bg-green-400">
-                                        <svg viewBox="0 0 8 8" fill="none" class="h-2 w-2 text-gray-100 transition-colors group-hover/card:text-white dark:text-white dark:group-hover/card:text-gray-1000">
-                                            <path d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="group/card relative col-span-6 overflow-hidden rounded-2xl border-b border-t-0 border-gray-10 bg-gradient-to-br from-gray-10 via-white to-gray-5 active:top-[1px] dark:border-b-0 dark:border-gray-50/20 dark:from-gray-1000 dark:via-gray-800 dark:to-gray-950 md:col-span-3 last:md:col-span-6 lg:col-span-2 last:lg:col-span-2" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                        <a class="h-full w-full" href="https://a-barber.ee/">
-                            <svg width="382" height="228" viewBox="0 0 382 228" fill="none" class="absolute text-gray-20 dark:text-gray-500/80 -bottom-2 -right-36">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M276.821 196.067C276.407 199.864 277.16 203.755 278.753 207.336C281.344 213.191 286.247 218.548 292.72 222.266C299.188 225.983 306.305 227.53 312.693 226.841C318.049 226.259 323.127 224.047 326.585 219.983C338.399 224.089 344.636 223.241 353.605 215.516C355.009 213.908 353.492 210.8 349.201 212.473C342.841 215.436 337.565 215.867 330.278 212.726C331.361 208.241 330.65 203.487 328.742 199.18C326.151 193.33 321.243 187.967 314.775 184.25C308.307 180.533 301.185 178.986 294.797 179.68C289.573 180.242 284.613 182.361 281.165 186.237L249.137 165.172C272.37 168.969 287.387 168.551 297.435 162.242C276.85 158.389 267.734 154.555 255.213 145.137C257.837 145.817 260.376 146.492 262.831 147.144C289.517 154.241 306.621 158.792 320.051 137.637C293.219 141.856 282.705 139.906 267.033 137C265.007 136.625 262.887 136.231 260.645 135.837C312.26 132.228 336.072 128.389 339.351 107.628C319.651 117.158 303.625 120.669 263.358 122.628C331.051 108.856 356.173 98.7734 362.574 73.7187C327.546 93.0031 302.344 99.9921 258.553 112.137L256.419 112.728C342.125 81.4812 373.753 64.4703 373.131 35.9094C335.648 67.1984 307.662 81.5797 250.701 104.028C348.221 51.0453 382.256 24.8703 380.965 2L223.082 105.837C226.827 117.73 231.137 131.375 236.131 147.087C239.433 157.522 242.727 167.96 246.014 178.4L276.821 196.067ZM134.653 179.169L105.574 195.842C106.045 199.705 105.292 203.68 103.671 207.336C101.08 213.191 96.1719 218.548 89.7041 222.266C83.2364 225.983 76.1138 227.53 69.7262 226.841C63.3385 226.147 57.3418 223.137 54.0255 217.419C50.7092 211.705 51.0861 205.03 53.6769 199.184C56.2678 193.325 61.1763 187.967 67.6488 184.25C74.1165 180.533 81.2343 178.986 87.622 179.68C92.7708 180.237 97.6557 182.3 101.095 186.064L132.863 165.172C109.63 168.969 94.6126 168.551 84.5648 162.242C105.15 158.389 114.266 154.555 126.787 145.137C124.163 145.817 121.624 146.492 119.169 147.144C92.4834 154.241 75.379 158.792 61.9489 137.637C88.7808 141.856 99.295 139.906 114.967 137C116.993 136.625 119.113 136.231 121.355 135.837C69.7403 132.228 45.9279 128.389 42.6492 107.628C62.3493 117.158 78.375 120.669 118.642 122.628C50.9495 108.861 25.8274 98.7781 19.4304 73.7187C54.4542 93.0031 79.6563 99.9921 123.442 112.137L125.581 112.728C39.8747 81.4812 8.25194 64.4703 8.87375 35.9094C46.3613 67.1984 74.3473 81.5797 131.304 104.028C33.7838 51.0453 -0.255527 24.8703 1.0352 2L156.355 104.15L134.653 179.169ZM320.466 202.812C322.209 206.741 322.091 210.289 320.56 212.919C319.038 215.548 316.009 217.428 311.718 217.892C307.431 218.361 302.221 217.33 297.242 214.47C292.258 211.611 288.763 207.631 287.025 203.708C285.282 199.775 285.404 196.226 286.93 193.597C288.457 190.967 291.486 189.092 295.777 188.628C300.064 188.159 305.274 189.181 310.253 192.045C315.232 194.905 318.732 198.884 320.466 202.812ZM61.8594 212.919C60.3331 210.289 60.2106 206.741 61.9536 202.812C63.6965 198.884 67.1871 194.905 72.171 192.045C77.1502 189.186 82.3602 188.159 86.6469 188.623C90.9336 189.092 93.9673 190.967 95.4935 193.597C97.0198 196.226 97.1376 199.775 95.3993 203.708C93.6564 207.631 90.1611 211.611 85.1772 214.47C80.2027 217.33 74.9927 218.361 70.706 217.892C66.4146 217.423 63.3856 215.548 61.8594 212.923V212.919Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M276.821 196.067C276.407 199.864 277.16 203.755 278.753 207.336C281.344 213.191 286.247 218.548 292.72 222.266C299.188 225.983 306.305 227.53 312.693 226.841C318.049 226.259 323.127 224.047 326.585 219.983C338.399 224.089 344.636 223.241 353.605 215.516C355.009 213.908 353.492 210.8 349.201 212.473C342.841 215.436 337.565 215.867 330.278 212.726C331.361 208.241 330.65 203.487 328.742 199.18C326.151 193.33 321.243 187.967 314.775 184.25C308.307 180.533 301.185 178.986 294.797 179.68C289.573 180.242 284.613 182.361 281.165 186.237L249.137 165.172C272.37 168.969 287.387 168.551 297.435 162.242C276.85 158.389 267.734 154.555 255.213 145.137C257.837 145.817 260.376 146.492 262.831 147.144C289.517 154.241 306.621 158.792 320.051 137.637C293.219 141.856 282.705 139.906 267.033 137C265.007 136.625 262.887 136.231 260.645 135.837C312.26 132.228 336.072 128.389 339.351 107.628C319.651 117.158 303.625 120.669 263.358 122.628C331.051 108.856 356.173 98.7734 362.574 73.7187C327.546 93.0031 302.344 99.9921 258.553 112.137L256.419 112.728C342.125 81.4812 373.753 64.4703 373.131 35.9094C335.648 67.1984 307.662 81.5797 250.701 104.028C348.221 51.0453 382.256 24.8703 380.965 2L223.082 105.837C226.827 117.73 231.137 131.375 236.131 147.087C239.433 157.522 242.727 167.96 246.014 178.4L276.821 196.067ZM134.653 179.169L105.574 195.842C106.045 199.705 105.292 203.68 103.671 207.336C101.08 213.191 96.1719 218.548 89.7041 222.266C83.2364 225.983 76.1138 227.53 69.7262 226.841C63.3385 226.147 57.3418 223.137 54.0255 217.419C50.7092 211.705 51.0861 205.03 53.6769 199.184C56.2678 193.325 61.1763 187.967 67.6488 184.25C74.1165 180.533 81.2343 178.986 87.622 179.68C92.7708 180.237 97.6557 182.3 101.095 186.064L132.863 165.172C109.63 168.969 94.6126 168.551 84.5648 162.242C105.15 158.389 114.266 154.555 126.787 145.137C124.163 145.817 121.624 146.492 119.169 147.144C92.4834 154.241 75.379 158.792 61.9489 137.637C88.7808 141.856 99.295 139.906 114.967 137C116.993 136.625 119.113 136.231 121.355 135.837C69.7403 132.228 45.9279 128.389 42.6492 107.628C62.3493 117.158 78.375 120.669 118.642 122.628C50.9495 108.861 25.8274 98.7781 19.4304 73.7187C54.4542 93.0031 79.6563 99.9921 123.442 112.137L125.581 112.728C39.8747 81.4812 8.25194 64.4703 8.87375 35.9094C46.3613 67.1984 74.3473 81.5797 131.304 104.028C33.7838 51.0453 -0.255527 24.8703 1.0352 2L156.355 104.15L134.653 179.169ZM320.466 202.812C322.209 206.741 322.091 210.289 320.56 212.919C319.038 215.548 316.009 217.428 311.718 217.892C307.431 218.361 302.221 217.33 297.242 214.47C292.258 211.611 288.763 207.631 287.025 203.708C285.282 199.775 285.404 196.226 286.93 193.597C288.457 190.967 291.486 189.092 295.777 188.628C300.064 188.159 305.274 189.181 310.253 192.045C315.232 194.905 318.732 198.884 320.466 202.812ZM61.8594 212.919C60.3331 210.289 60.2106 206.741 61.9536 202.812C63.6965 198.884 67.1871 194.905 72.171 192.045C77.1502 189.186 82.3602 188.159 86.6469 188.623C90.9336 189.092 93.9673 190.967 95.4935 193.597C97.0198 196.226 97.1376 199.775 95.3993 203.708C93.6564 207.631 90.1611 211.611 85.1772 214.47C80.2027 217.33 74.9927 218.361 70.706 217.892C66.4146 217.423 63.3856 215.548 61.8594 212.923V212.919Z" stroke="currentColor" stroke-width="1.5"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M163.388 207.715H165.871V213.13H120.875V207.715H123.136C133.311 207.715 140.772 202.095 145.973 184.615L183.96 54.9499H191.874L193.683 56.2015C196.349 62.1218 199.124 70.8546 207 95.614C210.472 106.526 214.933 120.551 220.816 138.828C228.73 163.55 234.265 180.875 237.798 192.917C242.744 203.933 249.264 207.715 257.616 207.715H259.877V213.13H202.958V207.715C216.751 207.715 221.047 203.136 216.073 186.697L207.706 158.6H160.675L153.439 184.405C148.917 200.225 153.213 207.715 163.388 207.715ZM162.484 152.773H205.897L183.512 77.8437L162.484 152.773Z" stroke="currentColor" stroke-width="1.5"></path>
-                            </svg>
-                            <div class="relative flex h-full flex-col items-start bg-white/50 p-8 transition-colors group-hover/card:bg-transparent dark:bg-gray-950/50">
-                                <h2 class="text-5xl font-bold tracking-snug">A-Barber</h2>
-                                <div class="mb-10 mt-6 flex-1 space-y-6 pr-4 text-lg leading-normal text-gray-50">Some branding, marketing design and web development for my dear sister-in-law.</div>
-                                <div class="inline-flex items-center space-x-2 rounded-lg border border-gray-30 bg-white py-2 pl-2.5 pr-2 transition-colors group-hover/card:border-gray-40 dark:border-gray-500 dark:bg-gray-900 dark:group-hover/card:border-gray-200">
-                                    <div class="text-sm font-bold leading-none text-gray-1000 dark:text-white">View more</div>
-                                    <div class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-40 transition-colors group-hover/card:border-green-500 group-hover/card:bg-green-500 dark:border-gray-200 dark:group-hover/card:border-green-400 dark:group-hover/card:bg-green-400">
-                                        <svg viewBox="0 0 8 8" fill="none" class="h-2 w-2 text-gray-100 transition-colors group-hover/card:text-white dark:text-white dark:group-hover/card:text-gray-1000">
-                                            <path d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="group/card relative col-span-6 overflow-hidden rounded-2xl border-b border-t-0 border-gray-10 bg-gradient-to-br from-gray-10 via-white to-gray-5 active:top-[1px] dark:border-b-0 dark:border-gray-50/20 dark:from-gray-1000 dark:via-gray-800 dark:to-gray-950 md:col-span-3 last:md:col-span-6 lg:col-span-2 last:lg:col-span-2" style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                        <a class="h-full w-full" href="https://ounaturg.ee/">
-                            <svg width="190" height="232" viewBox="0 0 190 232" fill="none" class="absolute text-gray-20 dark:text-gray-500/80 -bottom-4 -right-6">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M89.5359 104.558C89.6358 104.721 89.7312 104.884 89.8322 105.048C88.7435 104.971 87.6434 104.932 86.5297 104.932C62.3584 104.932 42.7317 124.138 42.7317 148.249C42.7317 172.359 62.3584 191.566 86.5297 191.566C111.321 191.566 130.328 172.359 130.328 148.249C130.328 142.417 129.213 136.874 127.176 131.818C134.396 129.884 141.475 127.396 148.456 123.819C154.144 120.904 159.45 117.637 164.405 114.09C169.319 124.515 172.06 136.082 172.06 148.249C172.06 193.814 133.634 231 86.5297 231C40.0457 231 1 193.814 1 148.249C1 115.322 21.3919 86.7801 50.2439 73.4756C55.9112 53.7117 68.0734 24.8278 92.7238 10.7218C132.277 -11.9134 189 12.0712 189 12.0712C189 12.0712 181.595 72.7553 142.041 95.3905C125.731 104.725 106.504 106.128 89.5359 104.558ZM110.224 40.6924C95.2475 49.287 90.2727 68.6169 90.2727 68.6169C90.2727 68.6169 109.579 74.0122 124.555 65.4165C139.531 56.8219 144.506 37.4908 144.506 37.4908C144.506 37.4908 125.2 32.0967 110.224 40.6924Z" stroke="currentColor" stroke-width="2"></path>
-                            </svg>
-                            <div class="relative flex h-full flex-col items-start bg-white/50 p-8 transition-colors group-hover/card:bg-transparent dark:bg-gray-950/50">
-                                <h2 class="text-5xl font-bold tracking-snug">Õunaturg</h2>
-                                <div class="mb-10 mt-6 flex-1 space-y-6 pr-4 text-lg leading-normal text-gray-50">Designed, co-built and sold a marketplace for selling second-hand Apple products.</div>
-                                <div class="inline-flex items-center space-x-2 rounded-lg border border-gray-30 bg-white py-2 pl-2.5 pr-2 transition-colors group-hover/card:border-gray-40 dark:border-gray-500 dark:bg-gray-900 dark:group-hover/card:border-gray-200">
-                                    <div class="text-sm font-bold leading-none text-gray-1000 dark:text-white">View more</div>
-                                    <div class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-40 transition-colors group-hover/card:border-green-500 group-hover/card:bg-green-500 dark:border-gray-200 dark:group-hover/card:border-green-400 dark:group-hover/card:bg-green-400">
-                                        <svg viewBox="0 0 8 8" fill="none" class="h-2 w-2 text-gray-100 transition-colors group-hover/card:text-white dark:text-white dark:group-hover/card:text-gray-1000">
-                                            <path d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                  </div>
+                </a>
+                <a
+                  target="_self"
+                  href="/articles"
+                  class="group/button inline-flex items-center space-x-2 rounded-lg border border-gray-500 py-2 pl-2.5 pr-2 transition-colors hover:border-gray-200 active:translate-y-[1px]"
+                >
+                  <div class="text-sm font-bold leading-none text-white">
+                    All articles
+                  </div>
+                  <div
+                    class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover/button:border-green-400 group-hover/button:bg-green-400"
+                  >
+                    <svg
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      class="h-2 w-2 text-white transition-colors group-hover/button:text-gray-1000"
+                    >
+                      <path
+                        d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
             </div>
+            <div
+              class="flex w-full flex-col justify-center divide-y divide-gray-500 pt-8 sm:w-1/2 sm:pl-10 sm:pt-0"
+            >
+              <div class="py-4 pr-10">
+                <a
+                  href="/articles/build-components-with-radix-tailwind"
+                  class="group inline-block max-w-xs active:translate-y-[1px]"
+                >
+                  <span
+                    class="text-lg text-gray-50 transition-colors group-hover:text-white"
+                    >Build Components with Radix UI and Tailwind
+                    <!-- -->
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-lg text-gray-50 transition-colors group-hover:text-white"
+                  >
+                    <span class="mr-2">CSS</span>
+                    <div
+                      class="inline-flex h-[18px] w-[18px] -translate-y-[3px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover:border-green-400 group-hover:bg-green-400"
+                    >
+                      <svg
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        class="h-2 w-2 text-white transition-colors group-hover:text-gray-1000"
+                      >
+                        <path
+                          d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                  </span>
+                </a>
+              </div>
+              <div class="py-4 pr-10">
+                <a
+                  href="/articles/building-dumb-stuff"
+                  class="group inline-block max-w-xs active:translate-y-[1px]"
+                >
+                  <span
+                    class="text-lg text-gray-50 transition-colors group-hover:text-white"
+                    >Building dumb
+                    <!-- -->
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-lg text-gray-50 transition-colors group-hover:text-white"
+                  >
+                    <span class="mr-2">stuff</span>
+                    <div
+                      class="inline-flex h-[18px] w-[18px] -translate-y-[3px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover:border-green-400 group-hover:bg-green-400"
+                    >
+                      <svg
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        class="h-2 w-2 text-white transition-colors group-hover:text-gray-1000"
+                      >
+                        <path
+                          d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                  </span>
+                </a>
+              </div>
+              <div class="py-4 pr-10">
+                <a
+                  href="/articles/interactive-illustrations-with-framer-motion"
+                  class="group inline-block max-w-xs active:translate-y-[1px]"
+                >
+                  <span
+                    class="text-lg text-gray-50 transition-colors group-hover:text-white"
+                    >Interactive Illustrations with Framer
+                    <!-- -->
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-lg text-gray-50 transition-colors group-hover:text-white"
+                  >
+                    <span class="mr-2">Motion</span>
+                    <div
+                      class="inline-flex h-[18px] w-[18px] -translate-y-[3px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover:border-green-400 group-hover:bg-green-400"
+                    >
+                      <svg
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        class="h-2 w-2 text-white transition-colors group-hover:text-gray-1000"
+                      >
+                        <path
+                          d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                  </span>
+                </a>
+              </div>
+              <div class="py-4 pr-10">
+                <a
+                  href="/articles/ui-experiments-with-swiftui"
+                  class="group inline-block max-w-xs active:translate-y-[1px]"
+                >
+                  <span
+                    class="text-lg text-gray-50 transition-colors group-hover:text-white"
+                    >UI Experiments with
+                    <!-- -->
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-lg text-gray-50 transition-colors group-hover:text-white"
+                  >
+                    <span class="mr-2">SwiftUI</span>
+                    <div
+                      class="inline-flex h-[18px] w-[18px] -translate-y-[3px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover:border-green-400 group-hover:bg-green-400"
+                    >
+                      <svg
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        class="h-2 w-2 text-white transition-colors group-hover:text-gray-1000"
+                      >
+                        <path
+                          d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+    <div class="mx-auto grid max-w-8xl grid-cols-12 px-2 xs:px-6 sm:px-10">
+      <div
+        class="col-span-12 border-x border-t border-gray-30 bg-gray-5/20 bg-dotted-light bg-center p-4 dark:border-gray-500 dark:bg-transparent dark:bg-dotted-dark xs:p-8"
+      >
+        <div
+          class="flex items-center space-x-3"
+          style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-4 text-green-500 dark:text-white"
+          >
+            <path
+              d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <div
+            class="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400"
+          >
+            Work
+          </div>
+        </div>
+        <div class="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-8">
+          <div
+            class="group/card relative col-span-6 overflow-hidden rounded-2xl border-b border-t-0 border-gray-10 bg-gradient-to-br from-gray-10 via-white to-gray-5 active:top-[1px] dark:border-b-0 dark:border-gray-50/20 dark:from-gray-1000 dark:via-gray-800 dark:to-gray-950 md:col-span-3 last:md:col-span-6 lg:col-span-2 last:lg:col-span-2"
+            style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+          >
+            <a class="h-full w-full" href="https://awesomeai.xyz/">
+              <svg
+                width="266"
+                height="231"
+                viewBox="0 0 266 231"
+                fill="none"
+                class="absolute text-gray-20 dark:text-gray-500/80 -bottom-6 -right-12"
+              >
+                <path
+                  d="M205.039 229L265 84.658C238.694 55.5212 205.977 41.2427 166.69 41.9859L106.348 187.663C143.186 182.775 175.877 196.659 205.039 229ZM163.293 41.9883L141.108 43.2969L133.59 61.72L155.773 59.6417L163.293 41.9883ZM154.464 62.8602L132.462 64.3611L124.773 82.7842L147.127 80.7156L154.464 62.8602ZM145.816 83.9124L123.835 85.2113L116.113 103.464L138.479 101.758L145.816 83.9124ZM137.179 104.953L114.985 106.276L107.479 124.504L129.659 122.62L137.179 104.953ZM128.531 125.625L106.348 126.943L98.8186 145.186L121.182 143.3L128.531 125.625ZM119.693 147.047L97.4979 148.38L89.9922 166.803L112.173 164.917L119.693 147.047ZM110.842 168.112L88.8496 169.444L81.1514 187.843L103.502 185.767L110.842 168.112ZM117.809 41.0406L110.842 57.7799L131.331 56.0865L138.298 39.5613L117.809 41.0406Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M122.695 77.3191L129.469 60.7819L108.978 62.2732L102.013 79.0029L122.695 77.3191ZM114.217 97.616L121.182 80.8864L100.512 82.5702L93.7379 99.1074L114.217 97.616Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M91.8518 103.644L84.707 120.374L105.581 118.68L112.341 101.951L91.8518 103.644Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M82.8305 124.867L76.0706 141.585L96.7402 139.937L103.524 123.183L82.8305 124.867ZM74.377 145.186L67.6147 161.903L88.3083 160.21L95.251 143.48L74.377 145.186Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M79.4578 181.25L86.4006 164.713L65.9331 166.204L58.9663 182.753L79.4578 181.25ZM116.871 31.8375L99.574 32.5952L93.377 47.451L110.852 46.4913L116.871 31.8375Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M90.7356 54.0106L84.5362 68.6741L102.013 67.736L108.052 53.2553L90.7356 54.0106ZM82.2773 74.1368L76.2631 88.9806L93.7379 88.0425L99.7545 73.5619L82.2773 74.1368Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M90.928 94.6141L73.4508 95.1673L67.4343 110.023L84.9331 109.097L90.928 94.6141Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M64.6124 116.614L58.413 131.458L76.0802 130.532L82.0872 115.883L64.6124 116.614ZM56.3249 136.911L50.3083 151.382L67.6051 150.648L73.8021 135.985L56.3249 136.911Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M58.9663 171.689L64.9829 157.027L47.6861 157.773L41.4915 172.401L58.9663 171.689ZM82.2772 26.3772L77.9663 36.9081L91.8639 36.3308L96.3793 25.6315L82.2772 26.3772Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M73.4508 47.6194L69.1278 58.1407L83.035 57.5995L87.5505 46.8761L73.4508 47.6194ZM64.9829 67.748L60.6599 78.2789L74.7716 77.894L79.2653 66.8099L64.9829 67.748Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M70.4365 88.0449L56.3249 88.8002L51.8214 99.3311L65.9331 98.9823L70.4365 88.0449Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M47.5081 110.023L43.0023 120.747L57.2968 120.181L61.6198 109.265L47.5081 110.023ZM39.0522 130.339L34.7171 141.053L48.8288 140.49L53.1422 129.584L39.0522 130.339Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M30.2233 151.37L25.8763 162.096L39.9783 161.53L44.4938 150.636L30.2233 151.37ZM76.0802 20.1904L79.8403 11.1605L69.1279 12.6711L65.5482 21.499L76.0802 20.1904Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M60.275 33.9061L56.5173 42.7557L67.2202 41.4327L70.9778 32.2344L60.275 33.9061ZM51.8214 54.2247L48.0614 63.0526L58.7738 61.7416L62.7264 52.5433L51.8214 54.2247Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M43.1731 75.2553L39.413 84.1048L49.9354 82.7818L53.8855 73.5619L43.1731 75.2553Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M34.3443 96.5096L30.7887 105.325L41.299 104.026L45.0687 95.0086L34.3443 96.5096ZM25.8763 116.797L22.3207 125.625L32.8335 124.314L36.5911 115.101L25.8763 116.797Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M17.0499 137.847L13.6627 146.506L24.1947 145.354L27.9548 136.153L17.0499 137.847ZM56.3249 1.7553L53.7051 7.77366L61.7641 7.58123L64.6028 1L56.3249 1.7553Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M47.6885 22.8099L45.0591 29.0159L52.9617 28.8235L55.5791 22.2567L47.6885 22.8099ZM39.2326 42.9144L36.7836 49.1204H44.4818L47.1136 42.5416L39.2326 42.9144Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M30.5746 63.9883L27.9524 70.175H35.8454L38.6576 63.5938L30.5746 63.9883Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M21.7458 85.4013L19.1139 91.4197L27.0045 91.2393L29.6267 85.0405L21.7458 85.4013ZM13.2898 105.708L10.658 111.907L18.5606 111.726L21.3608 105.316L13.2898 105.708Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M4.44897 126.763L2 132.983L9.90263 132.766L12.532 126.188L4.44897 126.763Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M176.084 112.46L195.252 66.4154C185.861 63.2089 173.443 61.9124 158.044 62.2732L139.041 108.149C153.144 107.572 165.562 109.107 176.084 112.46Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M239.428 88.4153C230.782 79.5778 220.62 73.3815 208.982 69.6098L189.426 116.797L202.578 122.25C207.634 124.304 213.471 128.458 220.235 134.847L239.428 88.4153Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M214.613 148.019C205.955 139.35 195.625 133.524 183.782 130.339L164.987 175.629C175.88 179.4 186.051 185.597 195.827 193.862L214.613 148.019Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M152.015 170.741L170.236 126.763C158.766 123.003 146.381 121.502 133.217 122.44L114.612 167.005C125.7 166.406 138.106 167.751 152.015 170.741Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+              <div
+                class="relative flex h-full flex-col items-start bg-white/50 p-8 transition-colors group-hover/card:bg-transparent dark:bg-gray-950/50"
+              >
+                <h2 class="text-5xl font-bold tracking-snug">Awesome AI</h2>
+                <div
+                  class="mb-10 mt-6 flex-1 space-y-6 pr-4 text-lg leading-normal text-gray-50"
+                >
+                  Had a stupid itch to build a Hacker News for AI in the style
+                  of Windows 95. So I did.
+                </div>
+                <div
+                  class="inline-flex items-center space-x-2 rounded-lg border border-gray-30 bg-white py-2 pl-2.5 pr-2 transition-colors group-hover/card:border-gray-40 dark:border-gray-500 dark:bg-gray-900 dark:group-hover/card:border-gray-200"
+                >
+                  <div
+                    class="text-sm font-bold leading-none text-gray-1000 dark:text-white"
+                  >
+                    View more
+                  </div>
+                  <div
+                    class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-40 transition-colors group-hover/card:border-green-500 group-hover/card:bg-green-500 dark:border-gray-200 dark:group-hover/card:border-green-400 dark:group-hover/card:bg-green-400"
+                  >
+                    <svg
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      class="h-2 w-2 text-gray-100 transition-colors group-hover/card:text-white dark:text-white dark:group-hover/card:text-gray-1000"
+                    >
+                      <path
+                        d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="group/card relative col-span-6 overflow-hidden rounded-2xl border-b border-t-0 border-gray-10 bg-gradient-to-br from-gray-10 via-white to-gray-5 active:top-[1px] dark:border-b-0 dark:border-gray-50/20 dark:from-gray-1000 dark:via-gray-800 dark:to-gray-950 md:col-span-3 last:md:col-span-6 lg:col-span-2 last:lg:col-span-2"
+            style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+          >
+            <a class="h-full w-full" href="https://a-barber.ee/">
+              <svg
+                width="382"
+                height="228"
+                viewBox="0 0 382 228"
+                fill="none"
+                class="absolute text-gray-20 dark:text-gray-500/80 -bottom-2 -right-36"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M276.821 196.067C276.407 199.864 277.16 203.755 278.753 207.336C281.344 213.191 286.247 218.548 292.72 222.266C299.188 225.983 306.305 227.53 312.693 226.841C318.049 226.259 323.127 224.047 326.585 219.983C338.399 224.089 344.636 223.241 353.605 215.516C355.009 213.908 353.492 210.8 349.201 212.473C342.841 215.436 337.565 215.867 330.278 212.726C331.361 208.241 330.65 203.487 328.742 199.18C326.151 193.33 321.243 187.967 314.775 184.25C308.307 180.533 301.185 178.986 294.797 179.68C289.573 180.242 284.613 182.361 281.165 186.237L249.137 165.172C272.37 168.969 287.387 168.551 297.435 162.242C276.85 158.389 267.734 154.555 255.213 145.137C257.837 145.817 260.376 146.492 262.831 147.144C289.517 154.241 306.621 158.792 320.051 137.637C293.219 141.856 282.705 139.906 267.033 137C265.007 136.625 262.887 136.231 260.645 135.837C312.26 132.228 336.072 128.389 339.351 107.628C319.651 117.158 303.625 120.669 263.358 122.628C331.051 108.856 356.173 98.7734 362.574 73.7187C327.546 93.0031 302.344 99.9921 258.553 112.137L256.419 112.728C342.125 81.4812 373.753 64.4703 373.131 35.9094C335.648 67.1984 307.662 81.5797 250.701 104.028C348.221 51.0453 382.256 24.8703 380.965 2L223.082 105.837C226.827 117.73 231.137 131.375 236.131 147.087C239.433 157.522 242.727 167.96 246.014 178.4L276.821 196.067ZM134.653 179.169L105.574 195.842C106.045 199.705 105.292 203.68 103.671 207.336C101.08 213.191 96.1719 218.548 89.7041 222.266C83.2364 225.983 76.1138 227.53 69.7262 226.841C63.3385 226.147 57.3418 223.137 54.0255 217.419C50.7092 211.705 51.0861 205.03 53.6769 199.184C56.2678 193.325 61.1763 187.967 67.6488 184.25C74.1165 180.533 81.2343 178.986 87.622 179.68C92.7708 180.237 97.6557 182.3 101.095 186.064L132.863 165.172C109.63 168.969 94.6126 168.551 84.5648 162.242C105.15 158.389 114.266 154.555 126.787 145.137C124.163 145.817 121.624 146.492 119.169 147.144C92.4834 154.241 75.379 158.792 61.9489 137.637C88.7808 141.856 99.295 139.906 114.967 137C116.993 136.625 119.113 136.231 121.355 135.837C69.7403 132.228 45.9279 128.389 42.6492 107.628C62.3493 117.158 78.375 120.669 118.642 122.628C50.9495 108.861 25.8274 98.7781 19.4304 73.7187C54.4542 93.0031 79.6563 99.9921 123.442 112.137L125.581 112.728C39.8747 81.4812 8.25194 64.4703 8.87375 35.9094C46.3613 67.1984 74.3473 81.5797 131.304 104.028C33.7838 51.0453 -0.255527 24.8703 1.0352 2L156.355 104.15L134.653 179.169ZM320.466 202.812C322.209 206.741 322.091 210.289 320.56 212.919C319.038 215.548 316.009 217.428 311.718 217.892C307.431 218.361 302.221 217.33 297.242 214.47C292.258 211.611 288.763 207.631 287.025 203.708C285.282 199.775 285.404 196.226 286.93 193.597C288.457 190.967 291.486 189.092 295.777 188.628C300.064 188.159 305.274 189.181 310.253 192.045C315.232 194.905 318.732 198.884 320.466 202.812ZM61.8594 212.919C60.3331 210.289 60.2106 206.741 61.9536 202.812C63.6965 198.884 67.1871 194.905 72.171 192.045C77.1502 189.186 82.3602 188.159 86.6469 188.623C90.9336 189.092 93.9673 190.967 95.4935 193.597C97.0198 196.226 97.1376 199.775 95.3993 203.708C93.6564 207.631 90.1611 211.611 85.1772 214.47C80.2027 217.33 74.9927 218.361 70.706 217.892C66.4146 217.423 63.3856 215.548 61.8594 212.923V212.919Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M276.821 196.067C276.407 199.864 277.16 203.755 278.753 207.336C281.344 213.191 286.247 218.548 292.72 222.266C299.188 225.983 306.305 227.53 312.693 226.841C318.049 226.259 323.127 224.047 326.585 219.983C338.399 224.089 344.636 223.241 353.605 215.516C355.009 213.908 353.492 210.8 349.201 212.473C342.841 215.436 337.565 215.867 330.278 212.726C331.361 208.241 330.65 203.487 328.742 199.18C326.151 193.33 321.243 187.967 314.775 184.25C308.307 180.533 301.185 178.986 294.797 179.68C289.573 180.242 284.613 182.361 281.165 186.237L249.137 165.172C272.37 168.969 287.387 168.551 297.435 162.242C276.85 158.389 267.734 154.555 255.213 145.137C257.837 145.817 260.376 146.492 262.831 147.144C289.517 154.241 306.621 158.792 320.051 137.637C293.219 141.856 282.705 139.906 267.033 137C265.007 136.625 262.887 136.231 260.645 135.837C312.26 132.228 336.072 128.389 339.351 107.628C319.651 117.158 303.625 120.669 263.358 122.628C331.051 108.856 356.173 98.7734 362.574 73.7187C327.546 93.0031 302.344 99.9921 258.553 112.137L256.419 112.728C342.125 81.4812 373.753 64.4703 373.131 35.9094C335.648 67.1984 307.662 81.5797 250.701 104.028C348.221 51.0453 382.256 24.8703 380.965 2L223.082 105.837C226.827 117.73 231.137 131.375 236.131 147.087C239.433 157.522 242.727 167.96 246.014 178.4L276.821 196.067ZM134.653 179.169L105.574 195.842C106.045 199.705 105.292 203.68 103.671 207.336C101.08 213.191 96.1719 218.548 89.7041 222.266C83.2364 225.983 76.1138 227.53 69.7262 226.841C63.3385 226.147 57.3418 223.137 54.0255 217.419C50.7092 211.705 51.0861 205.03 53.6769 199.184C56.2678 193.325 61.1763 187.967 67.6488 184.25C74.1165 180.533 81.2343 178.986 87.622 179.68C92.7708 180.237 97.6557 182.3 101.095 186.064L132.863 165.172C109.63 168.969 94.6126 168.551 84.5648 162.242C105.15 158.389 114.266 154.555 126.787 145.137C124.163 145.817 121.624 146.492 119.169 147.144C92.4834 154.241 75.379 158.792 61.9489 137.637C88.7808 141.856 99.295 139.906 114.967 137C116.993 136.625 119.113 136.231 121.355 135.837C69.7403 132.228 45.9279 128.389 42.6492 107.628C62.3493 117.158 78.375 120.669 118.642 122.628C50.9495 108.861 25.8274 98.7781 19.4304 73.7187C54.4542 93.0031 79.6563 99.9921 123.442 112.137L125.581 112.728C39.8747 81.4812 8.25194 64.4703 8.87375 35.9094C46.3613 67.1984 74.3473 81.5797 131.304 104.028C33.7838 51.0453 -0.255527 24.8703 1.0352 2L156.355 104.15L134.653 179.169ZM320.466 202.812C322.209 206.741 322.091 210.289 320.56 212.919C319.038 215.548 316.009 217.428 311.718 217.892C307.431 218.361 302.221 217.33 297.242 214.47C292.258 211.611 288.763 207.631 287.025 203.708C285.282 199.775 285.404 196.226 286.93 193.597C288.457 190.967 291.486 189.092 295.777 188.628C300.064 188.159 305.274 189.181 310.253 192.045C315.232 194.905 318.732 198.884 320.466 202.812ZM61.8594 212.919C60.3331 210.289 60.2106 206.741 61.9536 202.812C63.6965 198.884 67.1871 194.905 72.171 192.045C77.1502 189.186 82.3602 188.159 86.6469 188.623C90.9336 189.092 93.9673 190.967 95.4935 193.597C97.0198 196.226 97.1376 199.775 95.3993 203.708C93.6564 207.631 90.1611 211.611 85.1772 214.47C80.2027 217.33 74.9927 218.361 70.706 217.892C66.4146 217.423 63.3856 215.548 61.8594 212.923V212.919Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M163.388 207.715H165.871V213.13H120.875V207.715H123.136C133.311 207.715 140.772 202.095 145.973 184.615L183.96 54.9499H191.874L193.683 56.2015C196.349 62.1218 199.124 70.8546 207 95.614C210.472 106.526 214.933 120.551 220.816 138.828C228.73 163.55 234.265 180.875 237.798 192.917C242.744 203.933 249.264 207.715 257.616 207.715H259.877V213.13H202.958V207.715C216.751 207.715 221.047 203.136 216.073 186.697L207.706 158.6H160.675L153.439 184.405C148.917 200.225 153.213 207.715 163.388 207.715ZM162.484 152.773H205.897L183.512 77.8437L162.484 152.773Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+              <div
+                class="relative flex h-full flex-col items-start bg-white/50 p-8 transition-colors group-hover/card:bg-transparent dark:bg-gray-950/50"
+              >
+                <h2 class="text-5xl font-bold tracking-snug">A-Barber</h2>
+                <div
+                  class="mb-10 mt-6 flex-1 space-y-6 pr-4 text-lg leading-normal text-gray-50"
+                >
+                  Some branding, marketing design and web development for my
+                  dear sister-in-law.
+                </div>
+                <div
+                  class="inline-flex items-center space-x-2 rounded-lg border border-gray-30 bg-white py-2 pl-2.5 pr-2 transition-colors group-hover/card:border-gray-40 dark:border-gray-500 dark:bg-gray-900 dark:group-hover/card:border-gray-200"
+                >
+                  <div
+                    class="text-sm font-bold leading-none text-gray-1000 dark:text-white"
+                  >
+                    View more
+                  </div>
+                  <div
+                    class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-40 transition-colors group-hover/card:border-green-500 group-hover/card:bg-green-500 dark:border-gray-200 dark:group-hover/card:border-green-400 dark:group-hover/card:bg-green-400"
+                  >
+                    <svg
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      class="h-2 w-2 text-gray-100 transition-colors group-hover/card:text-white dark:text-white dark:group-hover/card:text-gray-1000"
+                    >
+                      <path
+                        d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="group/card relative col-span-6 overflow-hidden rounded-2xl border-b border-t-0 border-gray-10 bg-gradient-to-br from-gray-10 via-white to-gray-5 active:top-[1px] dark:border-b-0 dark:border-gray-50/20 dark:from-gray-1000 dark:via-gray-800 dark:to-gray-950 md:col-span-3 last:md:col-span-6 lg:col-span-2 last:lg:col-span-2"
+            style="opacity: 0; transform: translateY(-10px) translateZ(0)"
+          >
+            <a class="h-full w-full" href="https://ounaturg.ee/">
+              <svg
+                width="190"
+                height="232"
+                viewBox="0 0 190 232"
+                fill="none"
+                class="absolute text-gray-20 dark:text-gray-500/80 -bottom-4 -right-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M89.5359 104.558C89.6358 104.721 89.7312 104.884 89.8322 105.048C88.7435 104.971 87.6434 104.932 86.5297 104.932C62.3584 104.932 42.7317 124.138 42.7317 148.249C42.7317 172.359 62.3584 191.566 86.5297 191.566C111.321 191.566 130.328 172.359 130.328 148.249C130.328 142.417 129.213 136.874 127.176 131.818C134.396 129.884 141.475 127.396 148.456 123.819C154.144 120.904 159.45 117.637 164.405 114.09C169.319 124.515 172.06 136.082 172.06 148.249C172.06 193.814 133.634 231 86.5297 231C40.0457 231 1 193.814 1 148.249C1 115.322 21.3919 86.7801 50.2439 73.4756C55.9112 53.7117 68.0734 24.8278 92.7238 10.7218C132.277 -11.9134 189 12.0712 189 12.0712C189 12.0712 181.595 72.7553 142.041 95.3905C125.731 104.725 106.504 106.128 89.5359 104.558ZM110.224 40.6924C95.2475 49.287 90.2727 68.6169 90.2727 68.6169C90.2727 68.6169 109.579 74.0122 124.555 65.4165C139.531 56.8219 144.506 37.4908 144.506 37.4908C144.506 37.4908 125.2 32.0967 110.224 40.6924Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                ></path>
+              </svg>
+              <div
+                class="relative flex h-full flex-col items-start bg-white/50 p-8 transition-colors group-hover/card:bg-transparent dark:bg-gray-950/50"
+              >
+                <h2 class="text-5xl font-bold tracking-snug">Õunaturg</h2>
+                <div
+                  class="mb-10 mt-6 flex-1 space-y-6 pr-4 text-lg leading-normal text-gray-50"
+                >
+                  Designed, co-built and sold a marketplace for selling
+                  second-hand Apple products.
+                </div>
+                <div
+                  class="inline-flex items-center space-x-2 rounded-lg border border-gray-30 bg-white py-2 pl-2.5 pr-2 transition-colors group-hover/card:border-gray-40 dark:border-gray-500 dark:bg-gray-900 dark:group-hover/card:border-gray-200"
+                >
+                  <div
+                    class="text-sm font-bold leading-none text-gray-1000 dark:text-white"
+                  >
+                    View more
+                  </div>
+                  <div
+                    class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-40 transition-colors group-hover/card:border-green-500 group-hover/card:bg-green-500 dark:border-gray-200 dark:group-hover/card:border-green-400 dark:group-hover/card:bg-green-400"
+                  >
+                    <svg
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      class="h-2 w-2 text-gray-100 transition-colors group-hover/card:text-white dark:text-white dark:group-hover/card:text-gray-1000"
+                    >
+                      <path
+                        d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

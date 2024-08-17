@@ -1,24 +1,18 @@
 <script lang="ts" setup>
-  import TestimonialCard from '@/components/testimonials/TestimonialCard.vue'
-  import Header from '@/components/base/Header.vue'
-  import { useDark } from '@vueuse/core'
+import TestimonialCard from "@/components/testimonials/TestimonialCard.vue";
+import Header from "@/components/base/Header.vue";
+import { useDark } from "@vueuse/core";
 
-  const isDark = useDark()
+const isDark = useDark();
 </script>
 <template>
-  <main 
-    class="min-h-screen" 
-    :class="{'text-white bg-[#222]': isDark}"
-  >
+  <main class="min-h-screen" :class="{ 'text-white bg-[#222]': isDark }">
     <div class="font-oswald">
-      <Header/>
+      <Header />
       <h1 class="pt-20 text-6xl text-center">Testimonials</h1>
       <div class="pt-5 md:pt-10 lg:pt-10">
-        <div 
-          class="
-            grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 
-            px-5 md:px-10 lg:px-36
-          "
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-5 md:px-10 lg:px-36"
         >
           <TestimonialCard
             userImage="https://media.licdn.com/dms/image/C5603AQEHDAmIvOSIFA/profile-displayphoto-shrink_400_400/0/1516350899977?e=1724284800&v=beta&t=-gBoK6Po9UgVsgjbwKWY-zFuxSEquZYkrUPgdaWzKKI"
