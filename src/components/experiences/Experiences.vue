@@ -12,10 +12,7 @@ defineProps({
     type: String,
     required: true,
   },
-  description: {
-    type: String,
-    default: "",
-  },
+
   technologies: {
     type: Array as PropType<string[]>,
     default: () => [],
@@ -90,7 +87,7 @@ const animateOut = (defaultText: any, hoverText: any) => {
         <span class="font-extralight">{{ date }}</span> <br />
         {{ title }}
       </h3>
-      <ul v-if="technologies.length" class="flex items-center space-x-3 mt-5">
+      <ul v-if="technologies.length" class="flex mb-7 items-center flex-wrap gap-2 mt-3">
         <li
           v-for="tech in technologies"
           :key="tech"
@@ -113,7 +110,6 @@ const animateOut = (defaultText: any, hoverText: any) => {
           </span>
         </li>
       </ul>
-      <p v-if="description" class="pb-12 text-neutral-500">{{ description }}</p>
     </div>
   </div>
 </template>
