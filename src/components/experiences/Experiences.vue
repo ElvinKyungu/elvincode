@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { gsap } from "gsap";
-import type { PropType } from "vue";
+import { ref } from "vue"
+import { gsap } from "gsap"
+import type { PropType } from "vue"
 
 defineProps({
   date: {
@@ -79,19 +79,19 @@ const animateOut = (defaultText: any, hoverText: any) => {
             </slot>
           </div>
         </div>
-        <div v-if="!isLast" class="w-px h-full border border-dashed"></div>
+        <div v-if="!isLast" class="w-px h-full border border-dashed border-gray-500"></div>
       </div>
     </div>
     <div class="flex-1 p-2">
-      <h3 class="font-heading mb-0.5 text-lg font-semibold">
-        <span class="font-extralight">{{ date }}</span> <br />
+      <h3 class="font-heading mb-0.5 text-lg font-light">
+        <span class="font-extralight text-base">{{ date }}</span> <br />
         {{ title }}
       </h3>
       <ul v-if="technologies.length" class="flex mb-7 items-center flex-wrap gap-2 mt-3">
         <li
           v-for="tech in technologies"
           :key="tech"
-          class="relative overflow-hidden tag flex items-center"
+          class="relative overflow-hidden tag flex items-center text-sm font-light"
           @mouseenter="
             animateIn($refs[`defaultText_${tech}`], $refs[`hoverText_${tech}`])
           "
@@ -114,7 +114,7 @@ const animateOut = (defaultText: any, hoverText: any) => {
   </div>
 </template>
 
-<style scoped>
+<style>
 .tag {
   @apply py-2 px-5 bg-white/10 rounded-full cursor-pointer;
 }

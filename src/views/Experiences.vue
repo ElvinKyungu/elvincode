@@ -9,12 +9,12 @@ const isDark = useDark()
   <main class="min-h-screen w-full" :class="{ 'text-white bg-[#222]': isDark }">
     <Header class="header w-full h-full" />
     <section
-      class="py-4 overflow-hidden flex justify-center h-screen w-full pt-36 relative z-0"
+      class="py-4 flex justify-center w-full pt-20 relative z-0"
     >
-      <main class="px-20 w-full font-oswald relative w-95% md:w-[80%]">
-        <h1 class="mb-10 text-5xl text-center">Experiences</h1>
-        <div class="border border-[#363333] relative px-6 pt-5 pb-7 rounded-xl">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <main class="px-20 w-full font-oswald relative w-95% md:w-[85%]">
+        <h1 class="mb-5 text-4xl text-center">Experiences</h1>
+        <div class=" relative px-6 pt-5 pb-7 rounded-xl">
+          <div class="grid grid-cols-2 gap-10">
             <div>
               <Experience
                 date="August 24 - Présent"
@@ -77,8 +77,6 @@ const isDark = useDark()
                   <IconChek />
                 </template>
               </Experience>
-            </div>
-            <div>
               <Experience
                 date="August 24 - Présent"
                 title="Frontend web developer at Bayommo 🇨🇲"
