@@ -11,7 +11,7 @@ const props = defineProps<{
 <template>
   <div v-for="(card, index) in cardInfo" :key="index" class="border border-[#363333] cursor-pointer rounded-2xl flex gap-5 w-full mb-4">
     <div class="relative w-44 h-40 rounded-lg">
-      <img :src="card.componentImage" alt="" class="object-cover rounded-l-2xl absolute">
+      <img :src="card.componentImage" alt="" class="object-cover rounded-l-2xl absolute h-full">
     </div>
     <div class="py-3">
       <h2 class="text-xl">{{ card.componentName }}</h2>

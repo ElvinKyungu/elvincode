@@ -1,30 +1,56 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+import { gsap } from 'gsap'
 import { useDark } from "@vueuse/core"
 import Header from "@/components/base/Header.vue"
 import ProjectCard from '@/components/projects/ProjectCard.vue'
-import iosImage from '@/assets/ios.png'
+import ios from '@/assets/ios.png'
+import visionpro from '@/assets/visionpro.png'
 const isDark = useDark()
-
 const cardInfos = [
   {
     componentName: "Composant iOS",
     componentDescription: "C'est un composant UI qui a 5 fenêtres d'un iOS 18",
-    componentImage: iosImage,
+    componentImage: ios,
     componentTechno: ["Vue.js", "GSAP", "TailwindCSS"]
   },
   {
-    componentName: "Composant iOS",
-    componentDescription: "C'est un composant UI qui a 5 fenêtres d'un iOS 18",
-    componentImage: iosImage,
-    componentTechno: ["Vue.js", "GSAP", "TailwindCSS"]
-  },
-  {
-    componentName: "Composant iOS",
-    componentDescription: "C'est un composant UI qui a 5 fenêtres d'un iOS 18",
-    componentImage: iosImage,
-    componentTechno: ["Vue.js", "GSAP", "TailwindCSS"]
-  },
+    componentName: "Composant Android",
+    componentDescription: "C'est un composant UI qui a 3 fenêtres d'un Android 12",
+    componentImage: visionpro,
+    componentTechno: ["Vue.js", "TailwindCSS", "Axios"]
+  }
 ]
+
+const stickyImageRef = ref(null)
+const previousCardIndex = ref<number | null>(null)
+
+const handleCardClick = (event: Event, cardIndex: number) => {
+  const cardElement = event.currentTarget as HTMLElement
+  const stickyImageElement = stickyImageRef.value
+
+  // Calculate positions
+  const cardRect = cardElement.getBoundingClientRect()
+  const stickyRect = stickyImageElement.getBoundingClientRect()
+
+  // Determine the direction of the animation based on the previous card index
+  const direction = (previousCardIndex.value !== null && cardIndex < previousCardIndex.value)
+    ? 'bottom-to-top'
+    : 'top-to-bottom'
+
+  // Animate image based on direction
+  gsap.fromTo(stickyImageElement, 
+    { y: direction === 'top-to-bottom' ? '-100%' : '100%', opacity: 0 },
+    { y: '0%', opacity: 1, duration: 0.6, ease: 'power2.out' }
+  )
+  
+  // Update the image source
+  stickyImageElement.src = cardInfos[cardIndex].componentImage
+
+  // Update the previous card index
+  previousCardIndex.value = cardIndex
+}
+
 </script>
 
 <template>
@@ -44,14 +70,18 @@ const cardInfos = [
         <button class="px-10 py-3 border border-[#363333] rounded-xl">View Demo</button>
       </div>
       <div class="grid grid-cols-2 mt-20 w-95% md:w-[75%] gap-10">
-        <div class="relative">
-          <ProjectCard :card-info="cardInfos" />
+        <div>
+          <div v-for="(card, index) in cardInfos" :key="index" 
+          class="relative cursor-pointer" 
+          @click="(event) => handleCardClick(event, index)">
+          <ProjectCard :cardInfo="[card]" />
+        </div>
         </div>
         <div class="sticky top-20 h-[50vh] overflow-hidden">
-          <img src="@/assets/ios.png" alt="" class="object-cover h-full cursor-pointer rounded-2xl w-full">
+          <img ref="stickyImageRef" :src="cardInfos[0].componentImage" alt="" 
+            class="object-cover h-full cursor-pointer rounded-2xl w-full opacity-0">
         </div>
       </div>
     </section>
   </main>
 </template>
-
