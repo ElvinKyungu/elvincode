@@ -1,7 +1,30 @@
 <script setup lang="ts">
 import { useDark } from "@vueuse/core"
 import Header from "@/components/base/Header.vue"
+import ProjectCard from '@/components/projects/ProjectCard.vue'
+import iosImage from '@/assets/ios.png'
 const isDark = useDark()
+
+const cardInfos = [
+  {
+    componentName: "Composant iOS",
+    componentDescription: "C'est un composant UI qui a 5 fenêtres d'un iOS 18",
+    componentImage: iosImage,
+    componentTechno: ["Vue.js", "GSAP", "TailwindCSS"]
+  },
+  {
+    componentName: "Composant iOS",
+    componentDescription: "C'est un composant UI qui a 5 fenêtres d'un iOS 18",
+    componentImage: iosImage,
+    componentTechno: ["Vue.js", "GSAP", "TailwindCSS"]
+  },
+  {
+    componentName: "Composant iOS",
+    componentDescription: "C'est un composant UI qui a 5 fenêtres d'un iOS 18",
+    componentImage: iosImage,
+    componentTechno: ["Vue.js", "GSAP", "TailwindCSS"]
+  },
+]
 </script>
 
 <template>
@@ -22,22 +45,7 @@ const isDark = useDark()
       </div>
       <div class="grid grid-cols-2 mt-20 w-95% md:w-[75%] gap-10">
         <div class="relative">
-          <div class="border border-[#363333] cursor-pointer rounded-2xl flex gap-5 w-full mb-4">
-            <div class="relative w-44 h-40 rounded-lg">
-              <img src="@/assets/ios.png" alt="" class="object-cover rounded-l-2xl absolute">
-            </div>
-            <div class="py-3">
-              <h2 class="text-xl">Titre du composant</h2>
-              <p class="text-gray-400 mt-2">
-                C'est un composant UI qui a 5 fenêtres d'un iOS 18 
-              </p>
-              <ul class="flex gap-2 text-sm mt-5">
-                <li class="tag">Vuejs</li>
-                <li class="tag">GSAP</li>
-                <li class="tag">Tailwindcss</li>
-              </ul>
-            </div>
-          </div>
+          <ProjectCard :card-info="cardInfos" />
         </div>
         <div class="sticky top-20 h-[50vh] overflow-hidden">
           <img src="@/assets/ios.png" alt="" class="object-cover h-full cursor-pointer rounded-2xl w-full">
