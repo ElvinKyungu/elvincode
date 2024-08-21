@@ -6,6 +6,7 @@ import Header from "@/components/base/Header.vue"
 import ProjectCard from '@/components/projects/ProjectCard.vue'
 import ios from '@/assets/ios.png'
 import visionpro from '@/assets/visionpro.png'
+
 const isDark = useDark()
 const cardInfos = [
   {
@@ -22,36 +23,35 @@ const cardInfos = [
   }
 ]
 
-const stickyImageRef = ref(null)
+const stickyImageRef = ref<HTMLImageElement | null>(null)
 const previousCardIndex = ref<number | null>(null)
 
 const handleCardClick = (event: Event, cardIndex: number) => {
   const cardElement = event.currentTarget as HTMLElement
   const stickyImageElement = stickyImageRef.value
 
-  // Calculate positions
-  const cardRect = cardElement.getBoundingClientRect()
-  const stickyRect = stickyImageElement.getBoundingClientRect()
+  if (stickyImageElement) {
+    // Calculate positions
+    const cardRect = cardElement.getBoundingClientRect()
+    const stickyRect = stickyImageElement.getBoundingClientRect()
 
-  // Determine the direction of the animation based on the previous card index
-  const direction = (previousCardIndex.value !== null && cardIndex < previousCardIndex.value)
-    ? 'bottom-to-top'
-    : 'top-to-bottom'
+    // Determine the direction of the animation based on the previous card index
+    const direction = (previousCardIndex.value !== null && cardIndex < previousCardIndex.value)
+      ? 'bottom-to-top'
+      : 'top-to-bottom'
 
-  // Animate image based on direction
-  gsap.fromTo(stickyImageElement, 
-    { y: direction === 'top-to-bottom' ? '-100%' : '100%', opacity: 0 },
-    { y: '0%', opacity: 1, duration: 0.6, ease: 'power2.out' }
-  )
-  
-  // Update the image source
-  stickyImageElement.src = cardInfos[cardIndex].componentImage
+    // Animate image based on direction
+    gsap.fromTo(stickyImageElement, 
+      { y: direction === 'top-to-bottom' ? '-100%' : '100%', opacity: 0 },
+      { y: '0%', opacity: 1, duration: 0.6, ease: 'power2.out' }
+    )
+    stickyImageElement.src = cardInfos[cardIndex].componentImage
 
-  // Update the previous card index
-  previousCardIndex.value = cardIndex
+    previousCardIndex.value = cardIndex
+  }
 }
-
 </script>
+
 
 <template>
   <main class="min-h-screen w-full font-playfair" :class="{ 'text-white bg-[#222]': isDark }">
