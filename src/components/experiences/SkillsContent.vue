@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { SkillDetail } from '@/types/experiences'
 import IconFlag from '../icons/IconFlag.vue'
+import IconArrowGrowUp from '../icons/IconArrowGrowUp.vue'
 defineProps<({
   skills: SkillDetail[]
 })>()
@@ -13,7 +14,7 @@ defineProps<({
     </p>
     <div class="flex justify-between items-center">
       <p class="flex gap-2 items-center">
-        {{ skill.title }}
+        <IconArrowGrowUp class="text-green-400"/>{{ skill.title }}
       </p>
       <div class="flex items-center gap-2">
         <IconFlag :class="{'text-yellow-600': !skill.isHigh, 'text-red-600': skill.isHigh}"/>
