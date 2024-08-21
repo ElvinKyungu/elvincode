@@ -67,7 +67,7 @@ const animateOut = (defaultText: any, hoverText: any) => {
 </script>
 
 <template>
-  <div class="flex flex-wrap -m-2">
+  <div class="flex flex-wrap -m-2 cursor-pointer hover:bg-black/10 transition rounded-lg">
     <div class="w-auto p-2">
       <div class="flex flex-col items-center justify-between h-full">
         <div class="block pb-4">

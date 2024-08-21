@@ -40,7 +40,6 @@ const handleCardClick = (event: Event, cardIndex: number) => {
       ? 'bottom-to-top'
       : 'top-to-bottom'
 
-    // Animate image based on direction
     gsap.fromTo(stickyImageElement, 
       { y: direction === 'top-to-bottom' ? '-100%' : '100%', opacity: 0 },
       { y: '0%', opacity: 1, duration: 0.6, ease: 'power2.out' }
@@ -52,9 +51,8 @@ const handleCardClick = (event: Event, cardIndex: number) => {
 }
 </script>
 
-
 <template>
-  <main class="min-h-screen w-full font-playfair" :class="{ 'text-white bg-[#222]': isDark }">
+  <main class="min-h-screen w-full font-poppins" :class="{ 'text-white bg-[#222]': isDark }">
     <Header class="header w-full h-full" />
     <section class="py-4 flex justify-center flex-col items-center w-full pt-20 relative z-0">
       <div>

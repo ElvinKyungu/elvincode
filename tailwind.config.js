@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         oswald: "Oswald",
         playfair: "Playfair Display",
+        poppins: 'Poppins'
       },
     },
   },
