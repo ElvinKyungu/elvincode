@@ -1,0 +1,50 @@
+[
+  {
+    "companyName": "Efficient Outsource SRL",
+    "duration": "5 months of code",
+    "workType": "⏱️ Full time",
+    "location": "📍 Full Remote",
+    "learned": "What I learned from this work",
+    "skills": [
+      {
+        "type": "Soft Skills",
+        "details": [
+          {
+            "title": "Time management",
+            "description": "I learned to manage my time and tasks very well, which helped me avoid technical debts.",
+            "icon": "IconTime",
+            "level": "",
+            "image": "https://media.licdn.com/dms/image/v2/D4D03AQGcMcti8SAadg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1691835487556?e=1729728000&v=beta&t=9TlfE178JTSbViigb1IFca_ILLxVc5S3Q-QNzP4J5nI"
+          }
+        ]
+      },
+      {
+        "type": "Hard Skills",
+        "details": [
+          {
+            "title": "Analytical skills",
+            "description": "Each time I had to find solutions to new challenges, which pushed me to give my all, analyze the problem and live up to the company's expectations.",
+            "icon": "IconAnalitical",
+            "level": "Midle",
+            "image": "https://media.licdn.com/dms/image/v2/D4D03AQGcMcti8SAadg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1691835487556?e=1729728000&v=beta&t=9TlfE178JTSbViigb1IFca_ILLxVc5S3Q-QNzP4J5nI"
+          }
+        ]
+      },
+      {
+        "type": "Creative Skills",
+        "details": [
+          {
+            "title": "Communication",
+            "description": "I communicated very well with the team.",
+            "icon": "📶",
+            "level": "High",
+            "image": [
+              "https://infobiz.md/storage/companies/img/1024600042553.png",
+              "https://media.licdn.com/dms/image/v2/D4D03AQGcMcti8SAadg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1691835487556?e=1729728000&v=beta&t=9TlfE178JTSbViigb1IFca_ILLxVc5S3Q-QNzP4J5nI"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
