@@ -1,57 +1,85 @@
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
 import { useDark } from "@vueuse/core"
 import Experience from "@/components/experiences/Experiences.vue"
 import Header from "@/components/base/Header.vue"
 import IconChek from "@/components/icons/IconChek.vue"
 import experiences from '@/data/experiences.json'
 import ExperiencesDetails from '@/components/experiences/ExperienceDetail.vue'
+import gsap from 'gsap'
+import { 
+  efficientOutsourceExperience,
+  atlanticZoneExperience,
+  soixanteCircuitsExperience,
+  bayammoExperience,
+  codelabExperience,
+  lushitrapExperience
+} from '@/data/experiencesDetails'
 import type { ExperienceDetail } from '@/types/experiences'
 
 const isDark = useDark()
-const efficientOutsourceExperience: ExperienceDetail = {
-  companyName: "Efficient Outsource SRL",
-  duration: "5 months of code",
-  workType: {
-    location: 'Full Remote',
-    time: 'Full Time',
-  },
-  softSkills: [
-    {
-      title: "Analytical skills",
-      description: "Each time I had to find solutions to new challenges, which pushed me to give my all, analyze the problem and live up to the company's expectations.",
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQGcMcti8SAadg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1691835487556?e=1729728000&v=beta&t=9TlfE178JTSbViigb1IFca_ILLxVc5S3Q-QNzP4J5nI",
-      isHigh: false,  // Middle skill level
-    },
-    {
-      title: "Time management",
-      description: "I learned to manage my time and tasks very well, which helped me avoid technical debts.",
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQGcMcti8SAadg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1691835487556?e=1729728000&v=beta&t=9TlfE178JTSbViigb1IFca_ILLxVc5S3Q-QNzP4J5nI",
-      isHigh: true,  // High skill level
-    },
-    {
-      title: "Communication",
-      description: "I communicated very well with the team.",
-      image: "https://infobiz.md/storage/companies/img/1024600042553.png",
-      isHigh: true,  
+// State to store the selected experience details
+const selectedExperience = ref(efficientOutsourceExperience)
+const activeExperienceTitle = ref(experiences[0].title)  // Default
+
+function getExperienceDetails(title: string) {
+  switch (title) {
+    case 'Efficient Outsource':
+      return efficientOutsourceExperience
+    case 'Atlantic Zone':
+      return atlanticZoneExperience
+    case 'Soixante Circuits':
+      return soixanteCircuitsExperience
+    case 'Bayammo':
+      return bayammoExperience
+    case 'CodeLab':
+      return codelabExperience
+    case 'LushiTrap':
+      return lushitrapExperience
+    default:
+      return efficientOutsourceExperience
+  }
+}
+
+// Function to handle the animation sequence
+function selectExperience(experienceDetail:ExperienceDetail) {
+  gsap.to('.experience-details', {
+    opacity: 0,
+    duration: 0.5,
+    ease: 'power2.inOut',
+    onComplete() {
+      // Change the content after fade out
+      selectedExperience.value = experienceDetail
+      activeExperienceTitle.value = experienceDetail.companyName// Set the active experience
+
+      gsap.to('.experience-details', {
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.inOut',
+      })
     }
-  ],
-  hardSkills: [
-   
-  ],
-  creativeSkills: [
-    
-  ],
-};
+  })
+}
+
+onMounted(() => {
+  // Initial fade-in animation when the component is mounted
+  gsap.fromTo('.experience-details', {
+    opacity: 0
+  }, {
+    opacity: 1,
+    duration: 0.5,
+    ease: 'power2.inOut'
+  })
+})
 </script>
+
 <template>
   <main class="min-h-screen w-full" :class="{ 'text-white bg-[#222]': isDark }">
     <Header class="header w-full h-full" />
-    <section
-      class="py-4 flex justify-center w-full pt-20 relative z-0"
-    >
-      <main class="px-10 w-full font-poppins relative  md:w-[85%]">
+    <section class="py-4 flex justify-center w-full pt-20 relative z-0">
+      <main class="px-10 w-full font-poppins relative md:w-[85%]">
         <h1 class="mb-5 text-4xl text-center">Experiences</h1>
-        <div class=" relative px-6 pt-5 pb-7 rounded-xl">
+        <div class="relative px-6 pt-5 pb-7 rounded-xl">
           <div class="grid grid-cols-2 space-x-20">
             <div>
               <Experience
@@ -61,6 +89,8 @@ const efficientOutsourceExperience: ExperienceDetail = {
                 :title="experience.title"
                 :technologies="experience.technologies"
                 :isLast="experience.isLast"
+                @click="selectExperience(getExperienceDetails(experience.details.company))"
+                :isActive="activeExperienceTitle === experience.details.company"
               >
                 <template #icon>
                   <IconChek />
@@ -68,7 +98,10 @@ const efficientOutsourceExperience: ExperienceDetail = {
               </Experience>
             </div>
             <div class="bg-black/10 rounded-lg py-5 px-10 relative hidden md:block">
-              <ExperiencesDetails :experiences="efficientOutsourceExperience"/>
+              <ExperiencesDetails 
+                :experiences="selectedExperience" 
+                class="experience-details"
+              />
             </div>
           </div>
         </div>
@@ -76,6 +109,7 @@ const efficientOutsourceExperience: ExperienceDetail = {
     </section>
   </main>
 </template>
-<style>
 
+<style>
+/* Add any custom styles needed for smooth transitions */
 </style>

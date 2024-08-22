@@ -21,6 +21,10 @@ defineProps({
     type: Boolean,
     default: false,
   },
+  isActive: {  // New prop to receive the active state
+    type: Boolean,
+    default: false,
+  },
 });
 
 const animateIn = (defaultText: any, hoverText: any) => {
@@ -67,7 +71,11 @@ const animateOut = (defaultText: any, hoverText: any) => {
 </script>
 
 <template>
-  <div class="flex flex-wrap -m-2 cursor-pointer hover:bg-black/10 transition rounded-lg">
+  <div
+    :class="{'bg-black/10': isActive}"
+    class="flex flex-wrap -m-2 cursor-pointer hover:bg-black/10 transition rounded-lg
+    "
+  >
     <div class="w-auto p-2">
       <div class="flex flex-col items-center justify-between h-full">
         <div class="block pb-4">
