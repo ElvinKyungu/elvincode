@@ -68,30 +68,45 @@ const animateHearts = () => {
 
 const stickyImageRef = ref<HTMLImageElement | null>(null)
 const previousCardIndex = ref<number | null>(null)
+  const blockRef = ref<HTMLDivElement | null>(null);
+
 
 const handleCardClick = (event: Event, cardIndex: number) => {
-  const cardElement = event.currentTarget as HTMLElement
-  const stickyImageElement = stickyImageRef.value
+  const stickyImageElement = stickyImageRef.value;
+  const blockElement = blockRef.value;
 
-  if (stickyImageElement) {
-    // Calculate positions
-    const cardRect = cardElement.getBoundingClientRect()
-    const stickyRect = stickyImageElement.getBoundingClientRect()
-
-    // Determine the direction of the animation based on the previous card index
+  if (stickyImageElement && blockElement) {
     const direction = (previousCardIndex.value !== null && cardIndex < previousCardIndex.value)
       ? 'bottom-to-top'
-      : 'top-to-bottom'
+      : 'top-to-bottom';
 
-    gsap.fromTo(stickyImageElement, 
-      { y: direction === 'top-to-bottom' ? '-100%' : '100%', opacity: 0 },
-      { y: '0%', opacity: 1, duration: 0.6, ease: 'power2.out' }
-    )
-    stickyImageElement.src = cardInfos[cardIndex].componentImage
+    const tl = gsap.timeline({
+      onStart: () => {
+        // Mettre à jour l'image source avant l'apparition
+        stickyImageElement.src = cardInfos[cardIndex].componentImage;
+      }
+    });
 
-    previousCardIndex.value = cardIndex
+    // Faire disparaître le bloc dans la direction inverse
+    tl.to(blockElement, {
+      opacity: 0,
+      y: direction === 'top-to-bottom' ? '50%' : '-50%',
+      duration: 0.25,
+      ease: 'power2.in',
+    });
+
+    // Réapparaître le bloc dans la direction opposée
+    tl.fromTo(blockElement, 
+      { opacity: 0, y: direction === 'top-to-bottom' ? '-50%' : '50%' },
+      { opacity: 1, y: '0%', duration: 0.35, ease: 'power2.out' }
+    );
+
+    // Mettre à jour l'index de la carte précédente
+    previousCardIndex.value = cardIndex;
   }
-}
+};
+
+
 </script>
 
 <template>
@@ -112,14 +127,20 @@ const handleCardClick = (event: Event, cardIndex: number) => {
       </div>
       <div class="grid grid-cols-2 mt-20 w-95% md:w-[75%] gap-10">
         <div>
-          <div v-for="(card, index) in cardInfos" :key="index" 
-          class="relative cursor-pointer" 
-          @click="(event) => handleCardClick(event, index)">
+          <div 
+            v-for="(card, index) in cardInfos" :key="index" 
+            class="relative rounded-2xl cursor-pointer transition-colors duration-300" 
+            :class="{
+              'bg-white/10': index === previousCardIndex,
+              'hover:bg-white/10': index !== previousCardIndex
+            }"
+            @click="(event) => handleCardClick(event, index)"
+          >
           <ProjectCard :cardInfo="[card]" />
         </div>
         </div>
         <div class="sticky top-20 h-[50vh] overflow-hidden">
-          <div  class="h-full absolute w-full">
+          <div ref="blockRef" class="h-full w-full relative">
             <div class="absolute right-5 top-5 flex justify-between w-full">
               <div class="z-50 flex right-3 absolute top-0">
                 <button @click="animateHearts" class="rounded-full bg-white/20 p-2">
@@ -134,7 +155,7 @@ const handleCardClick = (event: Event, cardIndex: number) => {
                   <IconHeart class="heart-icon"/>
                 </div>
               </div>
-              <button class="absolute flex gap-2 left-10 bg-white/20 backdrop-blur-sm top-1 rounded-full border border-[#222] px-5 py-1">
+              <button class="preview-button absolute flex gap-2 left-10 bg-white/20 backdrop-blur-sm top-1 rounded-full border border-[#222] px-5 py-1">
                 <span>Preview</span>
                 <IconArrowGrowUp />
               </button>
@@ -143,10 +164,11 @@ const handleCardClick = (event: Event, cardIndex: number) => {
               ref="stickyImageRef"
               :src="cardInfos[0].componentImage" 
               alt="" 
-              class="object-cover h-full cursor-pointer rounded-2xl w-full opacity-0"
+              class="absolute object-cover h-full w-full cursor-pointer rounded-2xl"
             >
           </div>
         </div>
+        
       </div>
     </section>
   </main>
