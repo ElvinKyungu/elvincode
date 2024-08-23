@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { useDark } from "@vueuse/core"
 import Header from "@/components/base/Header.vue"
 import ProjectCard from '@/components/projects/ProjectCard.vue'
 import ios from '@/assets/ios.png'
 import visionpro from '@/assets/visionpro.png'
+import visionVR from "@/assets/vr.jpg"
+import IconArrowGrowUp from '@/components/icons/IconArrowGrowUp.vue'
+import IconHeart from '@/components/icons/IconHeart.vue'
 
 const isDark = useDark()
 const cardInfos = [
@@ -20,8 +23,48 @@ const cardInfos = [
     componentDescription: "C'est un composant UI qui a 3 fenêtres d'un Android 12",
     componentImage: visionpro,
     componentTechno: ["Vue.js", "TailwindCSS", "Axios"]
+  },
+  {
+    componentName: "Composant Android",
+    componentDescription: "C'est un composant UI qui a 3 fenêtres d'un Android 12",
+    componentImage: visionVR,
+    componentTechno: ["Vue.js", "TailwindCSS", "Axios"]
   }
 ]
+
+const hearts = Array.from({ length: 10 }, (_, i) => i + 1);
+const heartRefs = ref<HTMLDivElement[]>([]);
+
+onMounted(() => {
+  // Conversion de NodeList en tableau
+  heartRefs.value = Array.from(document.querySelectorAll('.heart-animation')) as HTMLDivElement[];
+});
+
+const animateHearts = () => {
+  heartRefs.value.forEach((heart, index) => {
+    const tl = gsap.timeline({
+      delay: index * 0.1, // Décalage entre les cœurs
+    });
+
+    tl.fromTo(
+      heart,
+      { opacity: 0, y: 0, x: 0, scale: 0.5, transformOrigin: 'center' },
+      {
+        opacity: 1,
+        y: gsap.utils.random(50, 100), 
+        x: gsap.utils.random(10, 50),
+        scale: 1,
+        duration: 1.5,
+        ease: 'power2.out',
+      }
+    ).to(heart, {
+      opacity: 0,
+      scale: 0.5,
+      duration: 0.5,
+      ease: 'power2.in',
+    })
+  })
+}
 
 const stickyImageRef = ref<HTMLImageElement | null>(null)
 const previousCardIndex = ref<number | null>(null)
@@ -76,10 +119,53 @@ const handleCardClick = (event: Event, cardIndex: number) => {
         </div>
         </div>
         <div class="sticky top-20 h-[50vh] overflow-hidden">
-          <img ref="stickyImageRef" :src="cardInfos[0].componentImage" alt="" 
-            class="object-cover h-full cursor-pointer rounded-2xl w-full opacity-0">
+          <div  class="h-full absolute w-full">
+            <div class="absolute right-5 top-5 flex justify-between w-full">
+              <div class="z-50 flex right-3 absolute top-0">
+                <button @click="animateHearts" class="rounded-full bg-white/20 p-2">
+                  <IconHeart class="heart-icon text-white"/>
+                </button>
+                <div
+                  v-for="index in hearts"
+                  :key="index"
+                  class="heart-animation"
+                  ref="hearts"
+                >
+                  <IconHeart class="heart-icon"/>
+                </div>
+              </div>
+              <button class="absolute flex gap-2 left-10 bg-white/20 backdrop-blur-sm top-1 rounded-full border border-[#222] px-5 py-1">
+                <span>Preview</span>
+                <IconArrowGrowUp />
+              </button>
+            </div>
+            <img
+              ref="stickyImageRef"
+              :src="cardInfos[0].componentImage" 
+              alt="" 
+              class="object-cover h-full cursor-pointer rounded-2xl w-full opacity-0"
+            >
+          </div>
         </div>
       </div>
     </section>
   </main>
 </template>
+<style scoped>
+button {
+  cursor: pointer;
+  z-index: 2
+}
+.heart-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: white;
+}
+
+.heart-animation {
+  position: absolute;
+  top: 0;
+  opacity: 0; 
+  right: 2rem;
+}
+</style>
