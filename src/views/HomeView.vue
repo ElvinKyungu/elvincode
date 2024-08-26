@@ -10,7 +10,7 @@ const isDark = useDark();
 
 <template>
   <main class="min-h-screen" :class="{ 'text-white bg-[#222]': isDark }">
-    <div class="font-oswald">
+    <div class="font-poppins">
       <Header class=" " />
       <Main />
       <Content />
