@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { ProjectCard } from '@/types/index'
 
+export interface ProjectCard {
+  componentName: string
+  componentDescription: string
+  componentImage: string
+}
 const props = defineProps<{
   cardInfo: ProjectCard[]
 }>()
@@ -18,9 +22,6 @@ const props = defineProps<{
       <p class="text-gray-400 mt-2">
         {{ card.componentDescription }}
       </p>
-      <ul class="flex gap-2 text-sm mt-5">
-        <li v-for="techno in card.componentTechno" :key="techno" class="tag">{{ techno }}</li>
-      </ul>
     </div>
   </div>
 </template>

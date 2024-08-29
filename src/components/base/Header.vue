@@ -137,13 +137,13 @@ function close_menu() {
               <router-link to="/"> Home </router-link>
             </li>
             <li>
-              <router-link to="/"> About </router-link>
+              <router-link to="/about"> About </router-link>
             </li>
             <li>
-              <router-link to="/"> Project </router-link>
+              <router-link to="/projects"> Projects </router-link>
             </li>
             <li>
-              <router-link to="/"> Conferences </router-link>
+              <router-link to="/conferences"> Conferences </router-link>
             </li>
           </ul>
         </div>
@@ -167,6 +167,7 @@ function close_menu() {
   height: 100%;
   display: flex;
   z-index: 99;
+  position: fixed !important;
 }
 
 .container--menu {

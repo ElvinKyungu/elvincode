@@ -30,11 +30,11 @@ import Button from "../base/Button.vue";
         <span class="font-bold">Spotify</span>
       </div>
       <div class="flex items-center gap-3 mr-6">
-        <span class="components-link"> Integration </span>
+        <span class="components-link">Integration </span>
       </div>
     </div>
     <div class="flex justify-end items-end">
-      <Button title="See all components" link="/ui" />
+      <Button title="See all components" link="/projects" />
     </div>
     <hr />
   </div>

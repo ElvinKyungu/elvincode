@@ -104,9 +104,7 @@ const handleCardClick = (event: Event, cardIndex: number) => {
     // Mettre à jour l'index de la carte précédente
     previousCardIndex.value = cardIndex;
   }
-};
-
-
+}
 </script>
 
 <template>
