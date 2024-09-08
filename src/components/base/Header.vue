@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { ref, nextTick } from "vue";
-import { useDark } from "@vueuse/core";
-import gsap from "gsap";
-import IconBars from "../icons/IconBars.vue";
-import IconClose from "../icons/IconClose.vue";
-import IconLinkedin from "../icons/IconLinkedin.vue";
-import IconsGithub from "../icons/IconsGithub.vue";
-import IconMoon from "../icons/IconMoon.vue";
-import IconSun from "../icons/IconSun.vue";
-import IconX from "../icons/IconX.vue";
+import { ref, nextTick } from "vue"
+import { useDark } from "@vueuse/core"
+import gsap from "gsap"
+import IconBars from "../icons/IconBars.vue"
+import IconClose from "../icons/IconClose.vue"
+import IconLinkedin from "../icons/IconLinkedin.vue"
+import IconsGithub from "../icons/IconsGithub.vue"
+import IconMoon from "../icons/IconMoon.vue"
+import IconSun from "../icons/IconSun.vue"
+import IconX from "../icons/IconX.vue"
 
-const isDark = useDark();
+const isDark = useDark()
 
 const toggleDark = () => {
   isDark.value = !isDark.value;
@@ -54,10 +54,10 @@ function open_menu() {
       },
       "<0.5",
     );
-  return tl;
+  return tl
 }
 function close_menu() {
-  const tl = gsap.timeline();
+  const tl = gsap.timeline()
   tl.fromTo(
     [".menu__left > *", ".menu__right"],
     {
@@ -79,7 +79,7 @@ function close_menu() {
     },
     "=-1",
   );
-  return tl;
+  return tl
 }
 </script>
 
