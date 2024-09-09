@@ -1,11 +1,11 @@
-import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "@/views/HomeView.vue";
-import About from "@/views/HomeView.vue";
-import Testimonials from "@/views/testimonials.vue";
-import Articles from "@/views/Articles.vue";
-import Experiences from "@/views/Experiences.vue";
-import Conferences from "@/views/Conferences.vue";
-import Projects from "@/views/projects.vue";
+import { createRouter, createWebHistory } from "vue-router"
+import HomeView from "@/views/HomeView.vue"
+import About from "@/views/About.vue"
+import Testimonials from "@/views/testimonials.vue"
+import Articles from "@/views/Articles.vue"
+import Experiences from "@/views/Experiences.vue"
+import Conferences from "@/views/Conferences.vue"
+import Projects from "@/views/projects.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +44,11 @@ const router = createRouter({
       path: "/projects",
       name: "projects",
       component: Projects,
+    },
+    {
+      path: "/about",
+      name: "about",
+      component: About,
     },
   ],
 });
