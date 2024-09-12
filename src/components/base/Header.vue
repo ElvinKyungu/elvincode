@@ -9,7 +9,7 @@ import IconsGithub from "../icons/IconsGithub.vue"
 import IconMoon from "../icons/IconMoon.vue"
 import IconSun from "../icons/IconSun.vue"
 import IconX from "../icons/IconX.vue"
-
+import IconArrowGrowUp from "../icons/IconArrowGrowUp.vue"
 const isDark = useDark()
 
 const toggleDark = () => {
@@ -81,6 +81,25 @@ function close_menu() {
   );
   return tl
 }
+const menuItems = [
+  { name: 'Home', route: '/' },
+  { name: 'About', route: '/about' },
+  { name: 'Projects', route: '/projects' },
+  { name: 'Testimonials', route: '/testimonials' },
+  { name: 'Experiences', route: '/experiences' },
+  { name: 'Conferences', route: '/conferences' }
+]
+
+const enter = (event: MouseEvent) => {
+  const icon = (event.currentTarget as HTMLElement).querySelector('.icon')
+  gsap.to(icon, { opacity: 1, x: 0, duration: 0.2, ease: 'power2.out' })
+}
+
+const leave = (event: MouseEvent) => {
+  const icon = (event.currentTarget as HTMLElement).querySelector('.icon')
+  gsap.to(icon, { opacity: 0, x: -20, duration: 0.2, ease: 'power2.in' })
+}
+
 </script>
 
 <template>
@@ -133,17 +152,11 @@ function close_menu() {
       >
         <div class="menu__layout">
           <ul class="menu__left text-xl space-y-5">
-            <li>
-              <router-link to="/"> Home </router-link>
-            </li>
-            <li>
-              <router-link to="/about"> About </router-link>
-            </li>
-            <li>
-              <router-link to="/projects"> Projects </router-link>
-            </li>
-            <li>
-              <router-link to="/conferences"> Conferences </router-link>
+            <li v-for="item in menuItems" :key="item.name" @mouseenter="enter" @mouseleave="leave" class="menu-item">
+              <router-link :to="item.route" class="flex gap-4 items-center">
+                {{ item.name }}
+                <span ref="icons" class="icon"><IconArrowGrowUp /></span>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -178,5 +191,15 @@ function close_menu() {
 
 .sidebar__menu-trigger {
   z-index: 99;
+}
+.menu-item {
+  position: relative;
+}
+
+.icon {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.1s ease, transform 0.1s ease;
 }
 </style>
