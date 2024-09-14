@@ -83,7 +83,7 @@ const isDark = useDark()
 <style>
 .p-article::first-letter {
   font-size: 50px;
-  font-weight: bold;
+  font-weight: 200;
   float: left;
   margin-right: 10px;
   line-height: 1;
