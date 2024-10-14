@@ -1,21 +1,89 @@
 <script setup lang="ts">
-import { ref, nextTick } from "vue"
-import { useDark } from "@vueuse/core"
+import { ref, onUnmounted, onMounted } from "vue"
 import gsap from "gsap"
-import IconBars from "../icons/IconBars.vue"
-import IconClose from "../icons/IconClose.vue"
-import IconLinkedin from "../icons/IconLinkedin.vue"
-import IconsGithub from "../icons/IconsGithub.vue"
-import IconMoon from "../icons/IconMoon.vue"
-import IconSun from "../icons/IconSun.vue"
-import IconX from "../icons/IconX.vue"
-import IconArrowGrowUp from "../icons/IconArrowGrowUp.vue"
-const isDark = useDark()
+import IconBars from "@/components/icons/IconBars.vue"
+import IconClose from "@/components/icons/IconClose.vue"
+import IconInstagram from "@/components/icons/IconInstagram.vue"
+import IconX from "@/components/icons/IconX.vue"
+import IconArrowGrowUp from "@/components/icons/IconArrowGrowUp.vue"
+import  IconSearch from "../icons/IconSearch.vue"
+import HoverPlaces from "../HoverPlaces.vue"
 
-const toggleDark = () => {
-  isDark.value = !isDark.value;
+const showPopup = ref(false)
+const isMenuOpen = ref(false)
+const showHover = ref(false)
+const hoverContent = ref<'whyTokyo' | 'places' | null>(null)
+const hoverComponentRef =  ref<HTMLElement | null>(null);
+const togglePopup = () => {
+  showPopup.value = !showPopup.value
+}
+
+let hoverTimeout: number | null = null; 
+const handleHoverEnter = (component: 'whyTokyo' | 'places') => {
+  clearHoverTimeout();
+  if (hoverContent.value !== component) {
+    hoverContent.value = component; 
+    showHover.value = true;
+    animateContainerIn()
+    animateContentIn(component)
+  } else {
+    showHover.value = true
+  }
 };
+
+const handleHoverLeave = () => {
+  hoverTimeout = window.setTimeout(() => {
+    if (!hoverComponentRef.value?.matches(':hover')) {
+      animateContentOut(() => {
+        showHover.value = false;
+        hoverContent.value = null; 
+      });
+    }
+  }, 300); 
+};
+
+const clearHoverTimeout = () => {
+  if (hoverTimeout !== null) {
+    clearTimeout(hoverTimeout);
+    hoverTimeout = null;
+  }
+};
+
+const animateContainerIn = () => {
+  gsap.fromTo(
+    '.hover-component', 
+    { y: 0, opacity: 0 }, 
+    { y: 0, opacity: 1, duration: 0.2, ease: 'power2.out' } 
+  );
+};
+
+
+const animateContentIn = (component: 'whyTokyo' | 'places') => {
+  gsap.fromTo(
+    '.hover-content', 
+    { x: 0, opacity: 0 },
+    { x: 0, opacity: 1, duration: 0.2, ease: 'power2.out' } 
+  )
+}
+
+const animateContentOut = (onComplete: () => void) => {
+  const direction = hoverContent.value === 'whyTokyo' ? 0 : 0; 
+
+  gsap.to('.hover-content', {
+    opacity: 0,
+    x: direction, 
+    duration: 0.2, 
+    ease: 'power2.in',
+    onComplete,
+  });
+};
+
+onUnmounted(() => {
+  clearHoverTimeout()
+});
+
 function open_menu() {
+  isMenuOpen.value = true;
   const tl = gsap.timeline();
   tl.to(".container--menu", {
     "--clip": "110vw",
@@ -24,52 +92,41 @@ function open_menu() {
   })
     .fromTo(
       ".menu__left > *",
-      {
-        x: -150,
-        opacity: 0,
-      },
+      { x: -150, opacity: 0 },
       {
         x: 0,
         opacity: 1,
         duration: 1.5,
         ease: "power2.out",
-        stagger: {
-          from: "center",
-          each: 0.05,
-        },
+        stagger: { from: "center", each: 0.05 },
       },
-      "0",
+      "0"
     )
     .fromTo(
       ".menu__right",
-      {
-        x: -100,
-        opacity: 0,
-      },
+      { x: -100, opacity: 0 },
       {
         opacity: 1,
         x: 0,
         duration: 1.5,
         ease: "power2.out",
       },
-      "<0.5",
+      "<0.5"
     );
-  return tl
+  return tl;
 }
+
 function close_menu() {
-  const tl = gsap.timeline()
+  const tl = gsap.timeline();
   tl.fromTo(
     [".menu__left > *", ".menu__right"],
-    {
-      x: 0,
-      opacity: 1,
-    },
+    { x: 0, opacity: 1 },
     {
       x: -150,
       opacity: 0,
       duration: 1,
       ease: "power2.out",
-    },
+    }
   ).to(
     ".container--menu",
     {
@@ -77,17 +134,20 @@ function close_menu() {
       duration: 1,
       ease: "power2.out",
     },
-    "=-1",
+    "=-1"
   );
-  return tl
+  isMenuOpen.value = false;
+  return tl;
 }
 const menuItems = [
   { name: 'Home', route: '/' },
+  { name: 'Components', route: '/about' },
   { name: 'About', route: '/about' },
-  { name: 'Projects', route: '/projects' },
-  { name: 'Testimonials', route: '/testimonials' },
   { name: 'Experiences', route: '/experiences' },
-  { name: 'Conferences', route: '/conferences' }
+  { name: 'Articles', route: '/articles' },
+  { name: 'Conferences', route: '/conferences' },
+  { name: 'Testimonials', route: '/testimonials' },
+  { name: 'Contact', route: '/contact' }
 ]
 
 const enter = (event: MouseEvent) => {
@@ -108,71 +168,83 @@ const leave = (event: MouseEvent) => {
       class="
       "
     >
-      <button
-        class="sidebar__menu-trigger w-20 h-20 fixed text-gray-100 group bg-black/10 backdrop-blur-md flex flex-col gap-4 ul rounded-full top-1/2 -translate-y-1/2 left-10 lg:left-20 items-center justify-center animate-pulse"
-        @click="open_menu"
-      >
-        <span
-          class="absolute w-full h-full rounded-full bg-white/20 opacity-70 transition-opacity duration-1000 ease-in-out animate-pulse"
-        ></span>
-        <IconBars
-          class="w-10 h-10 relative z-10"
-          :class="{ 'text-black': !isDark, 'text-white': isDark }"
-        />
-      </button>
-      <ul class="fixed right-0 flex justify-end py-5 px-5 space-x-5 z-50">
+      <ul class="fixed px-5 md:px-20  bg-white shadow-md backdrop-blur-sm items-center w-full flex justify-between py-3 space-x-5 z-header">
         <li class="cursor-pointer">
-          <IconsGithub
-            :class="{ 'text-black': !isDark, 'text-white': isDark }"
-          />
+          <router-link to="/" class="text-3xl text-green-500">Elvin Code</router-link>
         </li>
-        <li class="cursor-pointer">
-          <IconLinkedin
-            :class="{ 'text-black': !isDark, 'text-white': isDark }"
-          />
-        </li>
-        <li class="cursor-pointer">
-          <IconX :class="{ 'text-black': !isDark, 'text-white': isDark }" />
-        </li>
-        <li class="flex cursor-pointer" @click="toggleDark">
-          <IconMoon
-            v-if="isDark"
-            :class="{ 'text-black': !isDark, 'text-white': isDark }"
-          />
-          <IconSun
-            v-else
-            :class="{ 'text-black': !isDark, 'text-white': isDark }"
-          />
+        <li>
+          <ul class="flex space-x-10">
+            <li class="cursor-pointer hidden md:flex">
+              <ul class="flex space-x-7 text-lg">
+                <li
+                  class="border-b-4 py-3 border-transparent hover:border-b-black transition "
+                >
+                  Components
+                </li>
+                <li
+                  @mouseenter="handleHoverEnter('places')" 
+                  @mouseleave="handleHoverLeave"
+                  class="border-b-4 py-3 border-transparent hover:border-b-black transition "
+                >
+                  Recents articles
+                </li>
+                <li class="border-b-4 py-3 border-transparent">
+                  <IconInstagram class="w-7 h-7 relative z-10"/>
+                </li>
+                <li class="border-b-4 py-3 border-transparent">
+                  <IconX class="w-7 h-7 relative z-10"/>
+                </li>
+              </ul>
+            </li>
+            <li @click="open_menu" class="md:border-b-4 cursor-pointer py-3 border-transparent">
+              <IconBars class="text-black w-8 h-8 relative z-10"/>
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>
-    <div class="containers">
+    <!-- <div
+      v-if="showHover"
+      ref="hoverComponentRef"
+      class="hover-component backdrop-blur-md  bg-white/50"
+      @mouseenter="clearHoverTimeout()"
+      @mouseleave="handleHoverLeave"
+    >
+      <div class="hover-content">
+        <HoverPlaces v-if="hoverContent === 'places'" class="hover-places" />
+      </div>
+    </div> -->
+    <div >
       <div
-        class="container container--menu bg-black/10 h-full backdrop-blur-md flex justify-between px-20 py-10"
+        class="container container--menu bg-white/40 h-full backdrop-blur-md flex justify-between px-5 md:px-10 lg:px-20 py-10"
       >
-        <div class="menu__layout">
-          <ul class="menu__left text-xl space-y-5">
-            <li v-for="item in menuItems" :key="item.name" @mouseenter="enter" @mouseleave="leave" class="menu-item">
-              <router-link :to="item.route" class="flex gap-4 items-center">
-                {{ item.name }}
-                <span ref="icons" class="icon"><IconArrowGrowUp /></span>
-              </router-link>
-            </li>
-          </ul>
-        </div>
         <div class="sidebar">
           <button class="sidebar__menu-trigger menu__right" @click="close_menu">
             <IconClose
               class="w-10 h-10"
-              :class="{ 'text-black': !isDark, 'text-white': isDark }"
             />
           </button>
+        </div>
+        <div class="menu__layout">
+          <ul class="menu__left text-xl space-y-5">
+            <li v-for="item in menuItems" :key="item.name" @mouseenter="enter" @mouseleave="leave" class="menu-item">
+              <router-link :to="item.route" class="flex gap-4 items-center">
+                <span ref="icons" class="icon">
+                  <IconArrowGrowUp class="text-black " />
+                </span>
+                {{ item.name }}
+              </router-link>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </header>
 </template>
 <style scoped>
+.z-header{
+  z-index: 99;
+}
 .container--menu,
 .container--main {
   width: 100%;
@@ -185,8 +257,12 @@ const leave = (event: MouseEvent) => {
 
 .container--menu {
   --clip: 0;
-  clip-path: circle(var(--clip) at calc(7% + 1.5rem / 2) 50%);
+  clip-path: circle(var(--clip) at calc(100% - 3rem) 1rem);
   position: absolute;
+  top: 1rem;
+  right: 0px;
+  width: 100vw ;
+  height: calc(100vh - 1rem); 
 }
 
 .sidebar__menu-trigger {
@@ -202,4 +278,12 @@ const leave = (event: MouseEvent) => {
   transform: translateX(-20px);
   transition: opacity 0.1s ease, transform 0.1s ease;
 }
+.hover-component {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 20rem;
+  z-index: 99999;
+} 
 </style>

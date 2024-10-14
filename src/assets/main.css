@@ -1,26 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Engagement&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer components {
   .experience {
     @apply relative col-span-6 overflow-hidden rounded-2xl 
     border border-gray-50 active:top-[1px] dark:border-gray-500
     last:max-[1103px]:col-span-6 
     md:col-span-3 min-[1104px]:col-span-2 xl:col-span-6 cursor-pointer;
-  }
-  .link-botoom-actions {
-    @apply flex items-center hover:bg-black hover:text-white 
-    delay-100 p-3 cursor-pointer rounded-lg gap-3 transition-colors;
-  }
-  .file-result {
-    @apply flex justify-between pr-10 w-full gap-3 cursor-pointer 
-    hover:bg-black/5 
-    rounded-2xl py-2 hover:px-3 hover:w-[95%] duration-300 mx-auto;
   }
   .components-result {
     @apply hover:w-[95%] w-full  flex items-center justify-between gap-3 
@@ -36,5 +25,11 @@
     rounded-2xl py-3 
     hover:px-3 duration-300;
   }
-  
+  .text-heading-1{
+    @apply text-3xl md:text-4xl lg:text-5xl text-white 
+  }
+  .image-animate{
+    @apply transform w-36 h-36 md:w-64 md:h-56 object-cover rounded-[2rem] 
+    shadow-2xl border-[10px] border-gray-100
+  }
 }
