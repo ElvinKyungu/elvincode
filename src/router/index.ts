@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router"
 import HomeView from "@/views/HomeView.vue"
-import About from "@/views/About.vue"
-// import Testimonials from "@/views/TestimonialsView.vue"
+import About from "@/views/about.vue"
+import Conferences from "@/views/conferences.vue"
 // import Places from "@/views/PlacesTouristique.vue"
 import Experiences from "@/views/Experiences.vue"
 
@@ -23,16 +23,11 @@ const router = createRouter({
       name: "experiences",
       component: Experiences,
     },
-    // {
-    //   path: "/Places-touristiques",
-    //   name: "Places-touristiques",
-    //   component: Places,
-    // },
-    // {
-    //   path: "/contact",
-    //   name: "contact",
-    //   component: Contact,
-    // },
+    {
+      path: "/conferences",
+      name: "conferences",
+      component: Conferences,
+    },
   ],
 });
 

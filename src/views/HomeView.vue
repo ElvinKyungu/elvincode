@@ -7,16 +7,13 @@ import ImageBanner from '@/components/ImageBanner.vue'
 // import image4 from '@/assets/culture-modernity.avif'
 import TextScroll from '@/components/TextScroll.vue'
 import WalletCardHome from '@/components/WalletCardHome.vue'
-import SectionHighlight from '@/components/SectionHighlight.vue'
-import HomeCardSlider from '@/components/HomeCardSlider.vue'
 import PlacesCardClickable from '@/components/PlacesCardClickable.vue'
-import ScrollTriggerSection from '@/components/ScrollTriggerSection.vue'
-import FAQ from '@/components/FAQ.vue'
+import TestimonialCard from '@/components/TestimonialCard.vue'
 import AnimatedCard from '@/components/AnimatedCard.vue'
 import { useTitleAnimation } from '@/composables/useTitleAnimation'
 import { useParagraphAnimation } from '@/composables/useParagraphAnimation'
 import { ref } from 'vue'
-
+import userProfile  from '@/assets/elvin.png'
 const titleRef1 = ref<HTMLElement | null>(null)
 const titleRef2 = ref<HTMLElement | null>(null)
 const titleRef3= ref<HTMLElement | null>(null)
@@ -24,19 +21,56 @@ const titleRef4 = ref<HTMLElement | null>(null)
 const paragraphRef = ref<HTMLElement | null>(null)
 const imageRef4 = ref<HTMLElement | null>(null)
 
+const testimonials = ref([
+  {
+    userImage: userProfile,
+    userText: "Exploring Tsukiji was a food lover's dream. The freshest sushi and seafood I've ever had, and the market atmosphere was bustling!",
+    userName: "Alex Dubro",
+    userTitle: "From England"
+  },
+  {
+    userImage: userProfile,
+    userText: "Odaiba had a futuristic feel with its waterfront, giant Gundam statue and high-tech shopping malls. The sunset view from the Rainbow Bridge was magical.",
+    userName: "Sarah Assina",
+    userTitle: "From Canada"
+  },
+  {
+    userImage: userProfile,
+    userText: "Ueno Park was a peaceful escape from the hustle and bustle of the city. The cherry blossoms were beautiful, and visiting the zoo was a fun way to spend the day.",
+    userName: "Diego delafuente",
+    userTitle: "From Spain"
+  },
+  {
+    userImage: userProfile,
+    userText: "The view from Tokyo Skytree was breathtaking. Watching the city lights at night from this height is an unforgettable experience. A must-see!",
+    userName: "Emman Levi",
+    userTitle: "From Australia"
+  },
+  {
+    userImage: userProfile,
+    userText: "The atmosphere at Senso-ji Temple was surreal. The vibrant red doors, incense and stunning architecture really made me feel connected to Japan's rich history.",
+    userName: "Marc JC",
+    userTitle: "From USA"
+  },
+  {
+    userImage: userProfile,
+    userText: "Shibuya Crossing was incredible! The sheer number of people, the lights and the energy are something you have to experience in person. It's like stepping into a movie scene!",
+    userName: "Laura Bent",
+    userTitle: "From France"
+  }
+])
+
 useParagraphAnimation(paragraphRef, 0.5)
 useTitleAnimation(titleRef1, 0.5)
 useTitleAnimation(imageRef4, .5)
 useTitleAnimation(titleRef2, 0.5)
 useTitleAnimation(titleRef3, 0.5)
 useTitleAnimation(titleRef4, .5)
-// const imagesList = [image1,image3,image4,]
 </script>
 
 <template>
   <Header/>
   <AnimatedCard/>
-  <!-- <SectionHighlight/> -->
    <main class="relative ">
     <div
       class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
@@ -53,25 +87,74 @@ useTitleAnimation(titleRef4, .5)
     </section>
     <WalletCardHome/>
   </main>
-  
-  <section class="px-5 relative md:px-20 py-10 md:pt-20 lg:pt-20">
+  <PlacesCardClickable/>
+  <div class="pt-20 px-5 md:px-20 relative z-10 relative">
+    <div
+      class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
+    ></div>
+    <h2 class="text-3xl md:text-4xl relative mb-10">Testimonials</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 relative">
+      <TestimonialCard
+        v-for="(testimonial, index) in testimonials"
+        :key="index"
+        class="testimonial-card"
+        :userImage="testimonial.userImage"
+        :userText="testimonial.userText"
+        :userName="testimonial.userName"
+        :userTitle="testimonial.userTitle"
+      />
+    </div>
+  </div>
+  <section class="px-5 relative md:px-20 py-10 md:pt-56 ">
     <div
       class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
     <div class="grid grid-cols-12 gap-4 relative z-10">
       <div class="col-span-12 md:col-span-3 my-5 mt-2">
         <p class="h-[1px] bg-black"></p>
-        <p class="text-sm">W'are Tokyo</p>
+        <p class="text-sm">Get in Touch to work with me</p>
       </div>
-      <h1 ref="titleRef2" class="col-span-12 md:col-span-9 text-3xl md:text-4xl lg:text-5xl">
-        Welcome to Tokyo, the most vibrant city in the world
+      <h1 ref="titleRef2" class="col-span-12 md:col-span-9 text-2xl md:text-3xl lg:text-5xl">
+        Do you have any questions ?
       </h1>
     </div>
-    <h1 ref="titleRef3" class="text-3xl relative z-10  md:text-5xl lg:text-5xl">
-      Tokyo sets the pace for the future of urban living—through the lens of culture, cutting-edge technology, and endless exploration.
+    <h1 ref="titleRef3" class="relative z-10 text-2xl  md:text-3xl lg:text-5xl">
+      or would you like to get in touch with me? I will take the time to answer you as soon as possible.
     </h1>
   </section>
-  <PlacesCardClickable/>
+  
+  <section ref="cardsRef" class="grid pb-20 grid-cols-12 gap-5 overflow-hidden px-5 relative md:px-20">
+    <div
+      class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
+    ></div>
+    <div class="relative z-10 col-span-12 md:col-span-4 p-5 bg-black/5 cursor-pointer hover:bg-black/10 transition rounded-md ">
+      <div class="flex justify-center flex-col items-center space-y-3">
+        <h1 class="text-xl">Phone number</h1>
+        <ul>
+          <li>+243 846899101</li>
+          <li>+243 995555480</li>
+        </ul>
+      </div>
+    </div>
+    <div class="relative z-10 col-span-12 md:col-span-4 p-5 bg-black/5 cursor-pointer hover:bg-black/10 transition rounded-md ">
+      <div class="flex justify-center flex-col items-center space-y-3">
+        <h1 class="text-xl">Mail adress</h1>
+        <ul>
+          <li>elvinkyungu.75@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="relative z-10 col-span-12 md:col-span-4 p-5 bg-black/5 cursor-pointer hover:bg-black/10 transition rounded-md ">
+      <div class="flex justify-center flex-col items-center space-y-3">
+        <h1 class="text-xl">Social network</h1>
+        <ul>
+          <li>Instagram</li>
+          <li>Linkedin</li>
+          <li>X (Twiter)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <TextScroll/>
   <Footer/>
 </template>
