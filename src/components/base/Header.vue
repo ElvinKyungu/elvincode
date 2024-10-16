@@ -141,11 +141,11 @@ function close_menu() {
 }
 const menuItems = [
   { name: 'Home', route: '/' },
-  { name: 'Components', route: '/about' },
+  { name: 'Components', route: '/' },
   { name: 'About', route: '/about' },
-  { name: 'Experiences', route: '/experiences' },
-  { name: 'Articles', route: '/articles' },
-  { name: 'Conferences', route: '/conferences' },
+  { name: 'Experiences', route: '/' },
+  { name: 'Articles', route: '/' },
+  { name: 'Conferences', route: '/' },
 ]
 
 const enter = (event: MouseEvent) => {

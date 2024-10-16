@@ -48,7 +48,7 @@ onMounted(() => {
     <div
       class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
-    <div class="text-scroll-content">
+    <div class="text-scroll-content py-10 mg:py-20 lg:py-28">
       <div class="text-scroll-items bg-gray-100 text-green-600" role="marquee">
         <div v-for="(row, index) in tagRows" :key="index" class="text-scroll-row" ref="rows">
           <div v-for="(item, idx) in row" :key="idx" :class="item.styleClass" class="text-scroll-item">
@@ -65,9 +65,7 @@ onMounted(() => {
   position: relative;
 }
 
-.text-scroll-content {
-  padding: 200px 0;
-}
+
 
 .text-scroll-items {
   margin: -58px 0;

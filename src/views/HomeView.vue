@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Header from '@/components/base/Header.vue'
 import Footer from '@/components/base/Footer.vue'
-import ImageBanner from '@/components/ImageBanner.vue'
 // import image1 from '@/assets/tokyo-1.avif'
 // import image3 from '@/assets/market.avif'
 // import image4 from '@/assets/culture-modernity.avif'
@@ -71,7 +70,7 @@ useTitleAnimation(titleRef4, .5)
 <template>
   <Header/>
   <AnimatedCard/>
-   <main class="relative ">
+  <main class="relative ">
     <div
       class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
@@ -122,7 +121,7 @@ useTitleAnimation(titleRef4, .5)
       or would you like to get in touch with me? I will take the time to answer you as soon as possible.
     </h1>
   </section>
-  
+
   <section ref="cardsRef" class="grid pb-20 grid-cols-12 gap-5 overflow-hidden px-5 relative md:px-20">
     <div
       class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
