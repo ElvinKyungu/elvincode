@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
-import imgshrine from '@/assets/shrines.avif'
-import imgParanomic from '@/assets/panoramic.avif'
-import imgHotel1 from '@/assets/luxur-hotel.avif'
-import imgHotel3 from '@/assets/hotel3.avif'
-import imgCuisine1 from '@/assets/cuisine1.avif'
-import imgShopping5 from '@/assets/nightligh2.avif'
+import imgshrine from '@/assets/gsap.jpg'
+import imgParanomic from '@/assets/gsap.jpg'
+import imgHotel1 from '@/assets/gsap.jpg'
+import imgHotel3 from '@/assets/gsap.jpg'
+import imgCuisine1 from '@/assets/gsap.jpg'
+import imgShopping5 from '@/assets/gsap.jpg'
 
 const listContainer1 = ref<HTMLElement | null>(null)
 const listContainer2 = ref<HTMLElement | null>(null)

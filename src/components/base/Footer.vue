@@ -13,22 +13,16 @@
           <router-link  to="/about" class="hover:underline me-4 md:me-6">About</router-link>
         </li>
         <li>
-          <router-link  to="/Places-touristiques" class="hover:underline me-4 md:me-6">Tourist areas</router-link>
+          <router-link  to="/components" class="hover:underline me-4 md:me-6">Components</router-link>
         </li>
         <li>
-          <router-link  to="/contact" class="hover:underline me-4 md:me-6">Experiences</router-link>
+          <router-link  to="/experiences" class="hover:underline me-4 md:me-6">Experiences</router-link>
         </li>
         <li>
-          <router-link  to="/contact" class="hover:underline me-4 md:me-6">Articles</router-link>
+          <router-link  to="/articles" class="hover:underline me-4 md:me-6">Articles</router-link>
         </li>
         <li>
-          <router-link  to="/contact" class="hover:underline me-4 md:me-6">Testimonials</router-link>
-        </li>
-        <li>
-          <router-link  to="/contact" class="hover:underline me-4 md:me-6">Conferences</router-link>
-        </li>
-        <li>
-          <router-link  to="/contact" class="hover:underline">Contact</router-link>
+          <router-link  to="/conferences" class="hover:underline me-4 md:me-6">Conferences</router-link>
         </li>
       </ul>
     </div>
