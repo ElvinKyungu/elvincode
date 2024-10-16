@@ -3,7 +3,6 @@ import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { useDark } from "@vueuse/core"
 import Header from "@/components/base/Header.vue"
-import ProjectCard from '@/components/projects/ProjectCard.vue'
 import ios from '@/assets/ios.png'
 import visionpro from '@/assets/visionpro.png'
 import visionVR from "@/assets/vr.jpg"
