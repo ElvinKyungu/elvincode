@@ -4,7 +4,7 @@ import Header from "@/components/base/Header.vue"
 import Footer from '@/components/base/Footer.vue'
 import TouristCard from '@/components/TouristCard.vue'
 
-// majorTourist
+// conferences
 import conf1 from '@/assets/conf1.jpeg'
 import conf2 from '@/assets/conf2.jpeg'
 import conf3 from '@/assets/conf3.jpg'
@@ -44,84 +44,71 @@ useParagraphAnimation(cards1Ref2, .5)
 useParagraphAnimation(cards1Ref3, .5)
 useParagraphAnimation(cards1Ref4, .5)
 
-const majorTourist = [
+const conferences = [
   {
     img: conf15,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "A passion for tech as a lever for a promising professional future, both individually and collectively",
+    price: 2024,
   },
   {
     img: conf16,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "Community development drives strong growth in Lush's tech ecosystem",
+    price: 2022,
   },
   {
     img: conf17,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "Economic, environmental and social sustainability",
+    price: 2023,
   },
   {
     img: conf1,
-    title: "Panoramic Viewpoint",
-    price: 49,
-    notation: '4.7'
+    title: "Concours solution",
+    price: 2024,
   },
   {
     img: conf2,
-    title: "Temples and Shrines",
-    price: 99,
-    notation: '4.7'
+    title: "Devfest student edition",
+    price: 2023,
   },
   {
     img: conf3,
-    title: "Parks spaces",
-    price: 20,
-    notation: '4.5'
+    title: "Code fiesta 2023",
+    price: 2023,
   },
   {
     img: conf4,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "Soft Day 2024",
+    price: 2024,
   },
   {
     img: conf5,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "Evangelization tour, MLSA community at University of Lubumbashi",
+    price: 2024,
   },
   {
     img: conf6,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "Frontend web development contest",
+    price: 2022,
   },
   {
     img: conf7,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "Artificial intelligence in the DRC: opportunities and challenges",
+    price: 2023,
   },
   {
     img: conf8,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "Young people in digital",
+    price: 2022,
   },
   {
     img: conf9,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "Introduction to the developer professions",
+    price: 2023,
   },
   {
     img: conf10,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "Essential computer skills.",
+    price: 2024,
   },
   // {
   //   img: conf11,
@@ -131,24 +118,19 @@ const majorTourist = [
   // },
   {
     img: conf12,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "Google IO extend",
+    price: 2023,
   },
   {
     img: conf13,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "Devfest Google Developer Group Lubumbashi",
+    price: 2024,
   },
   {
     img: conf14,
-    title: "Green space",
-    price: 0,
-    notation: 'Free'
+    title: "Devfest GDG Lubumbashi",
+    price: 2023,
   },
-  
-  
 ]
 
 </script>
@@ -156,6 +138,13 @@ const majorTourist = [
 <template>
   <Header class="header w-full h-full" />
   <main class="w-full relative px-5 md:px-20 py-10 md:py-20 lg:py-28">
+    <div class="mt-20 relative w-full h-[30vh]">
+      <div class="absolute w-full h-full bg-black/50 z-40 rounded-xl"></div>
+      <img :src="conf12" class="rounded-xl absolute w-full  h-full z-20 object-cover" alt="">
+      <h1 class="px-5 lg:px-10 font-light relative text-center z-40 flex h-full w-full items-center justify-center text-3xl text-white">
+        One of my greatest passions outside of coding is clearly sharing knowledge. It's something that really gets me going, and I do it every chance I get at tech conferences.
+      </h1>
+    </div>
     <div
       class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.gray.200)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
@@ -165,14 +154,13 @@ const majorTourist = [
       </h2>
       <div ref="cards1Ref1" class="grid relative md:gap-10 z-40 grid-cols-12">
         <div 
-          v-for="(attraction, index) in majorTourist" 
+          v-for="(attraction, index) in conferences" 
           :key="index" 
           class="col-span-12 md:col-span-4 lg:col-span-3"
         >
           <TouristCard 
             :image="attraction.img"
             :title="attraction.title"
-            :rating="attraction.notation"
             :price="attraction.price"
           />
         </div>

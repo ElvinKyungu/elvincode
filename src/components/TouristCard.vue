@@ -6,13 +6,9 @@ import IconStars from '@/components/icons/IconStars.vue'
 const props = defineProps<{
   image: string
   title: string
-  rating: string
   price: number | string
 }>()
 
-const formattedPrice = computed(() => {
-  return typeof props.price === 'number' ? `$${props.price}` : props.price;
-})
 </script>
 
 <template>
@@ -30,13 +26,13 @@ const formattedPrice = computed(() => {
     <figcaption class="outside">
       <div class="flex justify-between px-2 mt-5">
         <h3 class="text-lg">{{ title }}</h3>
-        <div class="flex items-center">
-          <IconStars class="text-yellow-500"/>
-          <span>{{ rating }}</span>
-        </div>
       </div>
     </figcaption>
-    <p class="px-2 text-sm text-gray-500">{{ formattedPrice }}</p>
+    <div class="flex items-center">
+      <IconStars class="text-yellow-500"/>
+      <span>4.7</span>
+    </div>
+    <p class="px-2 text-sm text-gray-500">{{ price }}</p>
   </figure>
 </template>
 
