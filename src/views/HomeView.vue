@@ -20,9 +20,11 @@ useHead({
     { property: 'og:title', content: "Elvin Code - Frontend Developer" },
     { property: 'og:description', content: "I build elegant, modern web interfaces using Vue.js, Nuxt, TypeScript, Tailwindcss and GSAP" },
     { property: 'og:image', content: twitter },
+    { name: "keywords", content:"Vue.js, TypeScript, Frontend Developer, GSAP, Tailwind CSS, Web Development, Freelance" },
     { property: 'og:url', content: "https://elvincode.com" },
     { name: 'twitter:title', content:'Elvin Code - Frontend Developer'},
-    { name: 'twitter:card', content: twitter },
+    { name: 'twitter:card', content: "summary_large_image" },
+    { name: 'twitter:image', content: twitter },
     { name: 'twitter:description', content: "Frontend developer specialized in Vue.js, Nuxt, GSAP and TypeScript." }
   ],
 })
