@@ -11,7 +11,7 @@ import { useTitleAnimation } from '@/composables/useTitleAnimation'
 import { useParagraphAnimation } from '@/composables/useParagraphAnimation'
 import { ref } from 'vue'
 import userProfile  from '@/assets/elvin.png'
-import twitter from '@/assets/elvin-logo.png'
+import twitter from '@/assets/elvincode.png'
 
 useHead({
   title: 'Elvin code - Frontend developer',
