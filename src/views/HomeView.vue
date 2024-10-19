@@ -94,7 +94,7 @@ useTitleAnimation(titleRef4, .5)
       <div class="col-span-12 md:col-span-6">
         <h2 ref="titleRef1" class="text-5xl">Crafting the Future of Web Interfaces</h2>
       </div>
-      <div class="col-span-12 md:col-span-6">
+      <div class="col-span-12 md:col-span-6 mt-8 md:mt-0">
         <p ref="paragraphRef" class="text-lg md:text-xl">
           As a frontend developer, I blend creativity with precision to build intuitive and dynamic web applications. From pixel-perfect designs to seamless user experiences, I turn ideas into interactive realities, using modern technologies like Vue.js, Nuxt.js, and TailwindCSS. My mission? Delivering fast, responsive, and aesthetically compelling solutions that make a lasting impact.
         </p>
