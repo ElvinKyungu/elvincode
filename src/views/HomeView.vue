@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import Header from '@/components/base/Header.vue'
 import Footer from '@/components/base/Footer.vue'
-// import image1 from '@/assets/tokyo-1.avif'
-// import image3 from '@/assets/market.avif'
-// import image4 from '@/assets/culture-modernity.avif'
+import { useHead } from '@unhead/vue'
 import TextScroll from '@/components/TextScroll.vue'
 import WalletCardHome from '@/components/WalletCardHome.vue'
 import PlacesCardClickable from '@/components/PlacesCardClickable.vue'
@@ -13,6 +11,22 @@ import { useTitleAnimation } from '@/composables/useTitleAnimation'
 import { useParagraphAnimation } from '@/composables/useParagraphAnimation'
 import { ref } from 'vue'
 import userProfile  from '@/assets/elvin.png'
+import twitter from '@/assets/logo-twitter.png'
+
+useHead({
+  title: 'Elvin code - Frontend developer',
+  meta: [
+    { name: 'description', content: "I build elegant, modern web interfaces using Vue.js and TypeScript." },
+    { property: 'og:title', content: "Elvin Code - Frontend Developer" },
+    { property: 'og:description', content: "I build elegant, modern web interfaces using Vue.js, Nuxt, TypeScript, Tailwindcss and GSAP" },
+    { property: 'og:image', content: twitter },
+    { property: 'og:url', content: "https://elvincode.com" },
+    { name: 'twitter:title', content:'Elvin Code - Frontend Developer'},
+    { name: 'twitter:card', content: twitter },
+    { name: 'twitter:description', content: "Frontend developer specialized in Vue.js, Nuxt, GSAP and TypeScript." }
+  ],
+})
+
 const titleRef1 = ref<HTMLElement | null>(null)
 const titleRef2 = ref<HTMLElement | null>(null)
 const titleRef3= ref<HTMLElement | null>(null)
@@ -87,7 +101,7 @@ useTitleAnimation(titleRef4, .5)
     <WalletCardHome/>
   </main>
   <PlacesCardClickable/>
-  <div class="pt-20 px-5 md:px-20 relative z-10 relative">
+  <div class="pt-20 px-5 md:px-20 relative z-10">
     <div
       class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>

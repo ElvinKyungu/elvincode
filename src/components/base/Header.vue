@@ -6,7 +6,6 @@ import IconClose from "@/components/icons/IconClose.vue"
 import IconInstagram from "@/components/icons/IconInstagram.vue"
 import IconX from "@/components/icons/IconX.vue"
 import IconArrowGrowUp from "@/components/icons/IconArrowGrowUp.vue"
-import  IconSearch from "../icons/IconSearch.vue"
 import HoverPlaces from "../HoverPlaces.vue"
 
 const showPopup = ref(false)
@@ -14,9 +13,6 @@ const isMenuOpen = ref(false)
 const showHover = ref(false)
 const hoverContent = ref<'whyTokyo' | 'places' | null>(null)
 const hoverComponentRef =  ref<HTMLElement | null>(null);
-const togglePopup = () => {
-  showPopup.value = !showPopup.value
-}
 
 let hoverTimeout: number | null = null; 
 const handleHoverEnter = (component: 'whyTokyo' | 'places') => {

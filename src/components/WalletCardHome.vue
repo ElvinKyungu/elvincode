@@ -60,7 +60,7 @@ onMounted(() => {
         </div>
         <div class="w-full md:max-w-[30rem] my-auto mt-28 mx-auto">
           <h1 ref="titleRef1" class="text-2xl md:text-3xl lg:text-5xl">
-            Laissez-moi donner vie à vos projets
+            Let me bring your projects to life
           </h1>
           <p ref="paragraphRef1" class="mt-2 md:mt-10">
             Together, we can transform your ideas into concrete, high-performance solutions. Whether it's creating modern interfaces or intuitive user experiences, I'm with you every step of the way to bring your ambitions to life.
@@ -70,7 +70,7 @@ onMounted(() => {
           class="md:bottom-5 rounded-lg bottom-0 justify-end items-end w-[95%] md:w-1/2 mx-auto bg-black text-white cursor-pointer absolute p-5 md:p-5 right-[2.5%]"
         >
           <div class="flex justify-between">
-            <span class="text-sm md:text-sm">Démarrez votre projet</span>
+            <span class="text-sm md:text-sm">Start your project now</span>
             <IconArrowGrowUp class=" "/>
           </div>
         </div>
