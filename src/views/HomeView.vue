@@ -11,6 +11,7 @@ import { useTitleAnimation } from '@/composables/useTitleAnimation'
 import { useParagraphAnimation } from '@/composables/useParagraphAnimation'
 import { ref } from 'vue'
 import gabriel  from '@/assets/gabriel.jpeg'
+import patrick  from '@/assets/pro-patrick.jpeg'
 import emma  from '@/assets/emma.jpeg'
 import eric  from '@/assets/eric.jpeg'
 import katya  from '@/assets/kat.jpg'
@@ -19,6 +20,8 @@ import userProfile  from '@/assets/user.jpeg'
 import van  from '@/assets/van.jpeg'
 import yves  from '@/assets/yves.webp'
 import ana  from '@/assets/ana.jpeg'
+import deb  from '@/assets/deb.jpeg'
+import kevin  from '@/assets/kevin.jpeg'
 
 useHead({
   title: 'Elvin code - Frontend developer',
@@ -49,6 +52,18 @@ const testimonials = ref([
     userText: "I had the privilege of recruiting Elvin a year and a half ago. Since then, he has demonstrated remarkable growth, consistently delivering elegant and impactful user interfaces. He is a highly skilled and well-rounded frontend developer, with both creativity and technical expertise.",
     userName: "Gabriel Delattre",
     userTitle: "Cofounder at @Capte"
+  },
+  {
+    userImage: patrick,
+    userText: "I had the privilege of recruiting Elvin a year and a half ago. Since then, he has demonstrated remarkable growth, consistently delivering elegant and impactful user interfaces. He is a highly skilled and well-rounded frontend developer, with both creativity and technical expertise.",
+    userName: "Patrick Mukala",
+    userTitle: "Professor at the University of Lubumbashi"
+  },
+  {
+    userImage: kevin,
+    userText: "At Soixante Circuits, Elvin quickly stood out for his ability to turn complex challenges into sleek solutions. He excels in front-end technologies while adding his creative flair to each project. Fast, efficient, and detail-oriented, he's a valuable asset to any team.",
+    userName: "Kevin Maginot",
+    userTitle: "Interactive & immersive experience architect"
   },
   {
     userImage: ana,
@@ -103,6 +118,12 @@ const testimonials = ref([
     userText: "Elvin is not only an excellent developer, but also someone with a rare open-mindedness. After joining my team at CodeLab DRC in 2022, he impressed me with his ability to deliver quality projects quickly. A real asset to any team.",
     userName: "Vander Otis",
     userTitle: "Mobile and web developer"
+  },
+  {
+    userImage: deb,
+    userText: "Elvin is a creative front-end developer, a fast learner, and always goes the extra mile. His work is top-notch, and having him on your team is a valuable asset. I highly recommend him.",
+    userName: "Deborah Yambenu",
+    userTitle: "Data Analyst"
   },
 ])
 
