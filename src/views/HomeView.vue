@@ -10,23 +10,30 @@ import AnimatedCard from '@/components/AnimatedCard.vue'
 import { useTitleAnimation } from '@/composables/useTitleAnimation'
 import { useParagraphAnimation } from '@/composables/useParagraphAnimation'
 import { ref } from 'vue'
-import userProfile  from '@/assets/elvin.png'
-import twitter from '@/assets/elvincode.png'
+import gabriel  from '@/assets/gabriel.jpeg'
+import emma  from '@/assets/emma.jpeg'
+import eric  from '@/assets/eric.jpeg'
+import katya  from '@/assets/kat.jpg'
+import oxana  from '@/assets/oxana.jpeg'
+import userProfile  from '@/assets/user.jpeg'
+import van  from '@/assets/van.jpeg'
+import yves  from '@/assets/yves.webp'
+import ana  from '@/assets/ana.jpeg'
 
 useHead({
   title: 'Elvin code - Frontend developer',
-  meta: [
-    { name: 'description', content: "I build elegant, modern web interfaces using Vue.js and TypeScript." },
-    { property: 'og:title', content: "Elvin Code - Frontend Developer" },
-    { property: 'og:description', content: "I build elegant, modern web interfaces using Vue.js, Nuxt, TypeScript, Tailwindcss and GSAP" },
-    { property: 'og:image', content: twitter },
-    { name: "keywords", content:"Vue.js, TypeScript, Frontend Developer, GSAP, Tailwind CSS, Web Development, Freelance" },
-    { property: 'og:url', content: "https://elvincode.com" },
-    { name: 'twitter:title', content:'Elvin Code - Frontend Developer'},
-    { name: 'twitter:card', content: "summary_large_image" },
-    { name: 'twitter:image', content: twitter },
-    { name: 'twitter:description', content: "Frontend developer specialized in Vue.js, Nuxt, GSAP and TypeScript." }
-  ],
+  // meta: [
+  //   { name: 'description', content: "I build elegant, modern web interfaces using Vue.js and TypeScript." },
+  //   { property: 'og:title', content: "Elvin Code - Frontend Developer" },
+  //   { property: 'og:description', content: "I build elegant, modern web interfaces using Vue.js, Nuxt, TypeScript, Tailwindcss and GSAP" },
+  //   { property: 'og:image', content: twitter },
+  //   { name: "keywords", content:"Vue.js, TypeScript, Frontend Developer, GSAP, Tailwind CSS, Web Development, Freelance" },
+  //   { property: 'og:url', content: "https://elvincode.com" },
+  //   { name: 'twitter:title', content:'Elvin Code - Frontend Developer'},
+  //   { name: 'twitter:card', content: "summary_large_image" },
+  //   { name: 'twitter:image', content: twitter },
+  //   { name: 'twitter:description', content: "Frontend developer specialized in Vue.js, Nuxt, GSAP and TypeScript." }
+  // ],
 })
 
 const titleRef1 = ref<HTMLElement | null>(null)
@@ -38,41 +45,65 @@ const imageRef4 = ref<HTMLElement | null>(null)
 
 const testimonials = ref([
   {
-    userImage: userProfile,
-    userText: "Exploring Tsukiji was a food lover's dream. The freshest sushi and seafood I've ever had, and the market atmosphere was bustling!",
-    userName: "Alex Dubro",
-    userTitle: "From England"
+    userImage: gabriel,
+    userText: "I had the privilege of recruiting Elvin a year and a half ago. Since then, he has demonstrated remarkable growth, consistently delivering elegant and impactful user interfaces. He is a highly skilled and well-rounded frontend developer, with both creativity and technical expertise.",
+    userName: "Gabriel Delattre",
+    userTitle: "Cofounder at @Capte"
+  },
+  {
+    userImage: ana,
+    userText: "I was lucky enough to work with Elvin as Product Manager. His collaboration was seamless, and his work is always of the highest quality. Excellent developer!",
+    userName: "Ana Forostovschi",
+    userTitle: "Head of Render Wrangling at  @Atlantic Zone"
+  },
+  {
+    userImage: eric,
+    userText: "I have worked with Elvin on several projects where he stood out for his professionalism, passion for frontend development, and proactive approach. He excels in modern technologies, shows initiative, and offers innovative solutions. His enthusiasm and adaptability make him a valuable asset to any team.",
+    userName: "Eric Ampire",
+    userTitle: "iOS & Android Engineer at BRP"
+  },
+  {
+    userImage: katya,
+    userText: "I highly recommend Elvin Kyungu, an excellent frontend developer. He creates aesthetic and functional interfaces with remarkable attention to detail. His ability to collaborate and deliver quickly makes him a valuable asset to any team.",
+    userName: "Katya Kurkubet",
+    userTitle: "Frontend developer"
   },
   {
     userImage: userProfile,
-    userText: "Odaiba had a futuristic feel with its waterfront, giant Gundam statue and high-tech shopping malls. The sunset view from the Rainbow Bridge was magical.",
-    userName: "Sarah Assina",
-    userTitle: "From Canada"
+    userText: "I worked with Elvin on a project for my company Atlantic Zone, and was very pleased with the quality of his work. He's an excellent front-end web developer.",
+    userName: "Valeriu Stinca",
+    userTitle: "CEO at @Atlantic Zone"
+  },
+  {
+    userImage: oxana,
+    userText: "I had the opportunity to work with Elvin on a project. His ability to reproduce models with great precision really impressed me. He excels at integration, and I highly recommend him.",
+    userName: "Oxana Kiss",
+    userTitle: "Software engineer"
+  },
+  {
+    userImage: emma,
+    userText: "I had the opportunity to work with Elvin on a project. His ability to reproduce models with great precision really impressed me. He excels at integration, and I highly recommend him.",
+    userName: "Emmanuel Makabu",
+    userTitle: "Lead Designer at @KreativeTuch"
   },
   {
     userImage: userProfile,
-    userText: "Ueno Park was a peaceful escape from the hustle and bustle of the city. The cherry blossoms were beautiful, and visiting the zoo was a fun way to spend the day.",
-    userName: "Diego delafuente",
-    userTitle: "From Spain"
+    userText: "I am happy to recommend Elvin Kyungu as a skilled and reliable frontend developer. I had the pleasure of working with him and was impressed by his ability of delivering high-quality work and his passion for web development. Elvin is a great team player, always contributing positively to the project we were working on together. I am confident that Elvin would be a valuable asset to any team, and I highly recommend him for any front-end development role.",
+    userName: "Vladislav Gargai",
+    userTitle: "Golang developer at @Efficient Outsource"
   },
   {
-    userImage: userProfile,
-    userText: "The view from Tokyo Skytree was breathtaking. Watching the city lights at night from this height is an unforgettable experience. A must-see!",
-    userName: "Emman Levi",
-    userTitle: "From Australia"
+    userImage: yves,
+    userText: "I've seen Elvin's front-end work, and his passion is obvious. He masters web technologies perfectly and creates exceptional interfaces. A valuable asset for any team. Highly recommended!",
+    userName: "Yves Kalume",
+    userTitle: "Google Developer Expert for Android"
   },
   {
-    userImage: userProfile,
-    userText: "The atmosphere at Senso-ji Temple was surreal. The vibrant red doors, incense and stunning architecture really made me feel connected to Japan's rich history.",
-    userName: "Marc JC",
-    userTitle: "From USA"
+    userImage: van,
+    userText: "Elvin is not only an excellent developer, but also someone with a rare open-mindedness. After joining my team at CodeLab DRC in 2022, he impressed me with his ability to deliver quality projects quickly. A real asset to any team.",
+    userName: "Vander Otis",
+    userTitle: "Mobile and web developer"
   },
-  {
-    userImage: userProfile,
-    userText: "Shibuya Crossing was incredible! The sheer number of people, the lights and the energy are something you have to experience in person. It's like stepping into a movie scene!",
-    userName: "Laura Bent",
-    userTitle: "From France"
-  }
 ])
 
 useParagraphAnimation(paragraphRef, 0.5)
@@ -107,7 +138,7 @@ useTitleAnimation(titleRef4, .5)
     <div
       class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
-    <h2 class="text-3xl md:text-4xl relative mb-10">Testimonials</h2>
+    <h2 class="text-3xl lg:text-5xl relative mb-10">Testimonials</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 relative">
       <TestimonialCard
         v-for="(testimonial, index) in testimonials"
