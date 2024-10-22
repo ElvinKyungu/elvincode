@@ -35,7 +35,7 @@ const handleHoverLeave = () => {
         hoverContent.value = null; 
       });
     }
-  }, 300); 
+  }, 100); 
 };
 
 const clearHoverTimeout = () => {
@@ -83,7 +83,7 @@ function open_menu() {
   const tl = gsap.timeline();
   tl.to(".container--menu", {
     "--clip": "110vw",
-    duration: 2,
+    duration: 1,
     ease: "power2.out",
   })
     .fromTo(
@@ -92,7 +92,7 @@ function open_menu() {
       {
         x: 0,
         opacity: 1,
-        duration: 1.5,
+        duration: 1,
         ease: "power2.out",
         stagger: { from: "center", each: 0.05 },
       },
@@ -104,7 +104,7 @@ function open_menu() {
       {
         opacity: 1,
         x: 0,
-        duration: 1.5,
+        duration: 1,
         ease: "power2.out",
       },
       "<0.5"
@@ -197,7 +197,7 @@ const leave = (event: MouseEvent) => {
         </li>
       </ul>
     </nav>
-    <!-- <div
+    <div
       v-if="showHover"
       ref="hoverComponentRef"
       class="hover-component backdrop-blur-md  bg-white/50"
@@ -207,7 +207,7 @@ const leave = (event: MouseEvent) => {
       <div class="hover-content">
         <HoverPlaces v-if="hoverContent === 'places'" class="hover-places" />
       </div>
-    </div> -->
+    </div>
     <div >
       <div
         class="container container--menu bg-white/40 h-full backdrop-blur-md flex justify-between px-5 md:px-10 lg:px-20 py-10"
