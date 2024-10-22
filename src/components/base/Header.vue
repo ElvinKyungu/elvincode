@@ -139,7 +139,7 @@ const menuItems = [
   { name: 'Home', route: '/' },
   { name: 'Components', route: '/' },
   { name: 'About', route: '/about' },
-  { name: 'Experiences', route: '/' },
+  { name: 'Experiences', route: '/experiences' },
   { name: 'Articles', route: '/' },
   { name: 'Conferences', route: '/' },
 ]
@@ -170,7 +170,7 @@ const leave = (event: MouseEvent) => {
           <ul class="flex space-x-10">
             <li class="cursor-pointer hidden md:flex">
               <ul class="flex space-x-7 text-lg">
-                <li
+                <!-- <li
                   class="border-b-4 py-3 border-transparent hover:border-b-black transition "
                 >
                   Components
@@ -181,7 +181,7 @@ const leave = (event: MouseEvent) => {
                   class="border-b-4 py-3 border-transparent hover:border-b-black transition "
                 >
                   Recents articles
-                </li>
+                </li> -->
                 <li class="border-b-4 py-3 border-transparent">
                   <IconInstagram class="w-7 h-7 relative z-10"/>
                 </li>

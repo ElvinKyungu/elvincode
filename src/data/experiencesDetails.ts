@@ -12,13 +12,8 @@ import culture from '@/assets/elvin11.png'
 export const Efficient: ExperienceDetail = {
   title: "Efficient Outsource SRL",
   image: origine,
-  description: "The Meiji Restoration in 1868 marked the start of modernization. The Great Kanto Earthquake in 1923 devastated the city, followed by destruction during World War II (1939-1945). Reconstruction was completed in the 1950s.",
+  description: "At Efficient Outsource SRL, I developed a microfinance dashboard, enhancing the user experience and backend integration for smooth financial operations.",
   articles: [
-    {
-      img: artile1,
-      title: "Meiji Restoration",
-      description: "The Meiji Restoration of 1868 was a pivotal moment in Japanese history that led to the rapid modernization and industrialization of the country. It marked the end of feudal rule and the beginning of the imperial government."
-    },
     {
       img: artile2,
       title: "Great Kanto Earthquake",
@@ -26,11 +21,6 @@ export const Efficient: ExperienceDetail = {
     }
   ],
   personnages: [
-    {
-      img: artile3,
-      title: "Emperor Meiji",
-      description: "Emperor Meiji played a crucial role in transforming Japan from a feudal society into a modern state. His leadership was instrumental during the Meiji Restoration, which shifted power from the shogunate to the emperor."
-    },
     {
       img: personnage1,
       title: "Tokugawa Yoshinobu",
@@ -42,13 +32,8 @@ export const Efficient: ExperienceDetail = {
 export const atlanticZone: ExperienceDetail = {
   image: capital,
   title: "Atlantic Zone",
-  description: "In 1868, during the Meiji Restoration, Emperor Meiji moved the capital from Kyoto to Edo, renaming it Tokyo, which means 'Eastern Capital'. This move symbolized the beginning of Japan's modernization and the centralization of political power in Tokyo.",
+  description: "I built a device tracking app at Atlantic Zone, ensuring real-time data management and notification systems for seamless operations.",
   articles: [
-    {
-      img: artile1,
-      title: "Capital Relocation",
-      description: "Explores the strategic reasons behind moving the capital from Kyoto to Tokyo."
-    },
     {
       img: artile2,
       title: "Political Modernization",
@@ -56,11 +41,6 @@ export const atlanticZone: ExperienceDetail = {
     }
   ],
   personnages: [
-    {
-      img: personnage1,
-      title: "Emperor Meiji",
-      description: "The role of Emperor Meiji in relocating the capital and initiating Tokyo's modernization."
-    },
     {
       img: personnage2,
       title: "Samurai Transition",
@@ -72,7 +52,7 @@ export const atlanticZone: ExperienceDetail = {
 export const soixanteCircuits: ExperienceDetail = {
   title: "Soixante Circuits",
   image: growth,
-  description: "The economic boom from the 1960s to the 1990s turned Tokyo into a global metropolis and a major financial center. Today, Tokyo is one of the world’s most influential cities.",
+  description: "At Soixante Circuits, I worked on high-profile projects like Garden-Map with Google and Michael Kors, focusing on frontend development and Google Maps integration.",
   articles: [
     {
       img: artile1,
@@ -102,13 +82,8 @@ export const soixanteCircuits: ExperienceDetail = {
 export const bayamo: ExperienceDetail = {
   image: culture,
   title: "Bayamo",
-  description: "During the Edo period (1603-1868), Tokyo, then called Edo, transformed from a small fishing village into Japan’s political center. At the end of the Tokugawa shogunate in 1868, the city was renamed Tokyo, meaning \"Eastern Capital.\"",
+  description: "At Bayamo, I helped build a scalable dropshipping platform, optimizing transactions and inventory management for smoother user experiences.",
   articles: [
-    {
-      img: artile1,
-      title: "Edo Period Transformation",
-      description: "During the Edo period, Edo transformed into Japan's political center under the Tokugawa shogunate, growing in population and cultural influence."
-    },
     {
       img: artile2,
       title: "Tokugawa Shogunate",
@@ -116,11 +91,6 @@ export const bayamo: ExperienceDetail = {
     }
   ],
   personnages: [
-    {
-      img: personnage2,
-      title: "Tokugawa Ieyasu",
-      description: "Tokugawa Ieyasu was the founder of the Tokugawa shogunate, establishing Edo as the administrative capital and laying the foundations for its growth into modern-day Tokyo."
-    },
     {
       img: artile1,
       title: "Merchant Class in Edo",
@@ -132,29 +102,19 @@ export const bayamo: ExperienceDetail = {
 export const lushitrap: ExperienceDetail = {
   image: culture,
   title: "Lushitrap",
-  description: "During the Edo period (1603-1868), Tokyo, then called Edo, transformed from a small fishing village into Japan’s political center. At the end of the Tokugawa shogunate in 1868, the city was renamed Tokyo, meaning \"Eastern Capital.\"",
+  description: "I developed a music streaming and download app for Lushitrap, improving the download flow and content recommendations for a better user experience.",
   articles: [
     {
       img: artile1,
       title: "Edo Period Transformation",
       description: "During the Edo period, Edo transformed into Japan's political center under the Tokugawa shogunate, growing in population and cultural influence."
     },
-    {
-      img: artile2,
-      title: "Tokugawa Shogunate",
-      description: "The Tokugawa shogunate ruled Japan for over 250 years, providing stability and a strict social order, which allowed Edo to flourish as a cultural and economic hub."
-    }
   ],
   personnages: [
     {
       img: personnage2,
       title: "Tokugawa Ieyasu",
       description: "Tokugawa Ieyasu was the founder of the Tokugawa shogunate, establishing Edo as the administrative capital and laying the foundations for its growth into modern-day Tokyo."
-    },
-    {
-      img: artile1,
-      title: "Merchant Class in Edo",
-      description: "The rising merchant class played a significant role in the economic prosperity of Edo, contributing to its cultural and financial growth during the shogunate era."
     }
   ]
 }
