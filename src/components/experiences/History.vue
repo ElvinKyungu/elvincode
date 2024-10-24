@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue"
-import { gsap } from "gsap"
 import type { PropType } from "vue"
 
 defineProps({

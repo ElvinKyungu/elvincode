@@ -3,7 +3,6 @@ import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import Header from "@/components/base/Header.vue"
 import ProjectCard from '@/components/experiences/ProjectCard.vue'
-import elvin from '@/assets/typescript.png'
 import keybord from '@/assets/keyboard.png'
 import IconArrowGrowUp from '@/components/icons/IconArrowGrowUp.vue'
 import IconHeart from '@/components/icons/IconHeart.vue'
@@ -28,8 +27,8 @@ onMounted(() => {
 const animateHearts = () => {
   heartRefs.value.forEach((heart, index) => {
     const tl = gsap.timeline({
-      delay: index * 0.1, // Décalage entre les cœurs
-    });
+      delay: index * 0.1,
+    })
 
     tl.fromTo(
       heart,
@@ -132,7 +131,7 @@ const handleCardClick = (event: Event, cardIndex: number) => {
         <div class="col-span-1 lg:col-span-6 lg:sticky lg:top-20 h-[40vh] md:h-[50vh] w-full overflow-hidden mt-6 lg:mt-0">
           <div ref="blockRef" class="h-full w-full relative">
             <div class="absolute right-5 top-5 flex justify-between w-full">
-              <div class="z-50 flex right-3 absolute top-0">
+              <div class="z-50 flex right-0 absolute top-0">
                 <button @click="animateHearts" class="rounded-full bg-white/20 p-2">
                   <IconHeart class="heart-icon text-white"/>
                 </button>
@@ -145,7 +144,7 @@ const handleCardClick = (event: Event, cardIndex: number) => {
                   <IconHeart class="heart-icon"/>
                 </div>
               </div>
-              <button class="preview-button text-white absolute flex gap-2 left-3 md:left-10 bg-white/20 backdrop-blur-sm top-1 rounded-full border border-[#222] px-3 md:px-5 py-1 text-sm md:text-base">
+              <button class="preview-button text-white absolute flex gap-2 left-10 bg-white/20 backdrop-blur-sm top-1 rounded-full border border-[#222] px-3 md:px-5 py-1 text-sm md:text-base">
                 <span>Preview</span>
                 <IconArrowGrowUp />
               </button>

@@ -1,64 +1,60 @@
 # README
 
-![Tokyo Preview](src/assets/preview.png)
+![Elvin Code Preview](src/assets/elvincode.png)
 
+## Bienvenue sur **Elvin Code** 👨‍💻
 
-## Présentation du Site : Tokyo
-
-Bienvenue sur notre site dédié à la découverte de Tokyo, la capitale dynamique du Japon. Ce site a été conçu pour offrir une expérience immersive et informative sur cette ville fascinante.
+**Elvin Code** est mon portfolio interactif où je partage mon parcours en tant que développeur frontend. Vous y découvrirez mes projets, mes expériences, mes articles et conférences, ainsi qu'une sélection de composants UI que j'ai développés. Ce portfolio est un espace où je mets en avant ma passion pour la création de solutions web dynamiques et modernes.
 
 ### URL
-[Visitez le site ici](https://concours-designerduweb.netlify.app/)
+[Explorez Elvin Code ici](https://elvin-code-portfolio.netlify.app/)
 
-### Structure du Site
+---
 
-Le site est composé de cinq pages principales :
+## Structure du site 🗂
 
-1. **Home** : Une introduction captivante à Tokyo, avec des images et des informations essentielles pour vous plonger dans l'ambiance de la ville.
-  
-2. **About** : Découvrez l'histoire et la culture de Tokyo. Cette page présente des éléments clés qui rendent cette ville unique et attrayante.
-  
-3. **Space Areas** : Explorez les différents quartiers de Tokyo. Chaque espace offre une atmosphère distincte et des attractions uniques.
-  
-4. **Testimonials** : Lisez les avis et les expériences de visiteurs qui ont exploré Tokyo. Cette page met en avant des témoignages authentiques pour vous inspirer.
-  
-5. **Contact** : Une page dédiée pour toute question ou demande d'information. N'hésitez pas à nous contacter pour plus de détails.
+### 1. **Homepage**
+Sur la page d'accueil, vous trouverez une introduction à mon travail, une sélection de mes projets les plus récents, ainsi qu'une brève présentation de mes compétences clés en développement web.
 
-### Technologies Utilisées
+### 2. **About**
+La section **À propos** met en lumière mon parcours professionnel, mes motivations, et les différentes communautés tech dans lesquelles je suis activement impliqué.
 
-Ce site a été développé en utilisant les technologies suivantes :
+### 3. **Components**
+Découvrez une bibliothèque de composants UI que j'ai créés, mettant en avant mon expertise dans l'utilisation de **Vue.js**, **TailwindCSS**, et **GSAP** pour développer des interfaces dynamiques et fluides.
 
-- **TypeScript (TS)** : Pour une gestion de type solide et une meilleure maintenance du code.
-- **Vue.js** : Pour créer une interface utilisateur réactive et dynamique.
-- **Tailwind CSS** : Pour un design moderne et personnalisé, facilitant la mise en page et le style.
-- **GSAP** : Pour des animations fluides et engageantes, apportant une touche interactive à l'expérience utilisateur.
+### 4. **Experiences**
+Cette section détaille mes expériences professionnelles, allant de projets personnels aux collaborations avec des startups et des entreprises internationales. Chaque expérience est accompagnée des technologies utilisées et des résultats obtenus.
 
-### Installation
+### 5. **Articles et Conférences**
+Retrouvez ici mes articles de blog, où je partage des insights techniques, ainsi que mes interventions dans des conférences sur des sujets liés au développement web et aux communautés tech.
 
-Pour cloner et exécuter ce projet localement :
+---
+
+## Technologies utilisées 🚀
+
+- **TypeScript (TS)** : Pour une gestion de types avancée et une meilleure robustesse du code.
+- **Vue.js** : Pour une interface utilisateur réactive et performante.
+- **Tailwind CSS** : Pour un design moderne, responsive, et rapide à intégrer.
+- **GSAP** : Pour des animations fluides et immersives.
+
+---
+
+## Installation 🔧
+
+Vous souhaitez cloner et exécuter le projet localement ? Voici comment faire :
 
 1. **Clonez le dépôt** :
    ```bash
-   git clone  https://github.com/ElvinKyungu/ville-concours 
-   ```
+   git clone https://github.com/ElvinKyungu/elvin-code
 
-2. **Accédez au répertoire du projet** :
+2. **Accédez au répertoire du projet :** :
    ```bash
-   cd ville-concours 
-   ```
+   cd elvin-code
 
 3. **Installez les dépendances** :
    ```bash
    npm install
-   ```
 
-4. **Démarrez le serveur de développement** :
+3. **Démarrez le serveur de développement** :
    ```bash
    npm run dev
-   ```
-
-### Contribution
-
-Les contributions sont les bienvenues ! Si vous souhaitez améliorer ce site, n'hésitez pas à ouvrir une issue ou à soumettre une pull request.
-
-
