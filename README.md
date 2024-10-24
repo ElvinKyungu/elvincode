@@ -45,11 +45,11 @@ Vous souhaitez cloner et exécuter le projet localement ? Voici comment faire :
 
 1. **Clonez le dépôt** :
    ```bash
-   git clone https://github.com/ElvinKyungu/elvin-code
+   git clone https://github.com/ElvinKyungu/elvincode
 
 2. **Accédez au répertoire du projet :** :
    ```bash
-   cd elvin-code
+   cd elvincode
 
 3. **Installez les dépendances** :
    ```bash
