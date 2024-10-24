@@ -7,6 +7,8 @@ import WalletCardHome from '@/components/WalletCardHome.vue'
 import PlacesCardClickable from '@/components/PlacesCardClickable.vue'
 import TestimonialCard from '@/components/TestimonialCard.vue'
 import AnimatedCard from '@/components/AnimatedCard.vue'
+import Contact from '@/components/Contact.vue'
+import GetInTouch from '@/components/GetInTouch.vue'
 import { useTitleAnimation } from '@/composables/useTitleAnimation'
 import { useParagraphAnimation } from '@/composables/useParagraphAnimation'
 import { ref } from 'vue'
@@ -172,56 +174,8 @@ useTitleAnimation(titleRef4, .5)
       />
     </div>
   </div>
-  <section class="px-5 relative md:px-20 py-10 md:pt-56 ">
-    <div
-      class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
-    ></div>
-    <div class="grid grid-cols-12 gap-4 relative z-10">
-      <div class="col-span-12 md:col-span-3 my-5 mt-2">
-        <p class="h-[1px] bg-black"></p>
-        <p class="text-sm">Get in Touch to work with me</p>
-      </div>
-      <h1 ref="titleRef2" class="col-span-12 md:col-span-9 text-2xl md:text-3xl lg:text-5xl">
-        Do you have any questions ?
-      </h1>
-    </div>
-    <h1 ref="titleRef3" class="relative z-10 text-2xl  md:text-3xl lg:text-5xl">
-      or would you like to get in touch with me? I will take the time to answer you as soon as possible.
-    </h1>
-  </section>
-
-  <section ref="cardsRef" class="grid pb-20 grid-cols-12 gap-5 overflow-hidden px-5 relative md:px-20">
-    <div
-      class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
-    ></div>
-    <div class="relative z-10 col-span-12 md:col-span-4 p-5 bg-black/5 cursor-pointer hover:bg-black/10 transition rounded-md ">
-      <div class="flex justify-center flex-col items-center space-y-3">
-        <h1 class="text-xl">Phone number</h1>
-        <ul>
-          <li>+243 846899101</li>
-          <li>+243 995555480</li>
-        </ul>
-      </div>
-    </div>
-    <div class="relative z-10 col-span-12 md:col-span-4 p-5 bg-black/5 cursor-pointer hover:bg-black/10 transition rounded-md ">
-      <div class="flex justify-center flex-col items-center space-y-3">
-        <h1 class="text-xl">Mail adress</h1>
-        <ul>
-          <li>elvinkyungu.75@gmail.com</li>
-        </ul>
-      </div>
-    </div>
-    <div class="relative z-10 col-span-12 md:col-span-4 p-5 bg-black/5 cursor-pointer hover:bg-black/10 transition rounded-md ">
-      <div class="flex justify-center flex-col items-center space-y-3">
-        <h1 class="text-xl">Social network</h1>
-        <ul>
-          <li>Instagram</li>
-          <li>Linkedin</li>
-          <li>X (Twiter)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <GetInTouch/>
+  <Contact/>
   <TextScroll/>
   <Footer/>
 </template>
