@@ -13,14 +13,14 @@ export const Efficient: ExperienceDetail = {
   title: "Efficient Outsource SRL",
   image: origine,
   description: "At Efficient Outsource SRL, I developed a microfinance dashboard, enhancing the user experience and backend integration for smooth financial operations.",
-  articles: [
+  learned: [
     {
       img: artile2,
       title: "Great Kanto Earthquake",
       description: "In 1923, the Great Kanto Earthquake struck Tokyo, causing massive destruction. It was a catalyst for urban redevelopment and modernization efforts in the subsequent decades."
     }
   ],
-  personnages: [
+  locatedCompany: [
     {
       img: personnage1,
       title: "Tokugawa Yoshinobu",
@@ -33,14 +33,14 @@ export const atlanticZone: ExperienceDetail = {
   image: capital,
   title: "Atlantic Zone",
   description: "I built a device tracking app at Atlantic Zone, ensuring real-time data management and notification systems for seamless operations.",
-  articles: [
+  learned: [
     {
       img: artile2,
       title: "Political Modernization",
       description: "Examines how the move to Tokyo signaled a new era in Japan’s political landscape."
     }
   ],
-  personnages: [
+  locatedCompany: [
     {
       img: personnage2,
       title: "Samurai Transition",
@@ -53,7 +53,7 @@ export const soixanteCircuits: ExperienceDetail = {
   title: "Soixante Circuits",
   image: growth,
   description: "At Soixante Circuits, I worked on high-profile projects like Garden-Map with Google and Michael Kors, focusing on frontend development and Google Maps integration.",
-  articles: [
+  learned: [
     {
       img: artile1,
       title: "Economic Miracle",
@@ -65,7 +65,7 @@ export const soixanteCircuits: ExperienceDetail = {
       description: "During the economic growth period, Tokyo underwent significant urban expansion, with the construction of modern skyscrapers, bullet trains, and advanced urban planning to accommodate its growing population."
     }
   ],
-  personnages: [
+  locatedCompany: [
     {
       img: personnage1,
       title: "Prime Minister Eisaku Sato",
@@ -83,14 +83,14 @@ export const bayamo: ExperienceDetail = {
   image: culture,
   title: "Bayamo",
   description: "At Bayamo, I helped build a scalable dropshipping platform, optimizing transactions and inventory management for smoother user experiences.",
-  articles: [
+  learned: [
     {
       img: artile2,
       title: "Tokugawa Shogunate",
       description: "The Tokugawa shogunate ruled Japan for over 250 years, providing stability and a strict social order, which allowed Edo to flourish as a cultural and economic hub."
     }
   ],
-  personnages: [
+  locatedCompany: [
     {
       img: artile1,
       title: "Merchant Class in Edo",
@@ -103,14 +103,14 @@ export const lushitrap: ExperienceDetail = {
   image: culture,
   title: "Lushitrap",
   description: "I developed a music streaming and download app for Lushitrap, improving the download flow and content recommendations for a better user experience.",
-  articles: [
+  learned: [
     {
       img: artile1,
       title: "Edo Period Transformation",
       description: "During the Edo period, Edo transformed into Japan's political center under the Tokugawa shogunate, growing in population and cultural influence."
     },
   ],
-  personnages: [
+  locatedCompany: [
     {
       img: personnage2,
       title: "Tokugawa Ieyasu",
