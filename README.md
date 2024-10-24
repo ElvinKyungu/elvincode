@@ -1,6 +1,6 @@
 # README
 
-![Elvin Code Preview](src/assets/elvincode.png)
+![Elvin Code Preview](src/assets/preview.png)
 
 ## Bienvenue sur **Elvin Code** 👨‍💻
 
