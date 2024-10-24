@@ -22,7 +22,7 @@ const images: GalleryImages = {
 </script>
 <template>
   <Header />
-  <main class="flex flex-col justify-center pt-32">
+  <main class="flex flex-col relative justify-center pt-32 bg-[#222] text-white">
     <section class="flex relative justify-center pt-5 z-50">
       <div class="absolute pl top-44">
         <div class="pl__outer-ring"></div>
@@ -46,7 +46,7 @@ const images: GalleryImages = {
       </div>
     </section>
     <div
-      class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
+      class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
     <div class="text-center relative mt-10">
       <h1 class="text-2xl md:text-3xl lg:text-5xl mb-10"> 
@@ -57,15 +57,11 @@ const images: GalleryImages = {
         I specialize in Vue.js
       </p> 
     </div>
-    <section class="relative z-50 overflow-hidden text-gray-700">
-      <div
-        class="absolute inset-0 z-0 h-full w-full bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
-      />
+    <section class="relative z-50 overflow-hidden">
       <div class="relative mx-auto w-full px-4 py-6 sm:px-6 lg:px-16 lg:py-20">
         <h1 class="mb-8 mt-10 text-center text-3xl sm:text-3xl lg:mb-12 lg:text-5xl">
           Gallery
         </h1>
-  
         <div class="flex flex-col gap-4 md:flex-row">
           <div class="w-full md:w-1/2">
             <div class="flex flex-col gap-4 sm:flex-row">

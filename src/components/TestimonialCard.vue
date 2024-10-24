@@ -10,7 +10,7 @@ defineProps({
 </script>
 <template>
   <div
-    class="h-full p-8 rounded shadow-md cursor-pointer bg-white text-gray-800 border border-gray-200"
+    class="h-full p-8 rounded-xl shadow-md cursor-pointer text-white border border-[#616161]"
   >
     <IconCitation />
     <p class="leading-relaxed text-xl mb-6">

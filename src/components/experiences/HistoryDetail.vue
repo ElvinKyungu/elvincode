@@ -82,7 +82,7 @@ onMounted(() => {
     <div class="flex justify-start flex-wrap gap-5 mt-5 stagger-element2">
       <button
         class="py-2 px-5 rounded-full stagger-element2"
-        :class="activeHistoryType === 'learned' ? 'bg-black text-white' : 'border'"
+        :class="activeHistoryType === 'learned' ? 'bg-black text-white border border-black' : 'border'"
         @click="switchSkillType('learned')"
       >
         what I've learned

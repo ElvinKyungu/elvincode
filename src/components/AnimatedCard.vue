@@ -66,9 +66,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="grid relative z-40 md:gap-5 lg:gap-16 grid-cols-12 px-5 md:px-20  pt-36 md:pt-5 md:py-20 lg:py-36">
+  <section class="grid bg-[#222] text-white relative z-40 md:gap-5 lg:gap-16 grid-cols-12 px-5 md:px-20  pt-36 md:pt-5 md:py-20 lg:py-36">
     <div
-      class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
+      class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
     <div class="col-span-12 relative z-20 md:col-span-6 lg:py-10">
       <h2 ref="titleRef" class="text-3xl md:mt-5 md:text-4xl lg:text-6xl">
@@ -81,7 +81,7 @@ onMounted(() => {
       </p>
       <button 
         ref="buttonRef"
-        class="bg-black inline-flex gap-2 text-white py-4 px-5 mt-12 rounded-lg"
+        class="bg-white inline-flex gap-2 text-black py-4 px-5 mt-12 rounded-lg"
       >
         Learn more about my work
         <IconArrowGrowUp/>

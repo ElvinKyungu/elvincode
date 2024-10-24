@@ -67,7 +67,7 @@ onMounted(() => {
           </p>
         </div>
         <div 
-          class="md:bottom-5 rounded-lg bottom-0 justify-end items-end w-[95%] md:w-1/2 mx-auto bg-black text-white cursor-pointer absolute p-5 md:p-5 right-[2.5%]"
+          class="md:bottom-5 rounded-lg bottom-0 justify-end items-end w-[95%] md:w-1/2 mx-auto bg-white text-black cursor-pointer absolute p-5 md:p-5 right-[2.5%]"
         >
           <div class="flex justify-between">
             <span class="text-sm md:text-sm">Start your project now</span>
@@ -78,8 +78,8 @@ onMounted(() => {
     </div>
 
     <!-- Section "What do I do" -->
-    <div class="animated-section bg-gray-100 md:h-full h-[30rem] relative rounded-lg col-span-12 md:col-span-6 p-5 md:p-10">
-      <div class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.gray.300)_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="animated-section bg-gray-100 text-black md:h-full h-[30rem] relative rounded-lg col-span-12 md:col-span-6 p-5 md:p-10">
+      <div class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"></div>
       <div class="relative z-20 h-full">
         <div class="text-xs uppercase flex justify-between">
           <p ref="textRef3">My Services</p>
@@ -94,9 +94,9 @@ onMounted(() => {
           </p>
         </div>
         <div 
-          class="md:bottom-5 cursor-pointer rounded-lg bottom-0 justify-end items-end w-[95%] md:w-1/2 mx-auto bg-white text-black absolute p-5 md:p-5 right-[2.5%]"
+          class="md:bottom-5 cursor-pointer bg-black rounded-lg bottom-0 justify-end items-end w-[95%] md:w-1/2 mx-auto text-white absolute p-5 md:p-5 right-[2.5%]"
         >
-          <div class="flex justify-between">
+          <div class="flex justify-between ">
             <span class="text-sm md:text-sm">Start your project</span>
             <IconArrowGrowUp class=" "/>
           </div>

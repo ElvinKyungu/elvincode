@@ -1,32 +1,29 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
-import { useDark } from "@vueuse/core"
 import Header from "@/components/base/Header.vue"
-import ios from '@/assets/ios.png'
-import visionpro from '@/assets/visionpro.png'
-import visionVR from "@/assets/vr.jpg"
+import ProjectCard from '@/components/experiences/ProjectCard.vue'
+import elvin from '@/assets/typescript.png'
 import IconArrowGrowUp from '@/components/icons/IconArrowGrowUp.vue'
 import IconHeart from '@/components/icons/IconHeart.vue'
 
-const isDark = useDark()
 const cardInfos = [
   {
     componentName: "Composant iOS",
     componentDescription: "C'est un composant UI qui a 5 fenêtres d'un iOS 18",
-    componentImage: ios,
+    componentImage: elvin,
     componentTechno: ["Vue.js", "GSAP", "TailwindCSS"]
   },
   {
     componentName: "Composant Android",
     componentDescription: "C'est un composant UI qui a 3 fenêtres d'un Android 12",
-    componentImage: visionpro,
+    componentImage: elvin,
     componentTechno: ["Vue.js", "TailwindCSS", "Axios"]
   },
   {
     componentName: "Composant Android",
     componentDescription: "C'est un composant UI qui a 3 fenêtres d'un Android 12",
-    componentImage: visionVR,
+    componentImage: elvin,
     componentTechno: ["Vue.js", "TailwindCSS", "Axios"]
   }
 ]
@@ -107,36 +104,36 @@ const handleCardClick = (event: Event, cardIndex: number) => {
 </script>
 
 <template>
-  <main class="min-h-screen w-full font-poppins" :class="{ 'text-white bg-[#222]': isDark }">
+  <main class="min-h-screen w-full font-poppins">
     <Header class="header w-full h-full" />
-    <section class="py-4 flex justify-center flex-col items-center w-full pt-20 relative z-0">
-      <div>
-        <button class="border border-[#363333] py-2 px-5 rounded-full">✨ Explore components</button>
-      </div>
-      <h1 class="text-5xl text-center mt-7">
+    <section class="py-4 flex justify-center bg-[#222] flex-col items-center w-full pt-40 relative z-0">
+      <div
+        class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
+      ></div>
+      <h1 class="text-3xl relative md:text-4xl text-white lg:text-5xl text-center mt-7">
         Discover my flagship projects
         <br>
         And the <span class="from-yellow-400 via-green-400 to-teal-300 bg-gradient-to-r bg-clip-text text-transparent">UI components</span> I've developed. 
       </h1>
-      <div class="flex gap-5 mt-10">
-        <button class="px-10 py-3 border border-[#363333] rounded-xl">Try for free</button>
-        <button class="px-10 py-3 border border-[#363333] rounded-xl">View Demo</button>
+      <div class="relative mt-10">
+        <button class="border border-[#363333] text-white py-2 px-5 rounded-full">✨ Explore components</button>
       </div>
-      <div class="grid grid-cols-2 mt-20 w-95% md:w-[75%] gap-10">
-        <div>
-          <div 
-            v-for="(card, index) in cardInfos" :key="index" 
-            class="relative rounded-2xl cursor-pointer transition-colors duration-300" 
-            :class="{
-              'bg-white/10': index === previousCardIndex,
-              'hover:bg-white/10': index !== previousCardIndex
-            }"
-            @click="(event) => handleCardClick(event, index)"
-          >
-          <ProjectCard :cardInfo="[card]" />
+      <div class="grid grid-cols-12 mt-20 px-20 w-full relative gap-10">
+        <div class="col-span-5 space-y-10">
+            <div 
+              v-for="(card, index) in cardInfos" :key="index" 
+              class="relative rounded-2xl  cursor-pointer transition-colors duration-300" 
+              :class="{
+                'bg-white/10': index === previousCardIndex,
+                'hover:bg-white/10': index !== previousCardIndex
+              }"
+              @click="(event) => handleCardClick(event, index)"
+            >
+              <ProjectCard :cardInfo="[card]" />
+          </div>
         </div>
-        </div>
-        <div class="sticky top-20 h-[50vh] overflow-hidden">
+        <div class="col-span-1"></div>
+        <div class="sticky col-span-6 top-20 h-[50vh] w-full overflow-hidden">
           <div ref="blockRef" class="h-full w-full relative">
             <div class="absolute right-5 top-5 flex justify-between w-full">
               <div class="z-50 flex right-3 absolute top-0">
@@ -165,7 +162,6 @@ const handleCardClick = (event: Event, cardIndex: number) => {
             >
           </div>
         </div>
-        
       </div>
     </section>
   </main>

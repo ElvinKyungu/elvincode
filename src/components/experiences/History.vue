@@ -30,7 +30,7 @@ defineProps({
 <template>
   <div
     :class="{'bg-black/10': isActive}"
-    class="flex flex-wrap cursor-pointer hover:bg-black/10 transition rounded-lg
+    class="flex flex-wrap cursor-pointer hover:bg-white/10 transition rounded-lg
     "
   >
     <div class="pb-10">

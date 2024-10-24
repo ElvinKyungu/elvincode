@@ -137,7 +137,7 @@ function close_menu() {
 }
 const menuItems = [
   { name: 'Home', route: '/' },
-  { name: 'Components', route: '/' },
+  { name: 'Components', route: '/components' },
   { name: 'About', route: '/about' },
   { name: 'Experiences', route: '/experiences' },
   { name: 'Articles', route: '/' },
@@ -157,16 +157,20 @@ const leave = (event: MouseEvent) => {
 </script>
 
 <template>
-  <header>
+  <header class="relative">
     <nav
-      class="
+      class=" relative
       "
     >
-      <ul class="fixed px-5 md:px-20  bg-white shadow-md backdrop-blur-sm items-center w-full flex justify-between py-3 space-x-5 z-header">
-        <li class="cursor-pointer">
+      
+      <ul class="fixed px-5 md:px-20  bg-[#222] shadow-md backdrop-blur-sm items-center w-full flex justify-between py-3 space-x-5 z-header">
+        <div
+          class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
+        ></div>
+        <li class="cursor-pointer relative">
           <router-link to="/" class="text-3xl text-green-500">Elvin Code</router-link>
         </li>
-        <li>
+        <li class="relative">
           <ul class="flex space-x-10">
             <li class="cursor-pointer hidden md:flex">
               <ul class="flex space-x-7 text-lg">
@@ -183,15 +187,15 @@ const leave = (event: MouseEvent) => {
                   Recents articles
                 </li> -->
                 <li class="border-b-4 py-3 border-transparent">
-                  <IconInstagram class="w-7 h-7 relative z-10"/>
+                  <IconInstagram class="w-7 h-7 relative z-10 text-white"/>
                 </li>
                 <li class="border-b-4 py-3 border-transparent">
-                  <IconX class="w-7 h-7 relative z-10"/>
+                  <IconX class="w-7 h-7 relative z-10 text-white"/>
                 </li>
               </ul>
             </li>
             <li @click="open_menu" class="md:border-b-4 cursor-pointer py-3 border-transparent">
-              <IconBars class="text-black w-8 h-8 relative z-10"/>
+              <IconBars class="text-white w-8 h-8 relative z-10"/>
             </li>
           </ul>
         </li>
@@ -210,7 +214,7 @@ const leave = (event: MouseEvent) => {
     </div>
     <div >
       <div
-        class="container container--menu bg-white/40 h-full backdrop-blur-md flex justify-between px-5 md:px-10 lg:px-20 py-10"
+        class="container text-white container--menu bg-black/40 h-full backdrop-blur-md flex justify-between px-5 md:px-10 lg:px-20 py-10"
       >
         <div class="sidebar">
           <button class="sidebar__menu-trigger menu__right" @click="close_menu">
@@ -224,7 +228,7 @@ const leave = (event: MouseEvent) => {
             <li v-for="item in menuItems" :key="item.name" @mouseenter="enter" @mouseleave="leave" class="menu-item">
               <router-link :to="item.route" class="flex gap-4 items-center">
                 <span ref="icons" class="icon">
-                  <IconArrowGrowUp class="text-black " />
+                  <IconArrowGrowUp class="text-white " />
                 </span>
                 {{ item.name }}
               </router-link>
@@ -253,10 +257,9 @@ const leave = (event: MouseEvent) => {
   --clip: 0;
   clip-path: circle(var(--clip) at calc(100% - 3rem) 1rem);
   position: absolute;
-  top: 1rem;
   right: 0px;
   width: 100vw ;
-  height: calc(100vh - 1rem); 
+  height: calc(100vh); 
 }
 
 .sidebar__menu-trigger {

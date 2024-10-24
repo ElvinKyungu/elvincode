@@ -148,9 +148,9 @@ const handleCardClick = (event: Event, cardIndex: number) => {
 
 </script>
 <template>
-  <section class="grid grid-cols-12 gap-7 relative py-10 md:py-20 px-5 md:px-20">
+  <section class="grid grid-cols-12 gap-7 bg-[#222] relative py-10 md:py-20 px-5 md:px-20 text-white">
     <div
-      class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
+      class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
     
     <div class="col-span-12 md:col-span-6 relative z-30">
@@ -162,7 +162,7 @@ const handleCardClick = (event: Event, cardIndex: number) => {
           <p ref="paragraphRef1" class="w-full col-span-8">
             As a frontend developer, I craft sleek, interactive web applications, using Vue.js for its reactivity and simplicity to build precise, dynamic user experiences.
           </p>
-          <div ref="titleRef2" class="h-[1px] col-span-4 bg-black w-full"></div>
+          <div ref="titleRef2" class="h-[1px] col-span-4 bg-white w-full"></div>
         </div>
       </div>
     </div>
@@ -184,7 +184,7 @@ const handleCardClick = (event: Event, cardIndex: number) => {
         </div>
       </div>
   
-      <div ref="cardRef3" class="grid grid-cols-12 bg-gray-100 mt-5 p-5 rounded-lg md:p-5">
+      <div ref="cardRef3" class="grid grid-cols-12 border border-[#616161] mt-5 p-5 rounded-lg md:p-5">
         <div ref="paragraphRef4" class="text-lg uppercase col-span-2">My stack</div>
         <div class="col-span-12 md:col-span-10">
           <section class="flex justify-center flex-col items-center w-full relative z-0">
@@ -192,7 +192,7 @@ const handleCardClick = (event: Event, cardIndex: number) => {
               <div ref="imagesRef" class="sticky col-span-12 md:col-span-6 overflow-hidden h-72 w-full ">
                 <div ref="blockRef" class="h-full w-full relative">
                   <div class="absolute flex justify-between w-full">
-                    <button class="preview-button left-3 text-black z-40 absolute flex gap-2  bg-white/50 backdrop-blur-sm top-2 rounded-full border border-black px-5 py-1">
+                    <button class="preview-button left-3 text-white z-40 absolute flex gap-2  bg-black/50 backdrop-blur-sm top-2 rounded-full border border-white/50 px-5 py-1">
                       <span class="text-sm">Preview</span>
                       <IconArrowGrowUp class="w-4 h-4 text-black" />
                     </button>
@@ -216,7 +216,7 @@ const handleCardClick = (event: Event, cardIndex: number) => {
                   @click="(event) => handleCardClick(event, index)"
                 >
                   <div
-                    class="flex flex-col w-full bottom-16 text-black details gap-1"
+                    class="flex flex-col w-full bottom-16 text-white details gap-1"
                   >
                     <div class="components-result">
                       <div class="flex items-center gap-3">
@@ -227,11 +227,9 @@ const handleCardClick = (event: Event, cardIndex: number) => {
                         <span class="components-link">see </span>
                       </div>
                     </div>
-                    <hr />
                   </div>
                 </div>
               </div>
-  
             </div>
           </section>
         </div>

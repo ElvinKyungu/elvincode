@@ -100,9 +100,9 @@ onMounted(() => {
 
 <template>
   <Header class="header w-full h-full" />
-  <main class="w-full relative px-5 md:px-20 py-10">
+  <main class="w-full relative px-5 md:px-20 py-10 bg-[#222] text-white">
     <div
-      class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.gray.200)_1px,transparent_1px)] [background-size:16px_16px]"
+      class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div> 
     <section ref="cardHistory" class="py-4 flex justify-center w-full relative z-0 mt-20">
       <main class="px-5 w-full relative">

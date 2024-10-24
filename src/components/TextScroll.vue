@@ -44,12 +44,12 @@ onMounted(() => {
 })
 </script>
 <template>
-  <section class="text-scroll-container relative font-Dancing">
+  <section class="text-scroll-container -mt-5 relative font-Dancing bg-[#222]">
     <div
-      class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
+      class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
     <div class="text-scroll-content py-10 mg:py-20 lg:py-28">
-      <div class="text-scroll-items bg-gray-100 text-green-600" role="marquee">
+      <div class="text-scroll-items bg-white/5 text-green-600" role="marquee">
         <div v-for="(row, index) in tagRows" :key="index" class="text-scroll-row" ref="rows">
           <div v-for="(item, idx) in row" :key="idx" :class="item.styleClass" class="text-scroll-item">
             <span>{{ item.text }}</span>
@@ -64,8 +64,6 @@ onMounted(() => {
 .text-scroll-container {
   position: relative;
 }
-
-
 
 .text-scroll-items {
   margin: -58px 0;
@@ -94,7 +92,7 @@ onMounted(() => {
 .text-scroll-item.-stroke {
   color: transparent;
   text-shadow: none;
-  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 2px rgba(255, 247, 247, 0.5);
 }
 
 .text-scroll-item span {

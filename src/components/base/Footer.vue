@@ -1,6 +1,9 @@
 <template>
-<footer class="flex w-full mt-20 px-5 md:px-20">
-  <div class="w-full  mx-auto p-4 ">
+<footer class="flex w-full relative pt-20 px-5 md:px-20 bg-[#222] text-white">
+  <div
+    class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
+  ></div>
+  <div class="w-full  mx-auto p-4 relative">
     <div class="sm:flex sm:items-center sm:justify-between">
       <router-link 
         to="/" 

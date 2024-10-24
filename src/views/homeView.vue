@@ -140,9 +140,9 @@ useTitleAnimation(titleRef4, .5)
 <template>
   <Header/>
   <AnimatedCard/>
-  <main class="relative ">
+  <main class="relative text-white bg-[#222]">
     <div
-      class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
+      class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
     <section class="grid relative z-40 grid-cols-12 px-5 md:px-20 py-5">
       <div class="col-span-12 md:col-span-6">
@@ -157,9 +157,9 @@ useTitleAnimation(titleRef4, .5)
     <WalletCardHome/>
   </main>
   <PlacesCardClickable/>
-  <div class="pt-20 px-5 md:px-20 relative z-10">
+  <div class="pt-20 px-5 md:px-20 relative z-10 text-white bg-[#222]">
     <div
-      class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
+      class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
     <h2 class="text-3xl lg:text-5xl relative mb-10">Testimonials</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 relative">
@@ -180,9 +180,6 @@ useTitleAnimation(titleRef4, .5)
   <Footer/>
 </template>
 <style>
-.bg-gray{
-  background: hsl(0, 0%, 96%);
-}
 .img-card-home{
   @apply rounded-lg object-cover h-full w-full absolute;
 }
