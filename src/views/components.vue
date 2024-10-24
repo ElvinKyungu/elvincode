@@ -4,27 +4,16 @@ import { gsap } from 'gsap'
 import Header from "@/components/base/Header.vue"
 import ProjectCard from '@/components/experiences/ProjectCard.vue'
 import elvin from '@/assets/typescript.png'
+import keybord from '@/assets/keyboard.png'
 import IconArrowGrowUp from '@/components/icons/IconArrowGrowUp.vue'
 import IconHeart from '@/components/icons/IconHeart.vue'
 
 const cardInfos = [
   {
-    componentName: "Composant iOS",
-    componentDescription: "C'est un composant UI qui a 5 fenêtres d'un iOS 18",
-    componentImage: elvin,
+    componentName: "Mecanical Keyboard",
+    componentDescription: "A mecanical keyboard builded with JS, GSAP and CSS",
+    componentImage: keybord,
     componentTechno: ["Vue.js", "GSAP", "TailwindCSS"]
-  },
-  {
-    componentName: "Composant Android",
-    componentDescription: "C'est un composant UI qui a 3 fenêtres d'un Android 12",
-    componentImage: elvin,
-    componentTechno: ["Vue.js", "TailwindCSS", "Axios"]
-  },
-  {
-    componentName: "Composant Android",
-    componentDescription: "C'est un composant UI qui a 3 fenêtres d'un Android 12",
-    componentImage: elvin,
-    componentTechno: ["Vue.js", "TailwindCSS", "Axios"]
   }
 ]
 
@@ -106,34 +95,41 @@ const handleCardClick = (event: Event, cardIndex: number) => {
 <template>
   <main class="min-h-screen w-full font-poppins">
     <Header class="header w-full h-full" />
-    <section class="py-4 flex justify-center bg-[#222] flex-col items-center w-full pt-40 relative z-0">
-      <div
-        class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
-      ></div>
-      <h1 class="text-3xl relative md:text-4xl text-white lg:text-5xl text-center mt-7">
+    <section class="py-4 min-h-screen flex justify-center bg-[#222] flex-col items-center w-full pt-20 md:pt-40 relative z-0">
+      <div class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]">
+      </div>
+
+      <h1 class="text-2xl md:text-3xl mt-20 lg:text-4xl xl:text-5xl text-white text-center md:mt-7 px-4 md:px-0">
         Discover my flagship projects
         <br>
         And the <span class="from-yellow-400 via-green-400 to-teal-300 bg-gradient-to-r bg-clip-text text-transparent">UI components</span> I've developed. 
       </h1>
-      <div class="relative mt-10">
-        <button class="border border-[#363333] text-white py-2 px-5 rounded-full">✨ Explore components</button>
+
+      <div class="relative mt-6 md:mt-10">
+        <button class="border border-[#363333] text-white py-2 px-5 rounded-full">
+          ✨ Explore components
+        </button>
       </div>
-      <div class="grid grid-cols-12 mt-20 px-20 w-full relative gap-10">
-        <div class="col-span-5 space-y-10">
-            <div 
-              v-for="(card, index) in cardInfos" :key="index" 
-              class="relative rounded-2xl  cursor-pointer transition-colors duration-300" 
-              :class="{
-                'bg-white/10': index === previousCardIndex,
-                'hover:bg-white/10': index !== previousCardIndex
-              }"
-              @click="(event) => handleCardClick(event, index)"
-            >
-              <ProjectCard :cardInfo="[card]" />
+      <div class="grid grid-cols-1 lg:grid-cols-12 mt-10 md:mt-20 px-4 md:px-8 lg:px-20 w-full relative gap-6 md:gap-10">
+      
+        <div class="col-span-1 lg:col-span-5 space-y-6 md:space-y-10">
+          <div 
+            v-for="(card, index) in cardInfos" 
+            :key="index" 
+            class="relative rounded-2xl cursor-pointer transition-colors duration-300" 
+            :class="{
+              'bg-white/10': index === previousCardIndex,
+              'hover:bg-white/10': index !== previousCardIndex
+            }"
+            @click="(event) => handleCardClick(event, index)"
+          >
+            <ProjectCard :cardInfo="[card]" />
           </div>
         </div>
-        <div class="col-span-1"></div>
-        <div class="sticky col-span-6 top-20 h-[50vh] w-full overflow-hidden">
+
+        <div class="hidden lg:block lg:col-span-1"></div>
+
+        <div class="col-span-1 lg:col-span-6 lg:sticky lg:top-20 h-[40vh] md:h-[50vh] w-full overflow-hidden mt-6 lg:mt-0">
           <div ref="blockRef" class="h-full w-full relative">
             <div class="absolute right-5 top-5 flex justify-between w-full">
               <div class="z-50 flex right-3 absolute top-0">
@@ -149,7 +145,7 @@ const handleCardClick = (event: Event, cardIndex: number) => {
                   <IconHeart class="heart-icon"/>
                 </div>
               </div>
-              <button class="preview-button absolute flex gap-2 left-10 bg-white/20 backdrop-blur-sm top-1 rounded-full border border-[#222] px-5 py-1">
+              <button class="preview-button text-white absolute flex gap-2 left-3 md:left-10 bg-white/20 backdrop-blur-sm top-1 rounded-full border border-[#222] px-3 md:px-5 py-1 text-sm md:text-base">
                 <span>Preview</span>
                 <IconArrowGrowUp />
               </button>
@@ -166,11 +162,13 @@ const handleCardClick = (event: Event, cardIndex: number) => {
     </section>
   </main>
 </template>
+
 <style scoped>
 button {
   cursor: pointer;
   z-index: 2
 }
+
 .heart-icon {
   width: 1.5rem;
   height: 1.5rem;
@@ -184,32 +182,3 @@ button {
   right: 2rem;
 }
 </style>
-
-<!-- <script setup lang="ts">
-import { ref } from 'vue'
-
-export interface ProjectCard {
-  componentName: string
-  componentDescription: string
-  componentImage: string
-}
-const props = defineProps<{
-  cardInfo: ProjectCard[]
-}>()
-
-</script>
-
-<template>
-  <div v-for="(card, index) in cardInfo" :key="index" class="cursor-pointer rounded-2xl flex gap-5 w-full mb-4">
-    <div class="relative w-44 h-40 rounded-lg">
-      <img :src="card.componentImage" alt="" class="object-cover rounded-l-2xl absolute h-full">
-    </div>
-    <div class="py-3">
-      <h2 class="text-xl">{{ card.componentName }}</h2>
-      <p class="text-gray-400 mt-2">
-        {{ card.componentDescription }}
-      </p>
-    </div>
-  </div>
-</template>
- -->

@@ -137,8 +137,8 @@ const conferences = [
 
 <template>
   <Header class="header w-full h-full" />
-  <main class="w-full relative px-5 md:px-20 py-10 md:py-20 lg:py-28">
-    <div class="mt-20 relative w-full h-[30vh]">
+  <main class="w-full relative px-5 bg-[#222] text-white md:px-20 py-10 md:py-20 lg:py-28">
+    <div class="hidden lg:block mt-20 relative w-full h-[30vh]">
       <div class="absolute w-full h-full bg-black/50 z-40 rounded-xl"></div>
       <img :src="conf12" class="rounded-xl absolute w-full  h-full z-20 object-cover" alt="">
       <h1 class="px-5 lg:px-10 font-light relative text-center z-40 flex h-full w-full items-center justify-center text-3xl text-white">
@@ -146,7 +146,7 @@ const conferences = [
       </h1>
     </div>
     <div
-      class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.gray.200)_1px,transparent_1px)] [background-size:16px_16px]"
+      class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
     <div class="relative">
       <h2 ref="titleRef1" class="pt-10 text-3xl md:text-5xl relative z-10 my-10">

@@ -11,7 +11,7 @@ useTitleAnimation(cardsRef, 0.5)
     <div
       class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
-    <div class="relative z-10 col-span-12 md:col-span-4 p-5 bg-white/5 cursor-pointer hover:bg-white/10 transition rounded-md ">
+    <div class="relative z-10 col-span-12 md:col-span-4 p-5 cursor-pointer hover:bg-white/10 transition rounded-md ">
       <div class="flex justify-center flex-col items-center space-y-3">
         <h1 class="text-xl">Phone number</h1>
         <ul>

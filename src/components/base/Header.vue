@@ -141,7 +141,7 @@ const menuItems = [
   { name: 'About', route: '/about' },
   { name: 'Experiences', route: '/experiences' },
   { name: 'Articles', route: '/' },
-  { name: 'Conferences', route: '/' },
+  { name: 'Conferences', route: '/conferences' },
 ]
 
 const enter = (event: MouseEvent) => {
