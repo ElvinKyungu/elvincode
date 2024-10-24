@@ -8,6 +8,6 @@ export interface ExperienceDetail {
   title: string
   image: string
   description: string
-  articles: ArticleDetail[]
-  personnages: ArticleDetail[]
+  learned: ArticleDetail[]
+  locatedCompany: ArticleDetail[]
 }

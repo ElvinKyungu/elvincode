@@ -109,7 +109,7 @@ onMounted(() => {
         <h1 class="my-10 text-5xl">Experiences</h1>
         <div class="relative pb-7 rounded-xl">
           <div class="grid grid-cols-12 md:space-x-10 lg:space-x-20">
-            <div class=" col-span-12 md:col-span-6">
+            <div class=" col-span-12 md:col-span-5">
               <Experience
                 v-for="(experience, index) in experiences"
                 :key="index"
@@ -124,6 +124,7 @@ onMounted(() => {
                 </template>
               </Experience>
             </div>
+            <div class="col-span-12 md:col-span-1"></div>
             <div class="col-span-12 md:col-span-6 rounded-lg py-5 -mt-10 relative">
               <ExperiencesDetails 
                 :experiences="selectedExperience" 
@@ -134,8 +135,6 @@ onMounted(() => {
         </div>
       </main>
     </section>
-    
-    
   </main>
   <Footer />
 </template>

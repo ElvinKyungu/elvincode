@@ -8,7 +8,7 @@ defineProps<{
   experiences: ExperienceDetail
 }>()
 
-const activeHistoryType = ref<'articles' | 'personnages'>('articles')
+const activeHistoryType = ref<'learned' | 'locatedCompany'>('learned')
 const historyContentRef = ref<HTMLElement | null>(null)
 
 // Trigger GSAP Animations
@@ -37,7 +37,7 @@ const triggerAnimations = () => {
   }
 }
 
-const switchSkillType = (skillType: 'articles' | 'personnages') => {
+const switchSkillType = (skillType: 'learned' | 'locatedCompany') => {
   if (skillType !== activeHistoryType.value) {
     activeHistoryType.value = skillType
   }
@@ -82,17 +82,17 @@ onMounted(() => {
     <div class="flex justify-start flex-wrap gap-5 mt-5 stagger-element2">
       <button
         class="py-2 px-5 rounded-full stagger-element2"
-        :class="activeHistoryType === 'articles' ? 'bg-black text-white' : 'border'"
-        @click="switchSkillType('articles')"
+        :class="activeHistoryType === 'learned' ? 'bg-black text-white' : 'border'"
+        @click="switchSkillType('learned')"
       >
-        Articles Similaires
+        what I've learned
       </button>
       <button
         class="py-2 px-5 rounded-full stagger-element2"
-        :class="activeHistoryType === 'personnages' ? 'bg-black text-white' : 'border'"
-        @click="switchSkillType('personnages')"
+        :class="activeHistoryType === 'locatedCompany' ? 'bg-black text-white' : 'border'"
+        @click="switchSkillType('locatedCompany')"
       >
-        Personnages Attachés
+        Company location
       </button>
     </div>
     <div ref="historyContentRef" class="mt-8">

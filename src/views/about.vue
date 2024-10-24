@@ -3,12 +3,12 @@ import Header from '@/components/base/Header.vue'
 import Footer from '@/components/base/Footer.vue'
 
 interface GalleryImages {
-  elvin2: string;
-  elvin3: string;
-  elvin7: string;
-  elvin8: string;
-  elvin11: string;
-  ek: string;
+  elvin2: string
+  elvin3: string
+  elvin7: string
+  elvin8: string
+  elvin11: string
+  ek: string
 }
 
 const images: GalleryImages = {
@@ -18,7 +18,7 @@ const images: GalleryImages = {
   elvin8: new URL('@/assets/elvin8.jpeg', import.meta.url).href,
   elvin11: new URL('@/assets/elvin11.png', import.meta.url).href,
   ek: new URL('@/assets/ek.jpg', import.meta.url).href,
-};
+}
 </script>
 <template>
   <Header />
@@ -49,7 +49,7 @@ const images: GalleryImages = {
       class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
     <div class="text-center relative mt-10">
-      <h1 class="text-xl md:text-3xl lg:text-5xl mb-10"> 
+      <h1 class="text-2xl md:text-3xl lg:text-5xl mb-10"> 
         Hi, I'm Elvin, but you can call me Elvin Code :) 
       </h1> 
       <p class="text-lg md:text-xl text-center flex justify-center md:max-w-7xl mx-auto"> 
@@ -92,8 +92,6 @@ const images: GalleryImages = {
               />
             </div>
           </div>
-  
-          <!-- Second column -->
           <div class="w-full md:w-1/2">
             <div class="relative h-96 w-full overflow-hidden rounded-lg lg:h-[40rem]">
               <img

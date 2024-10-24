@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { ArticleDetail } from '@/types/experiences'
-import IconArrowGrowUp from '../icons/IconArrowGrowUp.vue'
 
 defineProps<{
   historyContent: ArticleDetail[]
@@ -14,9 +13,6 @@ defineProps<{
       <div>
         <h3 class="">{{ history.title }}</h3>
         <h3 class="text-sm">{{ history.description }}</h3>
-        <div class="flex justify-end w-full">
-          <button class="flex py-2 px-5 bg-black/10 mt-5 rounded-full">Read more</button>
-        </div>
       </div>
     </div>
   </div>
