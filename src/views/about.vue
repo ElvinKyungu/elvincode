@@ -1,6 +1,24 @@
 <script setup lang="ts">
 import Header from '@/components/base/Header.vue'
 import Footer from '@/components/base/Footer.vue'
+
+interface GalleryImages {
+  elvin2: string;
+  elvin3: string;
+  elvin7: string;
+  elvin8: string;
+  elvin11: string;
+  ek: string;
+}
+
+const images: GalleryImages = {
+  elvin2: new URL('@/assets/elvin2.jpeg', import.meta.url).href,
+  elvin3: new URL('@/assets/elvin3.jpeg', import.meta.url).href,
+  elvin7: new URL('@/assets/elvin7.jpeg', import.meta.url).href,
+  elvin8: new URL('@/assets/elvin8.jpeg', import.meta.url).href,
+  elvin11: new URL('@/assets/elvin11.png', import.meta.url).href,
+  ek: new URL('@/assets/ek.jpg', import.meta.url).href,
+};
 </script>
 <template>
   <Header />
@@ -38,72 +56,67 @@ import Footer from '@/components/base/Footer.vue'
         I'm a frontend developer passionate about transforming ideas into sleek, intuitive digital experiences. With a deep love for remote work, I thrive in flexible environments where creativity and efficiency meet. 
         I specialize in Vue.js
       </p> 
-      <!-- <p class="text-lg md:text-xl text-center flex justify-center md:max-w-7xl mx-auto mt-6"> 
-        My mission? To design user-centric applications that not only 
-        look stunning but also enhance the way people interact with 
-        technology. Whether it’s collaborating across time zones or 
-        fine-tuning every pixel, I'm driven to build solutions that 
-        empower businesses and captivate users. 
-      </p>  -->
-        <!-- <p class="text-lg md:text-xl text-center flex justify-center md:max-w-7xl mx-auto mt-6">
-          When I'm not coding, you’ll find me exploring the latest design trends or 
-          contributing to tech communities. Let’s build something extraordinary 
-          together— one pixel at a time. 
-        </p> -->
     </div>
-    <section class="overflow-hidden text-gray-700 relative z-50">
+    <section class="relative z-50 overflow-hidden text-gray-700">
       <div
-        class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
-      ></div>
-      <div class=" px-5 py-2 mx-auto lg:pt-24 lg:px-20 relative pb-10">
-        <h1 class="text-xl text-center md:text-3xl lg:text-5xl mb-10"> 
+        class="absolute inset-0 z-0 h-full w-full bg-[radial-gradient(theme(colors.green.300)_1px,transparent_1px)] [background-size:16px_16px]"
+      />
+      <div class="relative mx-auto w-full px-4 py-6 sm:px-6 lg:px-16 lg:py-20">
+        <h1 class="mb-8 mt-10 text-center text-3xl sm:text-3xl lg:mb-12 lg:text-5xl">
           Gallery
-        </h1> 
-        <div class="flex flex-wrap -m-1 md:-m-2">
-          <div class="flex flex-wrap w-1/2">
-            <div class="w-1/2 p-1 md:p-2 h-96">
-              <img 
-                alt="gallery" 
-                class="img-gallery" 
-                src="@/assets/elvin3.jpeg"
-              >
+        </h1>
+  
+        <div class="flex flex-col gap-4 md:flex-row">
+          <div class="w-full md:w-1/2">
+            <div class="flex flex-col gap-4 sm:flex-row">
+              <div class="relative h-64 w-full overflow-hidden rounded-lg sm:w-1/2 lg:h-96">
+                <img
+                  :src="images.elvin3"
+                  alt="gallery"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <div class="relative h-64 w-full overflow-hidden rounded-lg sm:w-1/2 lg:h-96">
+                <img
+                  :src="images.elvin8"
+                  alt="gallery"
+                  class="h-full w-full object-cover"
+                />
+              </div>
             </div>
-            <div class="w-1/2 p-1 md:p-2 h-96">
-              <img 
-                alt="gallery" 
-                class="img-gallery" 
-                src="@/assets/elvin8.jpeg"
-              >
-            </div>
-            <div class="w-full p-1 md:p-2 h-[40rem]">
-              <img 
-                alt="gallery" 
-                class="img-gallery" 
-                src="@/assets/ek.jpg"
-              >
+            <div class="relative mt-4 h-96 w-full overflow-hidden rounded-lg lg:h-[40rem]">
+              <img
+                :src="images.ek"
+                alt="gallery"
+                class="h-full w-full object-cover"
+              />
             </div>
           </div>
-          <div class="flex flex-wrap w-1/2 ">
-            <div class="w-full p-1 md:p-2  h-[40rem]">
-              <img 
-                alt="gallery" 
-                class="img-gallery" 
-                src="@/assets/elvin11.png"
-            >
+  
+          <!-- Second column -->
+          <div class="w-full md:w-1/2">
+            <div class="relative h-96 w-full overflow-hidden rounded-lg lg:h-[40rem]">
+              <img
+                :src="images.elvin11"
+                alt="gallery"
+                class="h-full w-full object-cover"
+              />
             </div>
-            <div class="w-1/2 p-1 md:p-2  h-[24rem]">
-              <img 
-                alt="gallery" 
-                class="img-gallery" 
-                src="@/assets/elvin2.jpeg"
-              >
-            </div>
-            <div class="w-1/2 p-1 md:p-2  h-[24rem]">
-              <img 
-                alt="gallery" 
-                class="img-gallery" 
-                src="@/assets/elvin7.jpeg"
-              >
+            <div class="mt-4 flex flex-col gap-4 sm:flex-row">
+              <div class="relative h-64 w-full overflow-hidden rounded-lg sm:w-1/2 lg:h-96">
+                <img
+                  :src="images.elvin2"
+                  alt="gallery"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <div class="relative h-64 w-full overflow-hidden rounded-lg sm:w-1/2 lg:h-96">
+                <img
+                  :src="images.elvin7"
+                  alt="gallery"
+                  class="h-full w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

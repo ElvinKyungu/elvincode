@@ -55,7 +55,7 @@ const testimonials = ref([
   },
   {
     userImage: patrick,
-    userText: "I had the privilege of recruiting Elvin a year and a half ago. Since then, he has demonstrated remarkable growth, consistently delivering elegant and impactful user interfaces. He is a highly skilled and well-rounded frontend developer, with both creativity and technical expertise.",
+    userText: "I had the pleasure of teaching Elvin programming at university, and from the start, I recognized his exceptional potential. Today, he has become one of the best frontend developers, combining creativity with technical expertise. I highly recommend him for any opportunity!",
     userName: "Patrick Mukala",
     userTitle: "Professor at the University of Lubumbashi"
   },
