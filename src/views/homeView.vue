@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from '@/components/base/Header.vue'
 import Footer from '@/components/base/Footer.vue'
+import Loader from '@/components/Loader.vue'
 import { useHead } from '@unhead/vue'
 import TextScroll from '@/components/TextScroll.vue'
 import WalletCardHome from '@/components/WalletCardHome.vue'
@@ -139,6 +140,7 @@ useTitleAnimation(titleRef4, .5)
 </script>
 
 <template>
+  <Loader/>
   <Header/>
   <AboutMeCardVue/>
   <AnimatedCard/>

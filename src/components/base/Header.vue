@@ -6,9 +6,7 @@ import IconClose from "@/components/icons/IconClose.vue"
 import IconInstagram from "@/components/icons/IconInstagram.vue"
 import IconX from "@/components/icons/IconX.vue"
 import IconArrowGrowUp from "@/components/icons/IconArrowGrowUp.vue"
-import HoverPlaces from "../HoverPlaces.vue"
 
-const showPopup = ref(false)
 const isMenuOpen = ref(false)
 const showHover = ref(false)
 const hoverContent = ref<'whyTokyo' | 'places' | null>(null)
@@ -50,9 +48,8 @@ const animateContainerIn = () => {
     '.hover-component', 
     { y: 0, opacity: 0 }, 
     { y: 0, opacity: 1, duration: 0.2, ease: 'power2.out' } 
-  );
-};
-
+  )
+}
 
 const animateContentIn = (component: 'whyTokyo' | 'places') => {
   gsap.fromTo(
@@ -162,7 +159,6 @@ const leave = (event: MouseEvent) => {
       class=" relative
       "
     >
-      
       <ul class="fixed px-5 md:px-20  bg-[#222] shadow-md backdrop-blur-sm items-center w-full flex justify-between py-3 space-x-5 z-header">
         <div
           class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
@@ -174,18 +170,6 @@ const leave = (event: MouseEvent) => {
           <ul class="flex space-x-10">
             <li class="cursor-pointer hidden md:flex">
               <ul class="flex space-x-7 text-lg">
-                <!-- <li
-                  class="border-b-4 py-3 border-transparent hover:border-b-black transition "
-                >
-                  Components
-                </li>
-                <li
-                  @mouseenter="handleHoverEnter('places')" 
-                  @mouseleave="handleHoverLeave"
-                  class="border-b-4 py-3 border-transparent hover:border-b-black transition "
-                >
-                  Recents articles
-                </li> -->
                 <li class="border-b-4 py-3 border-transparent">
                   <IconInstagram class="w-7 h-7 relative z-10 text-white"/>
                 </li>
@@ -201,17 +185,7 @@ const leave = (event: MouseEvent) => {
         </li>
       </ul>
     </nav>
-    <div
-      v-if="showHover"
-      ref="hoverComponentRef"
-      class="hover-component backdrop-blur-md  bg-white/50"
-      @mouseenter="clearHoverTimeout()"
-      @mouseleave="handleHoverLeave"
-    >
-      <div class="hover-content">
-        <HoverPlaces v-if="hoverContent === 'places'" class="hover-places" />
-      </div>
-    </div>
+    
     <div >
       <div
         class="container text-white container--menu bg-black/40 h-full backdrop-blur-md flex justify-between px-5 md:px-10 lg:px-20 py-10"
