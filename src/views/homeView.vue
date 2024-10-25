@@ -69,12 +69,12 @@ const testimonials = ref([
     userName: "Kevin Maginot",
     userTitle: "Interactive & immersive experience architect"
   },
-  {
-    userImage: ana,
-    userText: "I was lucky enough to work with Elvin as Product Manager. His collaboration was seamless, and his work is always of the highest quality. Excellent developer!",
-    userName: "Ana Forostovschi",
-    userTitle: "Head of Render Wrangling at  @Atlantic Zone"
-  },
+  // {
+  //   userImage: ana,
+  //   userText: "I was lucky enough to work with Elvin as Product Manager. His collaboration was seamless, and his work is always of the highest quality. Excellent developer!",
+  //   userName: "Ana Forostovschi",
+  //   userTitle: "Head of Render Wrangling at  @Atlantic Zone"
+  // },
   {
     userImage: eric,
     userText: "I have worked with Elvin on several projects where he stood out for his professionalism, passion for frontend development, and proactive approach. He excels in modern technologies, shows initiative, and offers innovative solutions. His enthusiasm and adaptability make him a valuable asset to any team.",
@@ -93,42 +93,42 @@ const testimonials = ref([
     userName: "Valeriu Stinca",
     userTitle: "CEO at @Atlantic Zone"
   },
-  {
-    userImage: oxana,
-    userText: "I had the opportunity to work with Elvin on a project. His ability to reproduce models with great precision really impressed me. He excels at integration, and I highly recommend him.",
-    userName: "Oxana Kiss",
-    userTitle: "Software engineer"
-  },
-  {
-    userImage: emma,
-    userText: "I had the opportunity to work with Elvin on a project. His ability to reproduce models with great precision really impressed me. He excels at integration, and I highly recommend him.",
-    userName: "Emmanuel Makabu",
-    userTitle: "Lead Designer at @KreativeTuch"
-  },
+  // {
+  //   userImage: oxana,
+  //   userText: "I had the opportunity to work with Elvin on a project. His ability to reproduce models with great precision really impressed me. He excels at integration, and I highly recommend him.",
+  //   userName: "Oxana Kiss",
+  //   userTitle: "Software engineer"
+  // },
+  // {
+  //   userImage: emma,
+  //   userText: "I had the opportunity to work with Elvin on a project. His ability to reproduce models with great precision really impressed me. He excels at integration, and I highly recommend him.",
+  //   userName: "Emmanuel Makabu",
+  //   userTitle: "Lead Designer at @KreativeTuch"
+  // },
   {
     userImage: userProfile,
     userText: "I am happy to recommend Elvin Kyungu as a skilled and reliable frontend developer. I had the pleasure of working with him and was impressed by his ability of delivering high-quality work and his passion for web development. Elvin is a great team player, always contributing positively to the project we were working on together. I am confident that Elvin would be a valuable asset to any team, and I highly recommend him for any front-end development role.",
     userName: "Vladislav Gargai",
     userTitle: "Golang developer at @Efficient Outsource"
   },
-  {
-    userImage: yves,
-    userText: "I've seen Elvin's front-end work, and his passion is obvious. He masters web technologies perfectly and creates exceptional interfaces. A valuable asset for any team. Highly recommended!",
-    userName: "Yves Kalume",
-    userTitle: "Google Developer Expert for Android"
-  },
-  {
-    userImage: van,
-    userText: "Elvin is not only an excellent developer, but also someone with a rare open-mindedness. After joining my team at CodeLab DRC in 2022, he impressed me with his ability to deliver quality projects quickly. A real asset to any team.",
-    userName: "Vander Otis",
-    userTitle: "Mobile and web developer"
-  },
-  {
-    userImage: deb,
-    userText: "Elvin is a creative front-end developer, a fast learner, and always goes the extra mile. His work is top-notch, and having him on your team is a valuable asset. I highly recommend him.",
-    userName: "Deborah Yambenu",
-    userTitle: "Data Analyst"
-  },
+  // {
+  //   userImage: yves,
+  //   userText: "I've seen Elvin's front-end work, and his passion is obvious. He masters web technologies perfectly and creates exceptional interfaces. A valuable asset for any team. Highly recommended!",
+  //   userName: "Yves Kalume",
+  //   userTitle: "Google Developer Expert for Android"
+  // },
+  // {
+  //   userImage: van,
+  //   userText: "Elvin is not only an excellent developer, but also someone with a rare open-mindedness. After joining my team at CodeLab DRC in 2022, he impressed me with his ability to deliver quality projects quickly. A real asset to any team.",
+  //   userName: "Vander Otis",
+  //   userTitle: "Mobile and web developer"
+  // },
+  // {
+  //   userImage: deb,
+  //   userText: "Elvin is a creative front-end developer, a fast learner, and always goes the extra mile. His work is top-notch, and having him on your team is a valuable asset. I highly recommend him.",
+  //   userName: "Deborah Yambenu",
+  //   userTitle: "Data Analyst"
+  // },
 ])
 
 useParagraphAnimation(paragraphRef, 0.5)
