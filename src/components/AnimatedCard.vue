@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
-import IconArrowGrowUp from './icons/IconArrowGrowUp.vue'
 import vuejs from '@/assets/vuejs.png'
 import nuxt from '@/assets/nuxt.svg'
-import js from '@/assets/js.png'
 import ts from '@/assets/typescript.png'
-import tailwindcss from '@/assets/tailwindcss.jpg'
 
 const buttonRef = ref<HTMLElement | null>(null)
 const titleRef = ref<HTMLElement | null>(null)
@@ -66,34 +63,25 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="grid bg-[#222] text-white relative z-40 md:gap-5 lg:gap-16 grid-cols-12 px-5 md:px-20  pt-36 md:pt-5 md:py-20 lg:py-36">
+  <section class="grid bg-[#222] text-white relative z-40 md:gap-5 grid-cols-12 px-5 md:px-20  pt-36 md:pt-5 md:py-20 lg:py-36">
     <div
       class="absolute z-0 inset-0 h-full w-full   bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
-    <div class="col-span-12 relative z-20 md:col-span-6 lg:py-10">
+    <div class="col-span-12 relative z-20 md:col-span-5 lg:py-10">
       <h2 ref="titleRef" class="text-3xl md:mt-5 md:text-4xl lg:text-6xl">
-        Hi, I'm Elvin Kyungu, you can call me Elvin Code also !
+        I am a developer based on vuejs
       </h2>
       <p ref="paragraphRef" class="mt-12 text-lg">
         I'm a passionate Frontend Developer and i specialize in building modern, responsive, and dynamic web applications.
         My expertise includes Vue.js, Nuxt.js, and TailwindCSS, with a focus on creating elegant and performant user interfaces.
         Let's explore the possibilities together and build amazing projects.
       </p>
-      <button 
-        ref="buttonRef"
-        class="bg-white inline-flex gap-2 text-black py-4 px-5 mt-12 rounded-lg"
-      >
-        Learn more about my work
-        <IconArrowGrowUp/>
-      </button>
     </div>
-    <div class="relative z-20 col-span-12 md:col-span-6 overflow-hidden mt-10 pt-5 pb-16">
-      <div class="flex flex-wrap gap-4 -space-x-24 justify-center md:w-[32rem] h-full mx-auto">
-        <img :src="vuejs" alt="Vue.js logo" class="animate-img bg-black image-animate rotate-12">
-        <img :src="nuxt" alt="Nuxt.js logo" class="animate-img bg-black image-animate -rotate-12">
-        <img :src="ts" alt="TypeScript logo" class="animate-img bg-black image-animate rotate-6">
-        <img :src="js" alt="JavaScript logo" class="animate-img image-animate -rotate-12">
-        <img :src="tailwindcss" alt="TailwindCSS logo" class="animate-img image-animate object-cover">
+    <div class="relative z-20 col-span-12 md:col-span-7 overflow-hidden mt-10 pt-5 pb-16">
+      <div class="flex flex-wrap gap-4 jcitems-center -space-x-40 wrap justify-center md:max-w-[32rem] h-full mx-auto">
+        <img :src="vuejs" alt="Vue.js logo" class="animate-img bg-black image-animate -rotate-12 ">
+        <img :src="nuxt" alt="Nuxt.js logo" class="animate-img bg-black image-animate rotate-12">
+        <img :src="ts" alt="TypeScript logo" class="animate-img bg-black image-animate -rotate-12">
       </div>
     </div>
   </section>

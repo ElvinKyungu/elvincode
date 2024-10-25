@@ -11,6 +11,7 @@ import Contact from '@/components/Contact.vue'
 import GetInTouch from '@/components/GetInTouch.vue'
 import { useTitleAnimation } from '@/composables/useTitleAnimation'
 import { useParagraphAnimation } from '@/composables/useParagraphAnimation'
+import AboutMeCardVue from '@/components/AboutMeCard.vue.vue'
 import { ref } from 'vue'
 import gabriel  from '@/assets/gabriel.jpeg'
 import patrick  from '@/assets/pro-patrick.jpeg'
@@ -139,12 +140,13 @@ useTitleAnimation(titleRef4, .5)
 
 <template>
   <Header/>
+  <AboutMeCardVue/>
   <AnimatedCard/>
   <main class="relative text-white bg-[#222]">
     <div
       class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
-    <section class="grid relative z-40 grid-cols-12 px-5 md:px-20 py-5">
+    <section class="grid relative z-40 grid-cols-12 pt-4  0 px-5 md:px-20 py-5">
       <div class="col-span-12 md:col-span-6">
         <h2 ref="titleRef1" class="text-5xl">Crafting the Future of Web Interfaces</h2>
       </div>

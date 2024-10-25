@@ -47,73 +47,45 @@ const cardStack = [
   {
     componentName: "Vuejs",
     componentImage: vuejs,
+    docLink: "https://vuejs.org/guide/introduction.html",
   },
   {
     componentName: "Nuxt ",
     componentImage: nuxtImg,
+    docLink: "https://nuxt.com/docs",
   },
   {
     componentName: "TypeScript",
     componentImage: ts,
+    docLink: "https://www.typescriptlang.org/docs/",
   },
   {
     componentName: "Javascript",
     componentImage: js,
+    docLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     componentName: "Tailwindcss",
     componentImage: tailwind,
+    docLink: "https://tailwindcss.com/docs",
   },
   {
     componentName: "GSAP",
     componentImage: gsapImg,
+    docLink: "https://greensock.com/docs/"
   },
   {
     componentName: "UnoCSS",
     componentImage: unocss,
+    docLink: "https://unocss.dev/guide/",
   },
 ]
-
-const hearts = Array.from({ length: 10 }, (_, i) => i + 1)
-const heartRefs = ref<HTMLDivElement[]>([])
-
-onMounted(() => {
-  // Conversion de NodeList en tableau
-  heartRefs.value = hearts.map((_, index) => document.querySelector(`.heart-animation-${index + 1}`)) as HTMLDivElement[]
-})
-
-const animateHearts = () => {
-  heartRefs.value.forEach((heart, index) => {
-    if (!heart) return; // Ajout d'une vérification de sécurité
-
-    const tl = gsap.timeline({
-      delay: index * 0.1, // Décalage entre les cœurs
-    })
-
-    tl.fromTo(
-      heart,
-      { opacity: 0, y: 0, x: 0, scale: 0.5, transformOrigin: 'center' },
-      {
-        opacity: 1,
-        y: gsap.utils.random(50, 100), 
-        x: gsap.utils.random(10, 50),
-        scale: 1,
-        duration: 1.5,
-        ease: 'power2.out',
-      }
-    ).to(heart, {
-      opacity: 0,
-      scale: 0.5,
-      duration: 0.5,
-      ease: 'power2.in',
-    })
-  })
-}
 
 const stickyImageRef = ref<HTMLImageElement | null>(null)
 const previousCardIndex = ref<number | null>(null)
 const blockRef = ref<HTMLDivElement | null>(null);
 
+const currentTechIndex = ref(0)
 
 const handleCardClick = (event: Event, cardIndex: number) => {
   const stickyImageElement = stickyImageRef.value;
@@ -122,11 +94,12 @@ const handleCardClick = (event: Event, cardIndex: number) => {
   if (stickyImageElement && blockElement) {
     const direction = (previousCardIndex.value !== null && cardIndex < previousCardIndex.value)
       ? 'bottom-to-top'
-      : 'top-to-bottom';
+      : 'top-to-bottom'
 
     const tl = gsap.timeline({
       onStart: () => {
-        stickyImageElement.src = cardStack[cardIndex].componentImage;
+        stickyImageElement.src = cardStack[cardIndex].componentImage
+        currentTechIndex.value = cardIndex
       }
     })
 
@@ -144,6 +117,10 @@ const handleCardClick = (event: Event, cardIndex: number) => {
 
     previousCardIndex.value = cardIndex
   }
+}
+
+const openDocumentation = () => {
+  window.open(cardStack[currentTechIndex.value].docLink, '_blank')
 }
 
 </script>
@@ -192,9 +169,12 @@ const handleCardClick = (event: Event, cardIndex: number) => {
               <div ref="imagesRef" class="sticky col-span-12 md:col-span-6 overflow-hidden h-72 w-full ">
                 <div ref="blockRef" class="h-full w-full relative">
                   <div class="absolute flex justify-between w-full">
-                    <button class="preview-button left-3 text-white z-40 absolute flex gap-2  bg-black/50 backdrop-blur-sm top-2 rounded-full border border-white/50 px-5 py-1">
-                      <span class="text-sm">Preview</span>
-                      <IconArrowGrowUp class="w-4 h-4 text-black" />
+                    <button 
+                      @click="openDocumentation"
+                      class="preview-button left-3 text-white z-40 absolute flex gap-2 bg-black/50 hover:bg-black/70 transition-colors backdrop-blur-sm top-2 rounded-full border border-white/50 px-5 py-1"
+                    >
+                      <span class="text-sm">Documentation</span>
+                      <IconArrowGrowUp class="w-4 h-4 text-white" />
                     </button>
                     <div class="z-50 flex right-0 absolute top-2">
                       <HeartAnimation/>
@@ -208,7 +188,6 @@ const handleCardClick = (event: Event, cardIndex: number) => {
                   >
                 </div>
               </div>
-  
               <div class="col-span-12 md:col-span-6 md:ml-3">
                 <div 
                   v-for="(card, index) in cardStack" :key="index" 
