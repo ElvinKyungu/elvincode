@@ -5,7 +5,9 @@ import IconBars from "@/components/icons/IconBars.vue"
 import IconClose from "@/components/icons/IconClose.vue"
 import IconInstagram from "@/components/icons/IconInstagram.vue"
 import IconX from "@/components/icons/IconX.vue"
+import IconGithub from "../icons/IconGithub.vue"
 import IconArrowGrowUp from "@/components/icons/IconArrowGrowUp.vue"
+import IconLinkedin from "../icons/IconLinkedin.vue"
 
 const isMenuOpen = ref(false)
 const showHover = ref(false)
@@ -171,10 +173,24 @@ const leave = (event: MouseEvent) => {
             <li class="cursor-pointer hidden md:flex">
               <ul class="flex space-x-7 text-lg">
                 <li class="border-b-4 py-3 border-transparent">
-                  <IconInstagram class="w-7 h-7 relative z-10 text-white"/>
+                  <a href="https://github.com/elvinKyungu/" target="_blanck">
+                    <IconGithub class="w-7 h-7 relative z-10 text-white"/>
+                  </a>
                 </li>
                 <li class="border-b-4 py-3 border-transparent">
-                  <IconX class="w-7 h-7 relative z-10 text-white"/>
+                  <a href="https://www.linkedin.com/in/elvin-kyungu/" target="_blanck">
+                    <IconLinkedin class="w-7 h-7 relative z-10 text-white"/>
+                  </a>
+                </li>
+                <li class="border-b-4 py-3 border-transparent">
+                  <a href="https://x.com/ElvinKyungu" target="_blanck">
+                    <IconX class="w-7 h-7 relative z-10 text-white"/>
+                  </a>
+                </li>
+                <li class="border-b-4 py-3 border-transparent">
+                  <a href="https://www.instagram.com/elvin.kyungu/" target="_blanck">
+                    <IconInstagram class="w-7 h-7 relative z-10 text-white"/>
+                  </a>
                 </li>
               </ul>
             </li>
@@ -185,7 +201,6 @@ const leave = (event: MouseEvent) => {
         </li>
       </ul>
     </nav>
-    
     <div >
       <div
         class="container text-white container--menu bg-black/40 h-full backdrop-blur-md flex justify-between px-5 md:px-10 lg:px-20 py-10"

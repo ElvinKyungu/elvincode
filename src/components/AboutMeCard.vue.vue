@@ -1,5 +1,5 @@
 <template>
- <main class="pt-40 bg-[#222] text-white  ">
+ <main class="pt-20 md:pt-40 bg-[#222] text-white  ">
   <div
       class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
@@ -29,7 +29,7 @@
     <h1 class="text-2xl md:text-3xl lg:text-6xl mb-10"> 
       Hi, I'm Elvin, but you can call me Elvin Code :) 
     </h1> 
-    <p class="text-lg md:text-xl text-center flex justify-center md:max-w-7xl mx-auto"> 
+    <p class="text-lg md:text-xl px-5 text-center flex justify-center md:max-w-7xl mx-auto"> 
       I'm a frontend developer passionate about transforming ideas into sleek, intuitive digital experiences. With a deep love for remote work, I thrive in flexible environments where creativity and efficiency meet. 
       I specialize in Vue.js
     </p> 
