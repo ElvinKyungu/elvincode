@@ -72,16 +72,14 @@ onMounted(() => {
         I am a developer based on vuejs
       </h2>
       <p ref="paragraphRef" class="mt-12 text-lg">
-        I'm a passionate Frontend Developer and i specialize in building modern, responsive, and dynamic web applications.
-        My expertise includes Vue.js, Nuxt.js, and TailwindCSS, with a focus on creating elegant and performant user interfaces.
-        Let's explore the possibilities together and build amazing projects.
+        Fueled by a passion for frontend development, I bring modern, responsive, and dynamic web applications to life. With expertise in Vue.js, Nuxt.js, and TailwindCSS, I craft seamless and high-performing user experiences. Ready to unlock new possibilities? Let’s build something remarkable together.
       </p>
     </div>
     <div class="relative z-20 col-span-12 md:col-span-7 overflow-hidden mt-10 pt-5 pb-16">
       <div class="flex flex-wrap gap-4 jcitems-center -space-x-40 wrap justify-center md:max-w-[32rem] h-full mx-auto">
-        <img :src="vuejs" alt="Vue.js logo" class="animate-img bg-black image-animate -rotate-12 ">
-        <img :src="nuxt" alt="Nuxt.js logo" class="animate-img bg-black image-animate rotate-12">
         <img :src="ts" alt="TypeScript logo" class="animate-img bg-black image-animate -rotate-12">
+        <img :src="nuxt" alt="Nuxt.js logo" class="animate-img bg-black image-animate rotate-12">
+        <img :src="vuejs" alt="Vue.js logo" class="animate-img bg-black image-animate -rotate-12 ">
       </div>
     </div>
   </section>

@@ -1,4 +1,4 @@
-import type { ExperienceDetail } from '@/types/experiences';
+import type { ExperienceDetail } from '@/types/experiences'
 import artile1 from '@/assets/elvin11.png'
 import russie from '@/assets/russie.png'
 import france from '@/assets/france.png'

@@ -105,12 +105,12 @@ const testimonials = ref([
   //   userName: "Emmanuel Makabu",
   //   userTitle: "Lead Designer at @KreativeTuch"
   // },
-  {
-    userImage: userProfile,
-    userText: "I am happy to recommend Elvin Kyungu as a skilled and reliable frontend developer. I had the pleasure of working with him and was impressed by his ability of delivering high-quality work and his passion for web development. Elvin is a great team player, always contributing positively to the project we were working on together. I am confident that Elvin would be a valuable asset to any team, and I highly recommend him for any front-end development role.",
-    userName: "Vladislav Gargai",
-    userTitle: "Golang developer at @Efficient Outsource"
-  },
+  // {
+  //   userImage: userProfile,
+  //   userText: "I am happy to recommend Elvin Kyungu as a skilled and reliable frontend developer. I had the pleasure of working with him and was impressed by his ability of delivering high-quality work and his passion for web development. Elvin is a great team player, always contributing positively to the project we were working on together. I am confident that Elvin would be a valuable asset to any team, and I highly recommend him for any front-end development role.",
+  //   userName: "Vladislav Gargai",
+  //   userTitle: "Golang developer at @Efficient Outsource"
+  // },
   // {
   //   userImage: yves,
   //   userText: "I've seen Elvin's front-end work, and his passion is obvious. He masters web technologies perfectly and creates exceptional interfaces. A valuable asset for any team. Highly recommended!",
