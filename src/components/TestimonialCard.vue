@@ -10,10 +10,10 @@ defineProps({
 </script>
 <template>
   <div
-    class="h-full p-8 rounded-xl shadow-md cursor-pointer text-white border border-[#616161]"
+    class="h-full p-4 lg:p-8 rounded-xl shadow-md cursor-pointer text-white border border-[#616161]"
   >
     <IconCitation />
-    <p class="leading-relaxed text-xl mb-6">
+    <p class="leading-relaxed text-base md:text-lg lg:text-xl mb-6">
       {{ userText }}
     </p>
     <a class="inline-flex items-center">
@@ -27,7 +27,7 @@ defineProps({
           {{ userName }}
         </span>
         <span
-          class="text-gray-800"
+          class="text-gray-300"
         >
           {{ userTitle }}
         </span>
