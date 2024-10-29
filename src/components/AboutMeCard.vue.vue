@@ -16,7 +16,7 @@ useTitleAnimation(paragraphRef, .3)
   <div
       class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
-  <section ref="firstImage" class="flex relative justify-center pt-5  z-50">
+  <section ref="firstImage" class="flex relative justify-center pt-5 pb-10  z-50">
     <div class="absolute pl top-44">
       <div class="pl__outer-ring"></div>
       <div class="pl__inner-ring"></div>
@@ -28,10 +28,10 @@ useTitleAnimation(paragraphRef, .3)
         <div class="pl__ball-side-shadows"></div>
       </div>
     </div>
-    <div class="bg-black/10 backdrop-blur-md ul p-16 rounded-full mt-10">
+    <div class="bg-black/10 backdrop-blur-md ul p-10 rounded-full mt-10">
       <div class="avatar flex justify-center items-center">
         <div
-          class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2"
+          class="ring-primary ring-offset-base-100 w-36 rounded-full ring ring-offset-2"
         >
           <img src="@/assets/elvin.png" class="rounded-full" />
         </div>
