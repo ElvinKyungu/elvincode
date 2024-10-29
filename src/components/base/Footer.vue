@@ -22,7 +22,7 @@
           <router-link  to="/experiences" class="hover:underline me-4 md:me-6">Experiences</router-link>
         </li>
         <li>
-          <router-link  to="/" class="hover:underline me-4 md:me-6">Articles</router-link>
+          <a  href="https://elvincode.hashnode.dev/" target="_blank" class="hover:underline me-4 md:me-6">Articles</a>
         </li>
         <li>
           <router-link  to="/conferences" class="hover:underline me-4 md:me-6">Conferences</router-link>
