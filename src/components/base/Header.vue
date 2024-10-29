@@ -136,7 +136,7 @@ function close_menu() {
 }
 const menuItems = [
   { name: 'Home', route: '/' },
-  { name: 'Components', route: '/components' },
+  // { name: 'Components', route: '/components' },
   { name: 'About', route: '/about' },
   { name: 'Experiences', route: '/experiences' },
   { name: 'Articles', route: 'https://elvincode.hashnode.dev/' },

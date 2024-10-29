@@ -15,9 +15,9 @@
         <li>
           <router-link  to="/about" class="hover:underline me-4 md:me-6">About</router-link>
         </li>
-        <li>
+        <!-- <li>
           <router-link  to="/components" class="hover:underline me-4 md:me-6">Components</router-link>
-        </li>
+        </li> -->
         <li>
           <router-link  to="/experiences" class="hover:underline me-4 md:me-6">Experiences</router-link>
         </li>
