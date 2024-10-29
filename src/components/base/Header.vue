@@ -139,7 +139,7 @@ const menuItems = [
   { name: 'Components', route: '/components' },
   { name: 'About', route: '/about' },
   { name: 'Experiences', route: '/experiences' },
-  { name: 'Articles', route: '/' },
+  { name: 'Articles', route: 'https://elvincode.hashnode.dev/' },
   { name: 'Conferences', route: '/conferences' },
 ]
 
@@ -215,12 +215,22 @@ const leave = (event: MouseEvent) => {
         <div class="menu__layout">
           <ul class="menu__left text-xl space-y-5">
             <li v-for="item in menuItems" :key="item.name" @mouseenter="enter" @mouseleave="leave" class="menu-item">
-              <router-link :to="item.route" class="flex gap-4 items-center">
-                <span ref="icons" class="icon">
-                  <IconArrowGrowUp class="text-white " />
-                </span>
-                {{ item.name }}
-              </router-link>
+              <template v-if="item.route.startsWith('http')">
+                <a :href="item.route" target="_blank" class="flex gap-4 items-center">
+                  <span ref="icons" class="icon">
+                    <IconArrowGrowUp class="text-white" />
+                  </span>
+                  {{ item.name }}
+                </a>
+              </template>
+              <template v-else>
+                <router-link :to="item.route" class="flex gap-4 items-center">
+                  <span ref="icons" class="icon">
+                    <IconArrowGrowUp class="text-white" />
+                  </span>
+                  {{ item.name }}
+                </router-link>
+              </template>
             </li>
           </ul>
         </div>
