@@ -69,10 +69,12 @@ onMounted(() => {
         <div 
           class="md:bottom-5 rounded-lg bottom-0 justify-end items-end w-[95%] md:w-1/2 mx-auto bg-white text-black cursor-pointer absolute p-5 md:p-5 right-[2.5%]"
         >
-          <div class="flex justify-between">
-            <span class="text-sm md:text-sm">Start your project now</span>
-            <IconArrowGrowUp class=" "/>
-          </div>
+          <a href="#contact">
+            <div class="flex justify-between">
+              <span class="text-sm md:text-sm">Start your project now</span>
+              <IconArrowGrowUp class=" "/>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -96,10 +98,12 @@ onMounted(() => {
         <div 
           class="md:bottom-5 cursor-pointer bg-black rounded-lg bottom-0 justify-end items-end w-[95%] md:w-1/2 mx-auto text-white absolute p-5 md:p-5 right-[2.5%]"
         >
-          <div class="flex justify-between ">
-            <span class="text-sm md:text-sm">Start your project</span>
-            <IconArrowGrowUp class=" "/>
-          </div>
+          <a href="#contact">
+            <div class="flex justify-between">
+              <span class="text-sm md:text-sm">Start your project</span>
+              <IconArrowGrowUp class=" "/>
+            </div>
+          </a>
         </div>
       </div>
     </div>

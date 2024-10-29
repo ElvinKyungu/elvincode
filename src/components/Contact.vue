@@ -8,7 +8,7 @@ useTitleAnimation(cardsRef, 0.5)
 </script>
 
 <template>
-  <section ref="cardsRef" class="grid pb-20 bg-[#222] text-white grid-cols-12 gap-5 overflow-hidden px-5 relative md:px-20">
+  <section  ref="cardsRef" class="grid pb-20 bg-[#222] text-white grid-cols-12 gap-5 overflow-hidden px-5 relative md:px-20">
     <div class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
     <div class="relative z-10 col-span-12 md:col-span-4 p-5 bg-white/5 cursor-pointer hover:bg-white/10 transition rounded-md">

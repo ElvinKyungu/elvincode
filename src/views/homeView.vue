@@ -176,8 +176,10 @@ useTitleAnimation(titleRef4, .5)
       />
     </div>
   </div>
-  <GetInTouch/>
-  <Contact/>
+  <div id="contact">
+    <GetInTouch/>
+    <Contact/>
+  </div>
   <TextScroll/>
   <Footer/>
 </template>
