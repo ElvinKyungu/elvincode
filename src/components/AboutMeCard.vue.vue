@@ -1,9 +1,22 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useTitleAnimation } from '@/composables/useTitleAnimation'
+import { useParagraphAnimation } from '@/composables/useParagraphAnimation'
+
+const firstImage = ref<HTMLElement | null>(null)
+const titleRef = ref<HTMLElement | null>(null)
+const paragraphRef = ref<HTMLElement | null>(null)
+
+useParagraphAnimation(titleRef, .3)
+useTitleAnimation(firstImage, .3)
+useTitleAnimation(paragraphRef, .3)
+</script>
 <template>
  <main class="pt-20 md:pt-40 bg-[#222] text-white  ">
   <div
       class="absolute z-0 inset-0 h-full w-full bg-[radial-gradient(theme(colors.green.900)_1px,transparent_1px)] [background-size:16px_16px]"
     ></div>
-  <section class="flex relative justify-center pt-5  z-50">
+  <section ref="firstImage" class="flex relative justify-center pt-5  z-50">
     <div class="absolute pl top-44">
       <div class="pl__outer-ring"></div>
       <div class="pl__inner-ring"></div>
@@ -26,10 +39,10 @@
     </div>
   </section>
   <div class="text-center relative mt-10">
-    <h1 class="text-2xl md:text-3xl lg:text-6xl mb-10"> 
+    <h1 ref="titleRef" class="text-2xl md:text-3xl lg:text-6xl mb-10"> 
       Hi, I'm Elvin, but you can call me Elvin Code :) 
     </h1> 
-    <p class="text-lg md:text-xl px-5 text-center flex justify-center md:max-w-7xl mx-auto"> 
+    <p ref="paragraphRef" class="text-lg md:text-xl px-5 text-center flex justify-center md:max-w-7xl mx-auto"> 
       I'm a frontend developer passionate about transforming ideas into sleek, intuitive digital experiences. With a deep love for remote work, I thrive in flexible environments where creativity and efficiency meet. 
       I specialize in Vue.js
     </p> 

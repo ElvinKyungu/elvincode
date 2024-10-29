@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Header from '@/components/base/Header.vue'
 import Footer from '@/components/base/Footer.vue'
-import Loader from '@/components/Loader.vue'
 import { useHead } from '@unhead/vue'
 import TextScroll from '@/components/TextScroll.vue'
 import WalletCardHome from '@/components/WalletCardHome.vue'
@@ -16,15 +15,15 @@ import AboutMeCardVue from '@/components/AboutMeCard.vue.vue'
 import { ref } from 'vue'
 import gabriel  from '@/assets/gabriel.jpeg'
 import patrick  from '@/assets/pro-patrick.jpeg'
-import emma  from '@/assets/emma.jpeg'
+// import emma  from '@/assets/emma.jpeg'
 import eric  from '@/assets/eric.jpeg'
 import katya  from '@/assets/kat.jpg'
-import oxana  from '@/assets/oxana.jpeg'
+// import oxana  from '@/assets/oxana.jpeg'
 import userProfile  from '@/assets/user.jpeg'
-import van  from '@/assets/van.jpeg'
-import yves  from '@/assets/yves.webp'
-import ana  from '@/assets/ana.jpeg'
-import deb  from '@/assets/deb.jpeg'
+// import van  from '@/assets/van.jpeg'
+// import yves  from '@/assets/yves.webp'
+// import ana  from '@/assets/ana.jpeg'
+// import deb  from '@/assets/deb.jpeg'
 import kevin  from '@/assets/kevin.jpeg'
 
 useHead({
@@ -140,7 +139,6 @@ useTitleAnimation(titleRef4, .5)
 </script>
 
 <template>
-  <Loader/>
   <Header/>
   <AboutMeCardVue/>
   <AnimatedCard/>
